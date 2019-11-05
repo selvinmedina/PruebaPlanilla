@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ab66477059b44ff298b7ec40fa100fe5" Name="Diagram1">
+        <EntityTypeShape EntityType="PruebaPlanillaModel.tbAccesoRol" Width="1.5" PointX="5.25" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PruebaPlanillaModel.tbObjeto" Width="1.5" PointX="3" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PruebaPlanillaModel.tbRol" Width="1.5" PointX="3" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PruebaPlanillaModel.tbRolesUsuario" Width="1.5" PointX="8.25" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PruebaPlanillaModel.tbUsuario" Width="1.5" PointX="0.75" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PruebaPlanillaModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PruebaPlanillaModel.tbCatalogoDeDeducciones" Width="1.5" PointX="10.75" PointY="17.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PruebaPlanillaModel.tbCatalogoDeIngresos" Width="1.5" PointX="13.75" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PruebaPlanillaModel.tbCatalogoDePlanillas" Width="1.5" PointX="10.75" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="PruebaPlanillaModel.tbDeduccionesExtraordinarias" Width="1.5" PointX="18" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PruebaPlanillaModel.tbDeduccionInstitucionFinanciera" Width="1.5" PointX="15.25" PointY="20.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PruebaPlanillaModel.tbEmpleadoBonos" Width="1.5" PointX="18.25" PointY="20.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PruebaPlanillaModel.tbEmpleadoComisiones" Width="1.5" PointX="15.25" PointY="25.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PruebaPlanillaModel.tbHistorialDeduccionPago" Width="1.5" PointX="20.5" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PruebaPlanillaModel.tbHistorialDeIngresosPago" Width="1.5" PointX="23.5" PointY="14.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PruebaPlanillaModel.tbHistorialDePago" Width="1.5" PointX="18.25" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PruebaPlanillaModel.tbInstitucionesFinancieras" Width="1.5" PointX="13" PointY="25.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PruebaPlanillaModel.tbPeriodos" Width="1.5" PointX="16" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PruebaPlanillaModel.tbRamaActividad" Width="1.5" PointX="2.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PruebaPlanillaModel.tbSalarioPorHora" Width="1.5" PointX="5" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="PruebaPlanillaModel.tbTechosDeducciones" Width="1.5" PointX="13" PointY="29.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PruebaPlanillaModel.tbTipoDeduccion" Width="1.5" PointX="8.5" PointY="18.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PruebaPlanillaModel.tbTipoPlanillaDetalleDeduccion" Width="1.5" PointX="13" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="PruebaPlanillaModel.tbTipoPlanillaDetalleIngreso" Width="1.5" PointX="16" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="PruebaPlanillaModel.tbAreas" Width="1.5" PointX="7.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PruebaPlanillaModel.tbCargos" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PruebaPlanillaModel.tbCompetencias" Width="1.5" PointX="10.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PruebaPlanillaModel.tbCompetenciasPersona" Width="1.5" PointX="10.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PruebaPlanillaModel.tbCompetenciasRequisicion" Width="1.5" PointX="11.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PruebaPlanillaModel.tbDepartamentos" Width="1.5" PointX="5.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PruebaPlanillaModel.tbEmpleados" Width="1.5" PointX="13" PointY="19.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PruebaPlanillaModel.tbEmpleadosAreas" Width="1.5" PointX="7.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PruebaPlanillaModel.tbEmpresas" Width="1.5" PointX="12.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PruebaPlanillaModel.tbEquipoEmpleados" Width="1.5" PointX="15.75" PointY="30.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PruebaPlanillaModel.tbEquipoTrabajo" Width="1.5" PointX="13.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PruebaPlanillaModel.tbFaseSeleccion" Width="1.5" PointX="14.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PruebaPlanillaModel.tbFasesReclutamiento" Width="1.5" PointX="15.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PruebaPlanillaModel.tbHabilidades" Width="1.5" PointX="4.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PruebaPlanillaModel.tbHabilidadesPersona" Width="1.5" PointX="16.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PruebaPlanillaModel.tbHabilidadesRequisicion" Width="1.5" PointX="17.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PruebaPlanillaModel.tbHistorialAmonestaciones" Width="1.5" PointX="18.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PruebaPlanillaModel.tbHistorialAudienciaDescargo" Width="1.5" PointX="4.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PruebaPlanillaModel.tbHistorialCargos" Width="1.5" PointX="18.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PruebaPlanillaModel.tbHistorialContrataciones" Width="1.5" PointX="19.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PruebaPlanillaModel.tbHistorialHorasTrabajadas" Width="1.5" PointX="0.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PruebaPlanillaModel.tbHistorialincapacidades" Width="1.5" PointX="20.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PruebaPlanillaModel.tbHistorialLiquidaciones" Width="1.5" PointX="20.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PruebaPlanillaModel.tbHistorialPermisos" Width="1.5" PointX="20.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PruebaPlanillaModel.tbHistorialRefrendamientos" Width="1.5" PointX="21.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PruebaPlanillaModel.tbHistorialSalidas" Width="1.5" PointX="6.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PruebaPlanillaModel.tbHistorialVacaciones" Width="1.5" PointX="2.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PruebaPlanillaModel.tbHorarios" Width="1.5" PointX="22.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PruebaPlanillaModel.tbIdiomaPersona" Width="1.5" PointX="22.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PruebaPlanillaModel.tbidiomas" Width="1.5" PointX="8.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PruebaPlanillaModel.tbIdiomasRequisicion" Width="1.5" PointX="22.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PruebaPlanillaModel.tbJornadas" Width="1.5" PointX="2.75" PointY="15.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PruebaPlanillaModel.tbPersonas" Width="1.5" PointX="20.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PruebaPlanillaModel.tbPrestaciones" Width="1.5" PointX="22.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PruebaPlanillaModel.tbRazonDespidos" Width="1.5" PointX="23.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PruebaPlanillaModel.tbRazonRenuncias" Width="1.5" PointX="24.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PruebaPlanillaModel.tbRequisiciones" Width="1.5" PointX="24.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PruebaPlanillaModel.tbRequisicionPersonal" Width="1.5" PointX="24.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PruebaPlanillaModel.tbSeleccionCandidatos" Width="1.5" PointX="24.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PruebaPlanillaModel.tbSucursales" Width="1.5" PointX="4.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PruebaPlanillaModel.tbSueldos" Width="1.5" PointX="6.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PruebaPlanillaModel.tbTipoAmonestaciones" Width="1.5" PointX="25.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PruebaPlanillaModel.tbTipoHoras" Width="1.5" PointX="8.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PruebaPlanillaModel.tbTipoIncapacidades" Width="1.5" PointX="25.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PruebaPlanillaModel.tbTipoMonedas" Width="1.5" PointX="25.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PruebaPlanillaModel.tbTipoPermisos" Width="1.5" PointX="0.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PruebaPlanillaModel.tbTipoSalidas" Width="1.5" PointX="26.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PruebaPlanillaModel.tbTitulos" Width="1.5" PointX="26.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PruebaPlanillaModel.tbTitulosPersona" Width="1.5" PointX="26.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PruebaPlanillaModel.tbTitulosRequisicion" Width="1.5" PointX="26.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PruebaPlanillaModel.tbVacaciones" Width="1.5" PointX="22.75" PointY="26.75" IsExpanded="true" />
+        <AssociationConnector Association="PruebaPlanillaModel.FK__Acce___tbUsuario__tbAccesoRol__acrol_UsuarioCrea" ManuallyRouted="false" />
+        <AssociationConnector Association="PruebaPlanillaModel.FK__Acce__tbObjeto__tbAccesoRol__obj_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="PruebaPlanillaModel.FK__Acce__tbUsuario__tbAccesoRol__acrol_UsuarioModifica" ManuallyRouted="false" />
+        <AssociationConnector Association="PruebaPlanillaModel.FK__Acce_tbRol__tbAccesoRol__rol_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="PruebaPlanillaModel.FK__Acce___tbUsuario__tbObjeto__obj_UsuarioCrea" ManuallyRouted="false" />
+        <AssociationConnector Association="PruebaPlanillaModel.FK__Acce__tbUsuario__tbObjeto__obj_UsuarioModifica" ManuallyRouted="false" />
+        <AssociationConnector Association="PruebaPlanillaModel.FK__Acce__tbRol__tbRolesUsuario_rol_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="PruebaPlanillaModel.FK__Acce__tbUsuario__tbRol__rol_UsuarioCrea" ManuallyRouted="false" />
+        <AssociationConnector Association="PruebaPlanillaModel.FK__Acce__tbUsuario__tbRol__rol_UsuarioModifica" ManuallyRouted="false" />
+        <AssociationConnector Association="PruebaPlanillaModel.FK__Acce__tbUsuario__tbRolesUsuario__rolu_UsuarioCrea" ManuallyRouted="false" />
+        <AssociationConnector Association="PruebaPlanillaModel.FK__Acce__tbUsuario__tbRolesUsuario__rolu_UsuarioModifica" ManuallyRouted="false" />
+        <AssociationConnector Association="PruebaPlanillaModel.FK__Acce__tbUsuario__tbRolesUsuario__usu_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="PruebaPlanillaModel.FK_Plani_tbCatalogodededucciones_tbTipoDeduccion_tde_IdTipoDedu" ManuallyRouted="false" />
+        <AssociationConnector Association="PruebaPlanillaModel.FK_Plani_tbCatálogoDeducciones_tbTipoPlanillaDetalleDeducciones_cde_IdDeducciones" ManuallyRouted="false" />
+        <AssociationConnector Association="PruebaPlanillaModel.FK_tbDeduccionesExtraordinarias_tbCatalogoDeDeducciones" ManuallyRouted="false" />
+        <AssociationConnector Association="PruebaPlanillaModel.FK_tbDeduccionInstitucionFinanciera_tbCatalogoDeDeducciones" ManuallyRouted="false" />
+        <AssociationConnector Association="PruebaPlanillaModel.FK_tbTechosDeducciones_tbCatalogoDeDeducciones" ManuallyRouted="false" />
+        <AssociationConnector Association="PruebaPlanillaModel.FK_Plani_tbCatalogoIngresos_tbTipoPlanillaDetalleIngreso_cin_IdIngreso" ManuallyRouted="false" />
+        <AssociationConnector Association="PruebaPlanillaModel.FK_tbEmpleadoBonos_tbCatalogodeIngresos" ManuallyRouted="false" />
+        <AssociationConnector Association="PruebaPlanillaModel.FK_tbEmpleadoComisiones_tbCatalogoDeIngresos" ManuallyRouted="false" />
+        <AssociationConnector Association="PruebaPlanillaModel.FK_Plani_tbCatálogoPlanillas_tbTipoPlanillaDetalleDeducciones_cpla_IdPlanilla" ManuallyRouted="false" />
+        <AssociationConnector Association="PruebaPlanillaModel.FK_Plani_tbCatalogoPlanillas_tbTipoPlanillaDetalleIngreso_cpla_IdPlanilla" ManuallyRouted="false" />
+        <AssociationConnector Association="PruebaPlanillaModel.FK_tbEmpleados_tbCatalogodeplanillas" ManuallyRouted="false" />
+        <AssociationConnector Association="PruebaPlanillaModel.FK_tbDeduccionesExtraordinarias_tbEquipoPorColaborador" ManuallyRouted="false" />
+        <AssociationConnector Association="PruebaPlanillaModel.FK_Plani_tbInstitucionesFinancieras_tbDeduInstiFinan_insf_IdInstituFinan" ManuallyRouted="false" />
+        <AssociationConnector Association="PruebaPlanillaModel.FK_tbDeduccionInstitucionfinanciera_tbEmpleados" ManuallyRouted="false" />
+        <AssociationConnector Association="PruebaPlanillaModel.FK_tbEmpleadoBonos_tbEmpleados" ManuallyRouted="false" />
+        <AssociationConnector Association="PruebaPlanillaModel.FK_tbEmpleadoComisiones_tbEmpleados" ManuallyRouted="false" />
+        <AssociationConnector Association="PruebaPlanillaModel.FK_Plani_tbHistorialDePago_tbHistorialDeDeduccionPago_hipa_IdHistorialdePago" ManuallyRouted="false" />
+        <AssociationConnector Association="PruebaPlanillaModel.FK_tbHistorialdeduccionpago_tbTipoPlanilladetallededuccion" ManuallyRouted="false" />
+        <AssociationConnector Association="PruebaPlanillaModel.FK_tbHistorialDeIngresosPago_tbHistorialdePago" ManuallyRouted="false" />
+        <AssociationConnector Association="PruebaPlanillaModel.FK_tbHistorialDeIngresosPago_tbTipoplanilladetalleingreso" ManuallyRouted="false" />
+        <AssociationConnector Association="PruebaPlanillaModel.FK_Plani_tbHistorialdePago_tbEmpleados_emp_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="PruebaPlanillaModel.FK_tbHistorialDePago_tbPeriodos" ManuallyRouted="false" />
+        <AssociationConnector Association="PruebaPlanillaModel.FK_tbSalarioPorHora_tbRamaActividad" ManuallyRouted="false" />
+        <AssociationConnector Association="PruebaPlanillaModel.FK_tbSalarioPorHora_tbJornadas" ManuallyRouted="false" />
+        <AssociationConnector Association="PruebaPlanillaModel.FK_emp_Id_rrhh_tbEmpleados_emp_Id" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,840 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PruebaPlanillaModelStoreContainer" CdmEntityContainer="PruebaPlanillaEntities">
+    <EntitySetMapping Name="tbCatalogoDeDeducciones">
+      <EntityTypeMapping TypeName="PruebaPlanillaModel.tbCatalogoDeDeducciones">
+        <MappingFragment StoreEntitySet="tbCatalogoDeDeducciones">
+          <ScalarProperty Name="cde_IdDeducciones" ColumnName="cde_IdDeducciones" />
+          <ScalarProperty Name="cde_DescripcionDeduccion" ColumnName="cde_DescripcionDeduccion" />
+          <ScalarProperty Name="tde_IdTipoDedu" ColumnName="tde_IdTipoDedu" />
+          <ScalarProperty Name="cde_PorcentajeColaborador" ColumnName="cde_PorcentajeColaborador" />
+          <ScalarProperty Name="cde_PorcentajeEmpresa" ColumnName="cde_PorcentajeEmpresa" />
+          <ScalarProperty Name="cde_UsuarioCrea" ColumnName="cde_UsuarioCrea" />
+          <ScalarProperty Name="cde_FechaCrea" ColumnName="cde_FechaCrea" />
+          <ScalarProperty Name="cde_UsuarioModifica" ColumnName="cde_UsuarioModifica" />
+          <ScalarProperty Name="cde_FechaModifica" ColumnName="cde_FechaModifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbCatalogoDeIngresos">
+      <EntityTypeMapping TypeName="PruebaPlanillaModel.tbCatalogoDeIngresos">
+        <MappingFragment StoreEntitySet="tbCatalogoDeIngresos">
+          <ScalarProperty Name="cin_IdIngreso" ColumnName="cin_IdIngreso" />
+          <ScalarProperty Name="cin_DescripcionIngreso" ColumnName="cin_DescripcionIngreso" />
+          <ScalarProperty Name="cin_UsuarioCrea" ColumnName="cin_UsuarioCrea" />
+          <ScalarProperty Name="cin_FechaCrea" ColumnName="cin_FechaCrea" />
+          <ScalarProperty Name="cin_UsuarioModifica" ColumnName="cin_UsuarioModifica" />
+          <ScalarProperty Name="cin_FechaModifica" ColumnName="cin_FechaModifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbCatalogoDePlanillas">
+      <EntityTypeMapping TypeName="PruebaPlanillaModel.tbCatalogoDePlanillas">
+        <MappingFragment StoreEntitySet="tbCatalogoDePlanillas">
+          <ScalarProperty Name="cpla_IdPlanilla" ColumnName="cpla_IdPlanilla" />
+          <ScalarProperty Name="cpla_DescripcionPlanilla" ColumnName="cpla_DescripcionPlanilla" />
+          <ScalarProperty Name="cpla_FrecuenciaEnDias" ColumnName="cpla_FrecuenciaEnDias" />
+          <ScalarProperty Name="cpla_UsuarioCrea" ColumnName="cpla_UsuarioCrea" />
+          <ScalarProperty Name="cpla_FechaCrea" ColumnName="cpla_FechaCrea" />
+          <ScalarProperty Name="cpla_UsuarioModifica" ColumnName="cpla_UsuarioModifica" />
+          <ScalarProperty Name="cpla_FechaModifica" ColumnName="cpla_FechaModifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbDeduccionesExtraordinarias">
+      <EntityTypeMapping TypeName="PruebaPlanillaModel.tbDeduccionesExtraordinarias">
+        <MappingFragment StoreEntitySet="tbDeduccionesExtraordinarias">
+          <ScalarProperty Name="dex_IdDeduccionesExtra" ColumnName="dex_IdDeduccionesExtra" />
+          <ScalarProperty Name="eqco_Id" ColumnName="eqco_Id" />
+          <ScalarProperty Name="dex_MontoInicial" ColumnName="dex_MontoInicial" />
+          <ScalarProperty Name="dex_MontoRestante" ColumnName="dex_MontoRestante" />
+          <ScalarProperty Name="dex_ObservacionesComentarios" ColumnName="dex_ObservacionesComentarios" />
+          <ScalarProperty Name="cde_IdDeducciones" ColumnName="cde_IdDeducciones" />
+          <ScalarProperty Name="dex_UsuarioCrea" ColumnName="dex_UsuarioCrea" />
+          <ScalarProperty Name="dex_FechaCrea" ColumnName="dex_FechaCrea" />
+          <ScalarProperty Name="dex_UsuarioModifica" ColumnName="dex_UsuarioModifica" />
+          <ScalarProperty Name="dex_FechaModifica" ColumnName="dex_FechaModifica" />
+          <ScalarProperty Name="dex_Cuota" ColumnName="dex_Cuota" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbDeduccionInstitucionFinanciera">
+      <EntityTypeMapping TypeName="PruebaPlanillaModel.tbDeduccionInstitucionFinanciera">
+        <MappingFragment StoreEntitySet="tbDeduccionInstitucionFinanciera">
+          <ScalarProperty Name="deif_IdDeduccionInstFinanciera" ColumnName="deif_IdDeduccionInstFinanciera" />
+          <ScalarProperty Name="emp_Id" ColumnName="emp_Id" />
+          <ScalarProperty Name="insf_IdInstitucionFinanciera" ColumnName="insf_IdInstitucionFinanciera" />
+          <ScalarProperty Name="deif_Monto" ColumnName="deif_Monto" />
+          <ScalarProperty Name="deif_Comentarios" ColumnName="deif_Comentarios" />
+          <ScalarProperty Name="cde_IdDeducciones" ColumnName="cde_IdDeducciones" />
+          <ScalarProperty Name="deif_UsuarioCrea" ColumnName="deif_UsuarioCrea" />
+          <ScalarProperty Name="deif_FechaCrea" ColumnName="deif_FechaCrea" />
+          <ScalarProperty Name="deif_UsuarioModifica" ColumnName="deif_UsuarioModifica" />
+          <ScalarProperty Name="deif_FechaModifica" ColumnName="deif_FechaModifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbEmpleadoBonos">
+      <EntityTypeMapping TypeName="PruebaPlanillaModel.tbEmpleadoBonos">
+        <MappingFragment StoreEntitySet="tbEmpleadoBonos">
+          <ScalarProperty Name="cb_Id" ColumnName="cb_Id" />
+          <ScalarProperty Name="emp_Id" ColumnName="emp_Id" />
+          <ScalarProperty Name="cin_IdIngreso" ColumnName="cin_IdIngreso" />
+          <ScalarProperty Name="cb_Monto" ColumnName="cb_Monto" />
+          <ScalarProperty Name="cb_FechaRegistro" ColumnName="cb_FechaRegistro" />
+          <ScalarProperty Name="cb_Pagado" ColumnName="cb_Pagado" />
+          <ScalarProperty Name="cb_UsuarioCrea" ColumnName="cb_UsuarioCrea" />
+          <ScalarProperty Name="cb_FechaCrea" ColumnName="cb_FechaCrea" />
+          <ScalarProperty Name="cb_UsuarioModifica" ColumnName="cb_UsuarioModifica" />
+          <ScalarProperty Name="cb_FechaModifica" ColumnName="cb_FechaModifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbEmpleadoComisiones">
+      <EntityTypeMapping TypeName="PruebaPlanillaModel.tbEmpleadoComisiones">
+        <MappingFragment StoreEntitySet="tbEmpleadoComisiones">
+          <ScalarProperty Name="cin_IdIngreso" ColumnName="cin_IdIngreso" />
+          <ScalarProperty Name="cc_Id" ColumnName="cc_Id" />
+          <ScalarProperty Name="emp_Id" ColumnName="emp_Id" />
+          <ScalarProperty Name="cc_Monto" ColumnName="cc_Monto" />
+          <ScalarProperty Name="cc_FechaRegistro" ColumnName="cc_FechaRegistro" />
+          <ScalarProperty Name="cc_Pagado" ColumnName="cc_Pagado" />
+          <ScalarProperty Name="cc_UsuarioCrea" ColumnName="cc_UsuarioCrea" />
+          <ScalarProperty Name="cc_FechaCrea" ColumnName="cc_FechaCrea" />
+          <ScalarProperty Name="cc_UsuarioModifica" ColumnName="cc_UsuarioModifica" />
+          <ScalarProperty Name="cc_FechaModifica" ColumnName="cc_FechaModifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbHistorialDeduccionPago">
+      <EntityTypeMapping TypeName="PruebaPlanillaModel.tbHistorialDeduccionPago">
+        <MappingFragment StoreEntitySet="tbHistorialDeduccionPago">
+          <ScalarProperty Name="hidp_IdHistorialdeDeduPago" ColumnName="hidp_IdHistorialdeDeduPago" />
+          <ScalarProperty Name="tpdd_IdPlanillaDetDeduccion" ColumnName="tpdd_IdPlanillaDetDeduccion" />
+          <ScalarProperty Name="hipa_IdHistorialDePago" ColumnName="hipa_IdHistorialDePago" />
+          <ScalarProperty Name="hidp_Total" ColumnName="hidp_Total" />
+          <ScalarProperty Name="hidp_UsuarioCrea" ColumnName="hidp_UsuarioCrea" />
+          <ScalarProperty Name="hidp_FechaCrea" ColumnName="hidp_FechaCrea" />
+          <ScalarProperty Name="hidp_UsuarioModifica" ColumnName="hidp_UsuarioModifica" />
+          <ScalarProperty Name="hidp_FechaModifica" ColumnName="hidp_FechaModifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbHistorialDeIngresosPago">
+      <EntityTypeMapping TypeName="PruebaPlanillaModel.tbHistorialDeIngresosPago">
+        <MappingFragment StoreEntitySet="tbHistorialDeIngresosPago">
+          <ScalarProperty Name="hip_IdHistorialDeIngresosPago" ColumnName="hip_IdHistorialDeIngresosPago" />
+          <ScalarProperty Name="hipa_IdHistorialDePago" ColumnName="hipa_IdHistorialDePago" />
+          <ScalarProperty Name="hip_FechaInicio" ColumnName="hip_FechaInicio" />
+          <ScalarProperty Name="hip_FechaFinal" ColumnName="hip_FechaFinal" />
+          <ScalarProperty Name="hip_UnidadesPagar" ColumnName="hip_UnidadesPagar" />
+          <ScalarProperty Name="hip_MedidaUnitaria" ColumnName="hip_MedidaUnitaria" />
+          <ScalarProperty Name="hip_TotalPagar" ColumnName="hip_TotalPagar" />
+          <ScalarProperty Name="tpdi_IdDetallePlanillaIngreso" ColumnName="tpdi_IdDetallePlanillaIngreso" />
+          <ScalarProperty Name="hip_UsuarioCrea" ColumnName="hip_UsuarioCrea" />
+          <ScalarProperty Name="hip_FechaCrea" ColumnName="hip_FechaCrea" />
+          <ScalarProperty Name="hip_UsuarioModifica" ColumnName="hip_UsuarioModifica" />
+          <ScalarProperty Name="hip_FechaModifica" ColumnName="hip_FechaModifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbHistorialDePago">
+      <EntityTypeMapping TypeName="PruebaPlanillaModel.tbHistorialDePago">
+        <MappingFragment StoreEntitySet="tbHistorialDePago">
+          <ScalarProperty Name="peri_IdPeriodo" ColumnName="peri_IdPeriodo" />
+          <ScalarProperty Name="hipa_IdHistorialDePago" ColumnName="hipa_IdHistorialDePago" />
+          <ScalarProperty Name="emp_Id" ColumnName="emp_Id" />
+          <ScalarProperty Name="hipa_SueldoNeto" ColumnName="hipa_SueldoNeto" />
+          <ScalarProperty Name="hipa_FechaInicio" ColumnName="hipa_FechaInicio" />
+          <ScalarProperty Name="hipa_FechaFin" ColumnName="hipa_FechaFin" />
+          <ScalarProperty Name="hipa_FechaPago" ColumnName="hipa_FechaPago" />
+          <ScalarProperty Name="hipa_Año" ColumnName="hipa_Año" />
+          <ScalarProperty Name="hipa_Mes" ColumnName="hipa_Mes" />
+          <ScalarProperty Name="hipa_UsuarioCrea" ColumnName="hipa_UsuarioCrea" />
+          <ScalarProperty Name="hipa_FechaCrea" ColumnName="hipa_FechaCrea" />
+          <ScalarProperty Name="hipa_UsuarioModifica" ColumnName="hipa_UsuarioModifica" />
+          <ScalarProperty Name="hipa_FechaModifica" ColumnName="hipa_FechaModifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbInstitucionesFinancieras">
+      <EntityTypeMapping TypeName="PruebaPlanillaModel.tbInstitucionesFinancieras">
+        <MappingFragment StoreEntitySet="tbInstitucionesFinancieras">
+          <ScalarProperty Name="insf_IdInstitucionFinanciera" ColumnName="insf_IdInstitucionFinanciera" />
+          <ScalarProperty Name="insf_DescInstitucionFinanc" ColumnName="insf_DescInstitucionFinanc" />
+          <ScalarProperty Name="insf_Contacto" ColumnName="insf_Contacto" />
+          <ScalarProperty Name="insf_Telefono" ColumnName="insf_Telefono" />
+          <ScalarProperty Name="insf_Correo" ColumnName="insf_Correo" />
+          <ScalarProperty Name="insf_UsuarioCrea" ColumnName="insf_UsuarioCrea" />
+          <ScalarProperty Name="insf_FechaCrea" ColumnName="insf_FechaCrea" />
+          <ScalarProperty Name="insf_UsuarioModifica" ColumnName="insf_UsuarioModifica" />
+          <ScalarProperty Name="insf_FechaModifica" ColumnName="insf_FechaModifica" />
+          <ScalarProperty Name="emp_Id" ColumnName="emp_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbRamaActividad">
+      <EntityTypeMapping TypeName="PruebaPlanillaModel.tbRamaActividad">
+        <MappingFragment StoreEntitySet="tbRamaActividad">
+          <ScalarProperty Name="rama_Id" ColumnName="rama_Id" />
+          <ScalarProperty Name="rama_Descripcion" ColumnName="rama_Descripcion" />
+          <ScalarProperty Name="rama_UsuarioCrea" ColumnName="rama_UsuarioCrea" />
+          <ScalarProperty Name="rama_FechaCrea" ColumnName="rama_FechaCrea" />
+          <ScalarProperty Name="rama_UsuarioModifica" ColumnName="rama_UsuarioModifica" />
+          <ScalarProperty Name="rama_FechaModifica" ColumnName="rama_FechaModifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbSalarioPorHora">
+      <EntityTypeMapping TypeName="PruebaPlanillaModel.tbSalarioPorHora">
+        <MappingFragment StoreEntitySet="tbSalarioPorHora">
+          <ScalarProperty Name="saph_TamanoEmpresaFinal" ColumnName="saph_TamanoEmpresaFinal" />
+          <ScalarProperty Name="saph_TamanoEmpresaInicial" ColumnName="saph_TamanoEmpresaInicial" />
+          <ScalarProperty Name="saph_Idsaph" ColumnName="saph_Idsaph" />
+          <ScalarProperty Name="rama_Id" ColumnName="rama_Id" />
+          <ScalarProperty Name="saph_SalarioMinimo" ColumnName="saph_SalarioMinimo" />
+          <ScalarProperty Name="jor_Id" ColumnName="jor_Id" />
+          <ScalarProperty Name="saph_Monto" ColumnName="saph_Monto" />
+          <ScalarProperty Name="saph_UsuarioCrea" ColumnName="saph_UsuarioCrea" />
+          <ScalarProperty Name="saph_FechaCrea" ColumnName="saph_FechaCrea" />
+          <ScalarProperty Name="saph_UsuarioModifica" ColumnName="saph_UsuarioModifica" />
+          <ScalarProperty Name="saph_FechaModifica" ColumnName="saph_FechaModifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbTechosDeducciones">
+      <EntityTypeMapping TypeName="PruebaPlanillaModel.tbTechosDeducciones">
+        <MappingFragment StoreEntitySet="tbTechosDeducciones">
+          <ScalarProperty Name="tede_Id" ColumnName="tede_Id" />
+          <ScalarProperty Name="tede_RangoInicial" ColumnName="tede_RangoInicial" />
+          <ScalarProperty Name="tede_RangoFinal" ColumnName="tede_RangoFinal" />
+          <ScalarProperty Name="tede_Porcentaje" ColumnName="tede_Porcentaje" />
+          <ScalarProperty Name="tede_UsuarioCrea" ColumnName="tede_UsuarioCrea" />
+          <ScalarProperty Name="tede_FechaCrea" ColumnName="tede_FechaCrea" />
+          <ScalarProperty Name="tede_UsuarioModifica" ColumnName="tede_UsuarioModifica" />
+          <ScalarProperty Name="tede_FechaModifica" ColumnName="tede_FechaModifica" />
+          <ScalarProperty Name="cde_IdDeducciones" ColumnName="cde_IdDeducciones" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbTipoDeduccion">
+      <EntityTypeMapping TypeName="PruebaPlanillaModel.tbTipoDeduccion">
+        <MappingFragment StoreEntitySet="tbTipoDeduccion">
+          <ScalarProperty Name="tde_IdTipoDedu" ColumnName="tde_IdTipoDedu" />
+          <ScalarProperty Name="tde_Descripcion" ColumnName="tde_Descripcion" />
+          <ScalarProperty Name="tde_UsuarioCrea" ColumnName="tde_UsuarioCrea" />
+          <ScalarProperty Name="tde_FechaCrea" ColumnName="tde_FechaCrea" />
+          <ScalarProperty Name="tde_UsuarioModifica" ColumnName="tde_UsuarioModifica" />
+          <ScalarProperty Name="tde_FechaModifica" ColumnName="tde_FechaModifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbTipoPlanillaDetalleDeduccion">
+      <EntityTypeMapping TypeName="PruebaPlanillaModel.tbTipoPlanillaDetalleDeduccion">
+        <MappingFragment StoreEntitySet="tbTipoPlanillaDetalleDeduccion">
+          <ScalarProperty Name="tpdd_IdPlanillaDetDeduccion" ColumnName="tpdd_IdPlanillaDetDeduccion" />
+          <ScalarProperty Name="cpla_IdPlanilla" ColumnName="cpla_IdPlanilla" />
+          <ScalarProperty Name="cde_IdDeducciones" ColumnName="cde_IdDeducciones" />
+          <ScalarProperty Name="tpdd_UsuarioCrea" ColumnName="tpdd_UsuarioCrea" />
+          <ScalarProperty Name="tpdd_FechaCrea" ColumnName="tpdd_FechaCrea" />
+          <ScalarProperty Name="tpdd_UsuarioModifica" ColumnName="tpdd_UsuarioModifica" />
+          <ScalarProperty Name="tpdd_FechaModifica" ColumnName="tpdd_FechaModifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbTipoPlanillaDetalleIngreso">
+      <EntityTypeMapping TypeName="PruebaPlanillaModel.tbTipoPlanillaDetalleIngreso">
+        <MappingFragment StoreEntitySet="tbTipoPlanillaDetalleIngreso">
+          <ScalarProperty Name="tpdi_IdDetallePlanillaIngreso" ColumnName="tpdi_IdDetallePlanillaIngreso" />
+          <ScalarProperty Name="cin_IdIngreso" ColumnName="cin_IdIngreso" />
+          <ScalarProperty Name="cpla_IdPlanilla" ColumnName="cpla_IdPlanilla" />
+          <ScalarProperty Name="tpdi_UsuarioCrea" ColumnName="tpdi_UsuarioCrea" />
+          <ScalarProperty Name="tpdi_FechaCrea" ColumnName="tpdi_FechaCrea" />
+          <ScalarProperty Name="tpdi_UsuarioModifica" ColumnName="tpdi_UsuarioModifica" />
+          <ScalarProperty Name="tpdi_FechaModifica" ColumnName="tpdi_FechaModifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbAreas">
+      <EntityTypeMapping TypeName="PruebaPlanillaModel.tbAreas">
+        <MappingFragment StoreEntitySet="tbAreas">
+          <ScalarProperty Name="depto_Id" ColumnName="depto_Id" />
+          <ScalarProperty Name="car_id" ColumnName="car_id" />
+          <ScalarProperty Name="area_Id" ColumnName="area_Id" />
+          <ScalarProperty Name="area_Descripcion" ColumnName="area_Descripcion" />
+          <ScalarProperty Name="area_Estado" ColumnName="area_Estado" />
+          <ScalarProperty Name="area_Razoninactiva" ColumnName="area_Razoninactiva" />
+          <ScalarProperty Name="area_Usuariocrea" ColumnName="area_Usuariocrea" />
+          <ScalarProperty Name="area_Fechacrea" ColumnName="area_Fechacrea" />
+          <ScalarProperty Name="area_Usuariomodifica" ColumnName="area_Usuariomodifica" />
+          <ScalarProperty Name="area_Fechamodifica" ColumnName="area_Fechamodifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbCargos">
+      <EntityTypeMapping TypeName="PruebaPlanillaModel.tbCargos">
+        <MappingFragment StoreEntitySet="tbCargos">
+          <ScalarProperty Name="car_Usuariocrea" ColumnName="car_Usuariocrea" />
+          <ScalarProperty Name="car_Estado" ColumnName="car_Estado" />
+          <ScalarProperty Name="car_Id" ColumnName="car_Id" />
+          <ScalarProperty Name="car_Descripcion" ColumnName="car_Descripcion" />
+          <ScalarProperty Name="car_Fechacrea" ColumnName="car_Fechacrea" />
+          <ScalarProperty Name="car_Usuariomodifica" ColumnName="car_Usuariomodifica" />
+          <ScalarProperty Name="car_Fechamodifica" ColumnName="car_Fechamodifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbCompetencias">
+      <EntityTypeMapping TypeName="PruebaPlanillaModel.tbCompetencias">
+        <MappingFragment StoreEntitySet="tbCompetencias">
+          <ScalarProperty Name="comp_Id" ColumnName="comp_Id" />
+          <ScalarProperty Name="comp_Descripcion" ColumnName="comp_Descripcion" />
+          <ScalarProperty Name="comp_UsuarioCrea" ColumnName="comp_UsuarioCrea" />
+          <ScalarProperty Name="comp_FechaCrea" ColumnName="comp_FechaCrea" />
+          <ScalarProperty Name="comp_UsuarioModifica" ColumnName="comp_UsuarioModifica" />
+          <ScalarProperty Name="comp_FechaModifica" ColumnName="comp_FechaModifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbCompetenciasRequisicion">
+      <EntityTypeMapping TypeName="PruebaPlanillaModel.tbCompetenciasRequisicion">
+        <MappingFragment StoreEntitySet="tbCompetenciasRequisicion">
+          <ScalarProperty Name="creq_Id" ColumnName="creq_Id" />
+          <ScalarProperty Name="req_Id" ColumnName="req_Id" />
+          <ScalarProperty Name="comp_Id" ColumnName="comp_Id" />
+          <ScalarProperty Name="creq_UsuarioCrea" ColumnName="creq_UsuarioCrea" />
+          <ScalarProperty Name="creq_FechaCrea" ColumnName="creq_FechaCrea" />
+          <ScalarProperty Name="creq_UsuarioModifica" ColumnName="creq_UsuarioModifica" />
+          <ScalarProperty Name="req_FechaModifica" ColumnName="req_FechaModifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbDepartamentos">
+      <EntityTypeMapping TypeName="PruebaPlanillaModel.tbDepartamentos">
+        <MappingFragment StoreEntitySet="tbDepartamentos">
+          <ScalarProperty Name="suc_Id" ColumnName="suc_Id" />
+          <ScalarProperty Name="depto_Id" ColumnName="depto_Id" />
+          <ScalarProperty Name="car_Id" ColumnName="car_Id" />
+          <ScalarProperty Name="depto_Descripcion" ColumnName="depto_Descripcion" />
+          <ScalarProperty Name="depto_UsuarioCrea" ColumnName="depto_UsuarioCrea" />
+          <ScalarProperty Name="depto_Fechacrea" ColumnName="depto_Fechacrea" />
+          <ScalarProperty Name="depto_Usuariomodifica" ColumnName="depto_Usuariomodifica" />
+          <ScalarProperty Name="depto_Fechamodifica" ColumnName="depto_Fechamodifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbEmpleados">
+      <EntityTypeMapping TypeName="PruebaPlanillaModel.tbEmpleados">
+        <MappingFragment StoreEntitySet="tbEmpleados">
+          <ScalarProperty Name="emp_CargoAnterior" ColumnName="emp_CargoAnterior" />
+          <ScalarProperty Name="emp_Id" ColumnName="emp_Id" />
+          <ScalarProperty Name="per_Id" ColumnName="per_Id" />
+          <ScalarProperty Name="car_Id" ColumnName="car_Id" />
+          <ScalarProperty Name="area_Id" ColumnName="area_Id" />
+          <ScalarProperty Name="jor_id" ColumnName="jor_id" />
+          <ScalarProperty Name="emp_Reingreso" ColumnName="emp_Reingreso" />
+          <ScalarProperty Name="emp_Fechaingreso" ColumnName="emp_Fechaingreso" />
+          <ScalarProperty Name="emp_Estado" ColumnName="emp_Estado" />
+          <ScalarProperty Name="emp_Razoninactivacion" ColumnName="emp_Razoninactivacion" />
+          <ScalarProperty Name="emp_Razonsalida" ColumnName="emp_Razonsalida" />
+          <ScalarProperty Name="emp_Fechadesalida" ColumnName="emp_Fechadesalida" />
+          <ScalarProperty Name="cpla_IdPlanilla" ColumnName="cpla_IdPlanilla" />
+          <ScalarProperty Name="emp_Usuariocrea" ColumnName="emp_Usuariocrea" />
+          <ScalarProperty Name="emp_Fechacrea" ColumnName="emp_Fechacrea" />
+          <ScalarProperty Name="emp_Usuariomodifica" ColumnName="emp_Usuariomodifica" />
+          <ScalarProperty Name="emp_Fechamodifica" ColumnName="emp_Fechamodifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbEmpleadosAreas">
+      <EntityTypeMapping TypeName="PruebaPlanillaModel.tbEmpleadosAreas">
+        <MappingFragment StoreEntitySet="tbEmpleadosAreas">
+          <ScalarProperty Name="coar_Id" ColumnName="coar_Id" />
+          <ScalarProperty Name="emp_Id" ColumnName="emp_Id" />
+          <ScalarProperty Name="are_Id" ColumnName="are_Id" />
+          <ScalarProperty Name="coar_UsuarioCrea" ColumnName="coar_UsuarioCrea" />
+          <ScalarProperty Name="coar_FechaCrea" ColumnName="coar_FechaCrea" />
+          <ScalarProperty Name="coar_UsuarioModifica" ColumnName="coar_UsuarioModifica" />
+          <ScalarProperty Name="coar_FechaModifica" ColumnName="coar_FechaModifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbEmpresas">
+      <EntityTypeMapping TypeName="PruebaPlanillaModel.tbEmpresas">
+        <MappingFragment StoreEntitySet="tbEmpresas">
+          <ScalarProperty Name="empr_Id" ColumnName="empr_Id" />
+          <ScalarProperty Name="empr_Nombre" ColumnName="empr_Nombre" />
+          <ScalarProperty Name="empr_UsuarioCrea" ColumnName="empr_UsuarioCrea" />
+          <ScalarProperty Name="empr_FechaCrea" ColumnName="empr_FechaCrea" />
+          <ScalarProperty Name="empr_UsuarioModifica" ColumnName="empr_UsuarioModifica" />
+          <ScalarProperty Name="empr_FechaModifica" ColumnName="empr_FechaModifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbEquipoEmpleados">
+      <EntityTypeMapping TypeName="PruebaPlanillaModel.tbEquipoEmpleados">
+        <MappingFragment StoreEntitySet="tbEquipoEmpleados">
+          <ScalarProperty Name="eqco_Fecha" ColumnName="eqco_Fecha" />
+          <ScalarProperty Name="eqco_Id" ColumnName="eqco_Id" />
+          <ScalarProperty Name="emp_Id" ColumnName="emp_Id" />
+          <ScalarProperty Name="eqtra_Id" ColumnName="eqtra_Id" />
+          <ScalarProperty Name="eqco_UsuarioCrea" ColumnName="eqco_UsuarioCrea" />
+          <ScalarProperty Name="eqco_FechaCrea" ColumnName="eqco_FechaCrea" />
+          <ScalarProperty Name="eqco_UsuarioModifica" ColumnName="eqco_UsuarioModifica" />
+          <ScalarProperty Name="eqco_FechaModifica" ColumnName="eqco_FechaModifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbEquipoTrabajo">
+      <EntityTypeMapping TypeName="PruebaPlanillaModel.tbEquipoTrabajo">
+        <MappingFragment StoreEntitySet="tbEquipoTrabajo">
+          <ScalarProperty Name="eqtra_Id" ColumnName="eqtra_Id" />
+          <ScalarProperty Name="eqtra_codigo" ColumnName="eqtra_codigo" />
+          <ScalarProperty Name="eqtra_Descripcion" ColumnName="eqtra_Descripcion" />
+          <ScalarProperty Name="eqtra_observacion" ColumnName="eqtra_observacion" />
+          <ScalarProperty Name="eqtra_util" ColumnName="eqtra_util" />
+          <ScalarProperty Name="eqtra_UsuarioCrea" ColumnName="eqtra_UsuarioCrea" />
+          <ScalarProperty Name="eqtra_FechaCrea" ColumnName="eqtra_FechaCrea" />
+          <ScalarProperty Name="eqtra_UsuarioModifica" ColumnName="eqtra_UsuarioModifica" />
+          <ScalarProperty Name="eqtra_FechaModifica" ColumnName="eqtra_FechaModifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbFaseSeleccion">
+      <EntityTypeMapping TypeName="PruebaPlanillaModel.tbFaseSeleccion">
+        <MappingFragment StoreEntitySet="tbFaseSeleccion">
+          <ScalarProperty Name="fsel_FechaModifica" ColumnName="fsel_FechaModifica" />
+          <ScalarProperty Name="fsel_UsuarioModifica" ColumnName="fsel_UsuarioModifica" />
+          <ScalarProperty Name="fsel_FechaCrea" ColumnName="fsel_FechaCrea" />
+          <ScalarProperty Name="fsel_UsuarioCrea" ColumnName="fsel_UsuarioCrea" />
+          <ScalarProperty Name="fsel_Id" ColumnName="fsel_Id" />
+          <ScalarProperty Name="fare_Id" ColumnName="fare_Id" />
+          <ScalarProperty Name="fare_fecha" ColumnName="fare_fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbFasesReclutamiento">
+      <EntityTypeMapping TypeName="PruebaPlanillaModel.tbFasesReclutamiento">
+        <MappingFragment StoreEntitySet="tbFasesReclutamiento">
+          <ScalarProperty Name="fare_Id" ColumnName="fare_Id" />
+          <ScalarProperty Name="fare_Descripcion" ColumnName="fare_Descripcion" />
+          <ScalarProperty Name="fare_Estado" ColumnName="fare_Estado" />
+          <ScalarProperty Name="fare_UsuarioCrea" ColumnName="fare_UsuarioCrea" />
+          <ScalarProperty Name="fare_FechaCrea" ColumnName="fare_FechaCrea" />
+          <ScalarProperty Name="fare_UsuarioModifica" ColumnName="fare_UsuarioModifica" />
+          <ScalarProperty Name="fare_FechaModifica" ColumnName="fare_FechaModifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbHabilidades">
+      <EntityTypeMapping TypeName="PruebaPlanillaModel.tbHabilidades">
+        <MappingFragment StoreEntitySet="tbHabilidades">
+          <ScalarProperty Name="habi_Id" ColumnName="habi_Id" />
+          <ScalarProperty Name="habi_Descripcion" ColumnName="habi_Descripcion" />
+          <ScalarProperty Name="habi_UsuarioCrea" ColumnName="habi_UsuarioCrea" />
+          <ScalarProperty Name="habi_FechaCrea" ColumnName="habi_FechaCrea" />
+          <ScalarProperty Name="habi_UsuarioModifica" ColumnName="habi_UsuarioModifica" />
+          <ScalarProperty Name="habi_FechaModifica" ColumnName="habi_FechaModifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbHabilidadesPersona">
+      <EntityTypeMapping TypeName="PruebaPlanillaModel.tbHabilidadesPersona">
+        <MappingFragment StoreEntitySet="tbHabilidadesPersona">
+          <ScalarProperty Name="hape_Id" ColumnName="hape_Id" />
+          <ScalarProperty Name="per_Id" ColumnName="per_Id" />
+          <ScalarProperty Name="habi_Id" ColumnName="habi_Id" />
+          <ScalarProperty Name="hape_UsuarioCrea" ColumnName="hape_UsuarioCrea" />
+          <ScalarProperty Name="hape_FechaCrea" ColumnName="hape_FechaCrea" />
+          <ScalarProperty Name="hape_UsuarioModifica" ColumnName="hape_UsuarioModifica" />
+          <ScalarProperty Name="hape_FechaModifica" ColumnName="hape_FechaModifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbHabilidadesRequisicion">
+      <EntityTypeMapping TypeName="PruebaPlanillaModel.tbHabilidadesRequisicion">
+        <MappingFragment StoreEntitySet="tbHabilidadesRequisicion">
+          <ScalarProperty Name="hreq_Id" ColumnName="hreq_Id" />
+          <ScalarProperty Name="req_Id" ColumnName="req_Id" />
+          <ScalarProperty Name="habi_Id" ColumnName="habi_Id" />
+          <ScalarProperty Name="hreq_UsuarioCrea" ColumnName="hreq_UsuarioCrea" />
+          <ScalarProperty Name="hreq_FechaCrea" ColumnName="hreq_FechaCrea" />
+          <ScalarProperty Name="hreq_UsuarioModifica" ColumnName="hreq_UsuarioModifica" />
+          <ScalarProperty Name="hreq_FechaModifica" ColumnName="hreq_FechaModifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbHistorialAmonestaciones">
+      <EntityTypeMapping TypeName="PruebaPlanillaModel.tbHistorialAmonestaciones">
+        <MappingFragment StoreEntitySet="tbHistorialAmonestaciones">
+          <ScalarProperty Name="hamo_Anterior" ColumnName="hamo_Anterior" />
+          <ScalarProperty Name="hamo_Id" ColumnName="hamo_Id" />
+          <ScalarProperty Name="emp_Id" ColumnName="emp_Id" />
+          <ScalarProperty Name="tamo_Id" ColumnName="tamo_Id" />
+          <ScalarProperty Name="hamo_Observacion" ColumnName="hamo_Observacion" />
+          <ScalarProperty Name="hamo_UsuarioCrea" ColumnName="hamo_UsuarioCrea" />
+          <ScalarProperty Name="hamo_FechaCrea" ColumnName="hamo_FechaCrea" />
+          <ScalarProperty Name="hamo_UsuarioModifica" ColumnName="hamo_UsuarioModifica" />
+          <ScalarProperty Name="hamo_FechaModifica" ColumnName="hamo_FechaModifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbHistorialAudienciaDescargo">
+      <EntityTypeMapping TypeName="PruebaPlanillaModel.tbHistorialAudienciaDescargo">
+        <MappingFragment StoreEntitySet="tbHistorialAudienciaDescargo">
+          <ScalarProperty Name="aude_Id" ColumnName="aude_Id" />
+          <ScalarProperty Name="emp_Id" ColumnName="emp_Id" />
+          <ScalarProperty Name="aude_Descripcion" ColumnName="aude_Descripcion" />
+          <ScalarProperty Name="aude_Fechaaudiencia" ColumnName="aude_Fechaaudiencia" />
+          <ScalarProperty Name="aude_Testigo" ColumnName="aude_Testigo" />
+          <ScalarProperty Name="aude_Direccionarchivo" ColumnName="aude_Direccionarchivo" />
+          <ScalarProperty Name="aude_UsuarioCrea" ColumnName="aude_UsuarioCrea" />
+          <ScalarProperty Name="aude_Fechacrea" ColumnName="aude_Fechacrea" />
+          <ScalarProperty Name="aude_UsuarioModifica" ColumnName="aude_UsuarioModifica" />
+          <ScalarProperty Name="aude_Fechamodifica" ColumnName="aude_Fechamodifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbHistorialContrataciones">
+      <EntityTypeMapping TypeName="PruebaPlanillaModel.tbHistorialContrataciones">
+        <MappingFragment StoreEntitySet="tbHistorialContrataciones">
+          <ScalarProperty Name="hcon_Id" ColumnName="hcon_Id" />
+          <ScalarProperty Name="per_Id" ColumnName="per_Id" />
+          <ScalarProperty Name="hcon_FechaContratado" ColumnName="hcon_FechaContratado" />
+          <ScalarProperty Name="area_Id" ColumnName="area_Id" />
+          <ScalarProperty Name="hcon_UsuarioCrea" ColumnName="hcon_UsuarioCrea" />
+          <ScalarProperty Name="hcon_FechaCrea" ColumnName="hcon_FechaCrea" />
+          <ScalarProperty Name="hcon_UsuarioModifica" ColumnName="hcon_UsuarioModifica" />
+          <ScalarProperty Name="hcon_FechaModifica" ColumnName="hcon_FechaModifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbHistorialHorasTrabajadas">
+      <EntityTypeMapping TypeName="PruebaPlanillaModel.tbHistorialHorasTrabajadas">
+        <MappingFragment StoreEntitySet="tbHistorialHorasTrabajadas">
+          <ScalarProperty Name="htra_Id" ColumnName="htra_Id" />
+          <ScalarProperty Name="emp_Id" ColumnName="emp_Id" />
+          <ScalarProperty Name="tiho_id" ColumnName="tiho_id" />
+          <ScalarProperty Name="jor_id" ColumnName="jor_id" />
+          <ScalarProperty Name="htra_Cantidadhoras" ColumnName="htra_Cantidadhoras" />
+          <ScalarProperty Name="htra_Fecha" ColumnName="htra_Fecha" />
+          <ScalarProperty Name="htra_UsuarioCrea" ColumnName="htra_UsuarioCrea" />
+          <ScalarProperty Name="htra_FechaCrea" ColumnName="htra_FechaCrea" />
+          <ScalarProperty Name="htra_UsuarioModifica" ColumnName="htra_UsuarioModifica" />
+          <ScalarProperty Name="htra_FechaModifica" ColumnName="htra_FechaModifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbHistorialincapacidades">
+      <EntityTypeMapping TypeName="PruebaPlanillaModel.tbHistorialincapacidades">
+        <MappingFragment StoreEntitySet="tbHistorialincapacidades">
+          <ScalarProperty Name="hinc_PorcentajeIndemnizado" ColumnName="hinc_PorcentajeIndemnizado" />
+          <ScalarProperty Name="hinc_Id" ColumnName="hinc_Id" />
+          <ScalarProperty Name="Emp_Id" ColumnName="Emp_Id" />
+          <ScalarProperty Name="ticn_Id" ColumnName="ticn_Id" />
+          <ScalarProperty Name="hinc_Observacion" ColumnName="hinc_Observacion" />
+          <ScalarProperty Name="hinc_Fechainicio" ColumnName="hinc_Fechainicio" />
+          <ScalarProperty Name="hinc_Fechafin" ColumnName="hinc_Fechafin" />
+          <ScalarProperty Name="hinc_Usuariocrea" ColumnName="hinc_Usuariocrea" />
+          <ScalarProperty Name="hinc_Fechacrea" ColumnName="hinc_Fechacrea" />
+          <ScalarProperty Name="hinc_Usuariomodifica" ColumnName="hinc_Usuariomodifica" />
+          <ScalarProperty Name="hinc_Fechamodifica" ColumnName="hinc_Fechamodifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbHistorialLiquidaciones">
+      <EntityTypeMapping TypeName="PruebaPlanillaModel.tbHistorialLiquidaciones">
+        <MappingFragment StoreEntitySet="tbHistorialLiquidaciones">
+          <ScalarProperty Name="hliq_Id" ColumnName="hliq_Id" />
+          <ScalarProperty Name="emp_Id" ColumnName="emp_Id" />
+          <ScalarProperty Name="hliq_Observaciones" ColumnName="hliq_Observaciones" />
+          <ScalarProperty Name="hliq_UsuarioCrea" ColumnName="hliq_UsuarioCrea" />
+          <ScalarProperty Name="hliq_FechaCrea" ColumnName="hliq_FechaCrea" />
+          <ScalarProperty Name="hliq_UsuarioModifica" ColumnName="hliq_UsuarioModifica" />
+          <ScalarProperty Name="hliq_FechaModifica" ColumnName="hliq_FechaModifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbHistorialPermisos">
+      <EntityTypeMapping TypeName="PruebaPlanillaModel.tbHistorialPermisos">
+        <MappingFragment StoreEntitySet="tbHistorialPermisos">
+          <ScalarProperty Name="hper_Id" ColumnName="hper_Id" />
+          <ScalarProperty Name="emp_Id" ColumnName="emp_Id" />
+          <ScalarProperty Name="tper_Id" ColumnName="tper_Id" />
+          <ScalarProperty Name="hper_fecha" ColumnName="hper_fecha" />
+          <ScalarProperty Name="hper_duracion" ColumnName="hper_duracion" />
+          <ScalarProperty Name="hper_Observacion" ColumnName="hper_Observacion" />
+          <ScalarProperty Name="hper_UsuarioCrea" ColumnName="hper_UsuarioCrea" />
+          <ScalarProperty Name="hper_FechaCrea" ColumnName="hper_FechaCrea" />
+          <ScalarProperty Name="hper_UsuarioModifica" ColumnName="hper_UsuarioModifica" />
+          <ScalarProperty Name="hper_FechaModifica" ColumnName="hper_FechaModifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbHistorialRefrendamientos">
+      <EntityTypeMapping TypeName="PruebaPlanillaModel.tbHistorialRefrendamientos">
+        <MappingFragment StoreEntitySet="tbHistorialRefrendamientos">
+          <ScalarProperty Name="href_Id" ColumnName="href_Id" />
+          <ScalarProperty Name="emp_Id" ColumnName="emp_Id" />
+          <ScalarProperty Name="href_Archivo" ColumnName="href_Archivo" />
+          <ScalarProperty Name="href_FechaRefrendado" ColumnName="href_FechaRefrendado" />
+          <ScalarProperty Name="href_UsuarioCrea" ColumnName="href_UsuarioCrea" />
+          <ScalarProperty Name="href_FechaCrea" ColumnName="href_FechaCrea" />
+          <ScalarProperty Name="href_UsuarioModifica" ColumnName="href_UsuarioModifica" />
+          <ScalarProperty Name="href_FechaModifica" ColumnName="href_FechaModifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbHistorialVacaciones">
+      <EntityTypeMapping TypeName="PruebaPlanillaModel.tbHistorialVacaciones">
+        <MappingFragment StoreEntitySet="tbHistorialVacaciones">
+          <ScalarProperty Name="hvac_DiasTomados" ColumnName="hvac_DiasTomados" />
+          <ScalarProperty Name="hvac_Id" ColumnName="hvac_Id" />
+          <ScalarProperty Name="emp_Id" ColumnName="emp_Id" />
+          <ScalarProperty Name="hvac_Fechanainicio" ColumnName="hvac_Fechanainicio" />
+          <ScalarProperty Name="hvac_MesVacaciones" ColumnName="hvac_MesVacaciones" />
+          <ScalarProperty Name="hvac_AnioVacaciones" ColumnName="hvac_AnioVacaciones" />
+          <ScalarProperty Name="hvac_Fechafin" ColumnName="hvac_Fechafin" />
+          <ScalarProperty Name="hvac_UsuarioCrea" ColumnName="hvac_UsuarioCrea" />
+          <ScalarProperty Name="hvac_FechaCrea" ColumnName="hvac_FechaCrea" />
+          <ScalarProperty Name="hvac_UsuarioModifica" ColumnName="hvac_UsuarioModifica" />
+          <ScalarProperty Name="hvac_FechaModifica" ColumnName="hvac_FechaModifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbHorarios">
+      <EntityTypeMapping TypeName="PruebaPlanillaModel.tbHorarios">
+        <MappingFragment StoreEntitySet="tbHorarios">
+          <ScalarProperty Name="hor_Id" ColumnName="hor_Id" />
+          <ScalarProperty Name="hor_Descripcion" ColumnName="hor_Descripcion" />
+          <ScalarProperty Name="hor_HoraInicio" ColumnName="hor_HoraInicio" />
+          <ScalarProperty Name="hor_HoraFin" ColumnName="hor_HoraFin" />
+          <ScalarProperty Name="hor_DuracionHoras" ColumnName="hor_DuracionHoras" />
+          <ScalarProperty Name="hor_UsuarioCrea" ColumnName="hor_UsuarioCrea" />
+          <ScalarProperty Name="hor_FechaCrea" ColumnName="hor_FechaCrea" />
+          <ScalarProperty Name="hor_UsuarioModifica" ColumnName="hor_UsuarioModifica" />
+          <ScalarProperty Name="hor_FechaModifica" ColumnName="hor_FechaModifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbJornadas">
+      <EntityTypeMapping TypeName="PruebaPlanillaModel.tbJornadas">
+        <MappingFragment StoreEntitySet="tbJornadas">
+          <ScalarProperty Name="jor_Id" ColumnName="jor_Id" />
+          <ScalarProperty Name="hor_Id" ColumnName="hor_Id" />
+          <ScalarProperty Name="jor_Descripcion" ColumnName="jor_Descripcion" />
+          <ScalarProperty Name="jor_UsuarioCrea" ColumnName="jor_UsuarioCrea" />
+          <ScalarProperty Name="jor_FechaCrea" ColumnName="jor_FechaCrea" />
+          <ScalarProperty Name="jor_UsuarioModifica" ColumnName="jor_UsuarioModifica" />
+          <ScalarProperty Name="jor_FechaModifica" ColumnName="jor_FechaModifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbPersonas">
+      <EntityTypeMapping TypeName="PruebaPlanillaModel.tbPersonas">
+        <MappingFragment StoreEntitySet="tbPersonas">
+          <ScalarProperty Name="per_Id" ColumnName="per_Id" />
+          <ScalarProperty Name="per_Identidad" ColumnName="per_Identidad" />
+          <ScalarProperty Name="per_Nombres" ColumnName="per_Nombres" />
+          <ScalarProperty Name="per_Apellidos" ColumnName="per_Apellidos" />
+          <ScalarProperty Name="per_FechaNacimiento" ColumnName="per_FechaNacimiento" />
+          <ScalarProperty Name="per_Sexo" ColumnName="per_Sexo" />
+          <ScalarProperty Name="per_Edad" ColumnName="per_Edad" />
+          <ScalarProperty Name="per_Direccion" ColumnName="per_Direccion" />
+          <ScalarProperty Name="per_Telefono" ColumnName="per_Telefono" />
+          <ScalarProperty Name="per_CorreoElectronico" ColumnName="per_CorreoElectronico" />
+          <ScalarProperty Name="per_EstadoCivil" ColumnName="per_EstadoCivil" />
+          <ScalarProperty Name="per_Nacionalidad" ColumnName="per_Nacionalidad" />
+          <ScalarProperty Name="per_TipoSangre" ColumnName="per_TipoSangre" />
+          <ScalarProperty Name="per_UsuarioCrea" ColumnName="per_UsuarioCrea" />
+          <ScalarProperty Name="per_FechaCrea" ColumnName="per_FechaCrea" />
+          <ScalarProperty Name="per_UsuarioModifica" ColumnName="per_UsuarioModifica" />
+          <ScalarProperty Name="per_FechaModifica" ColumnName="per_FechaModifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbPrestaciones">
+      <EntityTypeMapping TypeName="PruebaPlanillaModel.tbPrestaciones">
+        <MappingFragment StoreEntitySet="tbPrestaciones">
+          <ScalarProperty Name="pres_Id" ColumnName="pres_Id" />
+          <ScalarProperty Name="pres_DerechoPreaviso" ColumnName="pres_DerechoPreaviso" />
+          <ScalarProperty Name="pres_Preaviso" ColumnName="pres_Preaviso" />
+          <ScalarProperty Name="pres_DecimoTercer" ColumnName="pres_DecimoTercer" />
+          <ScalarProperty Name="pres_Catorceabo" ColumnName="pres_Catorceabo" />
+          <ScalarProperty Name="pres_UsuarioCrea" ColumnName="pres_UsuarioCrea" />
+          <ScalarProperty Name="pres_FechaCrea" ColumnName="pres_FechaCrea" />
+          <ScalarProperty Name="pres_UsuarioModifica" ColumnName="pres_UsuarioModifica" />
+          <ScalarProperty Name="pres_FechaModifica" ColumnName="pres_FechaModifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbRequisiciones">
+      <EntityTypeMapping TypeName="PruebaPlanillaModel.tbRequisiciones">
+        <MappingFragment StoreEntitySet="tbRequisiciones">
+          <ScalarProperty Name="req_Id" ColumnName="req_Id" />
+          <ScalarProperty Name="req_Edad" ColumnName="req_Edad" />
+          <ScalarProperty Name="req_Experiencia" ColumnName="req_Experiencia" />
+          <ScalarProperty Name="req_Genero" ColumnName="req_Genero" />
+          <ScalarProperty Name="req_Descripcion" ColumnName="req_Descripcion" />
+          <ScalarProperty Name="req_Vacantes" ColumnName="req_Vacantes" />
+          <ScalarProperty Name="req_FechaRequisicion" ColumnName="req_FechaRequisicion" />
+          <ScalarProperty Name="req_FechaContratacion" ColumnName="req_FechaContratacion" />
+          <ScalarProperty Name="req_UsuarioCrea" ColumnName="req_UsuarioCrea" />
+          <ScalarProperty Name="req_FechaCrea" ColumnName="req_FechaCrea" />
+          <ScalarProperty Name="req_UsuarioModifica" ColumnName="req_UsuarioModifica" />
+          <ScalarProperty Name="req_FechaModifica" ColumnName="req_FechaModifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbRequisicionPersonal">
+      <EntityTypeMapping TypeName="PruebaPlanillaModel.tbRequisicionPersonal">
+        <MappingFragment StoreEntitySet="tbRequisicionPersonal">
+          <ScalarProperty Name="rper_Id" ColumnName="rper_Id" />
+          <ScalarProperty Name="emp_Id" ColumnName="emp_Id" />
+          <ScalarProperty Name="area_Id" ColumnName="area_Id" />
+          <ScalarProperty Name="rper_plaza" ColumnName="rper_plaza" />
+          <ScalarProperty Name="rper_Descripcion" ColumnName="rper_Descripcion" />
+          <ScalarProperty Name="rper_Usuariocrea" ColumnName="rper_Usuariocrea" />
+          <ScalarProperty Name="rper_Fechacrea" ColumnName="rper_Fechacrea" />
+          <ScalarProperty Name="rper_Usuariomodifica" ColumnName="rper_Usuariomodifica" />
+          <ScalarProperty Name="rper_Fechamodifica" ColumnName="rper_Fechamodifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbSeleccionCandidatos">
+      <EntityTypeMapping TypeName="PruebaPlanillaModel.tbSeleccionCandidatos">
+        <MappingFragment StoreEntitySet="tbSeleccionCandidatos">
+          <ScalarProperty Name="fare_Id" ColumnName="fare_Id" />
+          <ScalarProperty Name="scan_Id" ColumnName="scan_Id" />
+          <ScalarProperty Name="per_Id" ColumnName="per_Id" />
+          <ScalarProperty Name="scan_fecha" ColumnName="scan_fecha" />
+          <ScalarProperty Name="rper_Id" ColumnName="rper_Id" />
+          <ScalarProperty Name="scan_Usuariocrea" ColumnName="scan_Usuariocrea" />
+          <ScalarProperty Name="scan_Fechacrea" ColumnName="scan_Fechacrea" />
+          <ScalarProperty Name="scan_Usuariomodifica" ColumnName="scan_Usuariomodifica" />
+          <ScalarProperty Name="scan_Fechamodifica" ColumnName="scan_Fechamodifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbSucursales">
+      <EntityTypeMapping TypeName="PruebaPlanillaModel.tbSucursales">
+        <MappingFragment StoreEntitySet="tbSucursales">
+          <ScalarProperty Name="suc_Id" ColumnName="suc_Id" />
+          <ScalarProperty Name="emp_Id" ColumnName="emp_Id" />
+          <ScalarProperty Name="empr_Id" ColumnName="empr_Id" />
+          <ScalarProperty Name="mun_Codigo" ColumnName="mun_Codigo" />
+          <ScalarProperty Name="bod_Id" ColumnName="bod_Id" />
+          <ScalarProperty Name="pemi_Id" ColumnName="pemi_Id" />
+          <ScalarProperty Name="suc_Descripcion" ColumnName="suc_Descripcion" />
+          <ScalarProperty Name="suc_Correo" ColumnName="suc_Correo" />
+          <ScalarProperty Name="suc_Direccion" ColumnName="suc_Direccion" />
+          <ScalarProperty Name="suc_Telefono" ColumnName="suc_Telefono" />
+          <ScalarProperty Name="suc_UsuarioCrea" ColumnName="suc_UsuarioCrea" />
+          <ScalarProperty Name="suc_FechaCrea" ColumnName="suc_FechaCrea" />
+          <ScalarProperty Name="suc_UsuarioModifica" ColumnName="suc_UsuarioModifica" />
+          <ScalarProperty Name="suc_FechaModifica" ColumnName="suc_FechaModifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbTipoAmonestaciones">
+      <EntityTypeMapping TypeName="PruebaPlanillaModel.tbTipoAmonestaciones">
+        <MappingFragment StoreEntitySet="tbTipoAmonestaciones">
+          <ScalarProperty Name="tamo_Id" ColumnName="tamo_Id" />
+          <ScalarProperty Name="tamo_Descripcion" ColumnName="tamo_Descripcion" />
+          <ScalarProperty Name="tamo_UsuarioCrea" ColumnName="tamo_UsuarioCrea" />
+          <ScalarProperty Name="tamo_FechaCrea" ColumnName="tamo_FechaCrea" />
+          <ScalarProperty Name="tamo_UsuarioModifica" ColumnName="tamo_UsuarioModifica" />
+          <ScalarProperty Name="tamo_FechaModifica" ColumnName="tamo_FechaModifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbTipoHoras">
+      <EntityTypeMapping TypeName="PruebaPlanillaModel.tbTipoHoras">
+        <MappingFragment StoreEntitySet="tbTipoHoras">
+          <ScalarProperty Name="tiho_Id" ColumnName="tiho_Id" />
+          <ScalarProperty Name="tiho_Descripcion" ColumnName="tiho_Descripcion" />
+          <ScalarProperty Name="tiho_recargo" ColumnName="tiho_recargo" />
+          <ScalarProperty Name="tiho_Estado" ColumnName="tiho_Estado" />
+          <ScalarProperty Name="tiho_UsuarioCrea" ColumnName="tiho_UsuarioCrea" />
+          <ScalarProperty Name="tiho_FechaCrea" ColumnName="tiho_FechaCrea" />
+          <ScalarProperty Name="tiho_UsuarioModifica" ColumnName="tiho_UsuarioModifica" />
+          <ScalarProperty Name="tiho_FechaModifica" ColumnName="tiho_FechaModifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbTipoIncapacidades">
+      <EntityTypeMapping TypeName="PruebaPlanillaModel.tbTipoIncapacidades">
+        <MappingFragment StoreEntitySet="tbTipoIncapacidades">
+          <ScalarProperty Name="ticn_Id" ColumnName="ticn_Id" />
+          <ScalarProperty Name="ticn_Descripcion" ColumnName="ticn_Descripcion" />
+          <ScalarProperty Name="ticn_Usuariocrea" ColumnName="ticn_Usuariocrea" />
+          <ScalarProperty Name="ticn_Fechacrea" ColumnName="ticn_Fechacrea" />
+          <ScalarProperty Name="ticn_Usuariomodifica" ColumnName="ticn_Usuariomodifica" />
+          <ScalarProperty Name="ticn_Fechamodifica" ColumnName="ticn_Fechamodifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbTipoMonedas">
+      <EntityTypeMapping TypeName="PruebaPlanillaModel.tbTipoMonedas">
+        <MappingFragment StoreEntitySet="tbTipoMonedas">
+          <ScalarProperty Name="tmon_Id" ColumnName="tmon_Id" />
+          <ScalarProperty Name="tmon_Descripcion" ColumnName="tmon_Descripcion" />
+          <ScalarProperty Name="tmon_UsuarioCrea" ColumnName="tmon_UsuarioCrea" />
+          <ScalarProperty Name="tmon_FechaCrea" ColumnName="tmon_FechaCrea" />
+          <ScalarProperty Name="tmon_UsuarioModifica" ColumnName="tmon_UsuarioModifica" />
+          <ScalarProperty Name="tmon_FechaModifica" ColumnName="tmon_FechaModifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbTipoPermisos">
+      <EntityTypeMapping TypeName="PruebaPlanillaModel.tbTipoPermisos">
+        <MappingFragment StoreEntitySet="tbTipoPermisos">
+          <ScalarProperty Name="tper_Id" ColumnName="tper_Id" />
+          <ScalarProperty Name="tper_Descripcion" ColumnName="tper_Descripcion" />
+          <ScalarProperty Name="tper_UsuarioCrea" ColumnName="tper_UsuarioCrea" />
+          <ScalarProperty Name="tper_FechaCrea" ColumnName="tper_FechaCrea" />
+          <ScalarProperty Name="tper_UsuarioModifica" ColumnName="tper_UsuarioModifica" />
+          <ScalarProperty Name="tper_FechaModifica" ColumnName="tper_FechaModifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbTitulos">
+      <EntityTypeMapping TypeName="PruebaPlanillaModel.tbTitulos">
+        <MappingFragment StoreEntitySet="tbTitulos">
+          <ScalarProperty Name="titu_Id" ColumnName="titu_Id" />
+          <ScalarProperty Name="titu_Titulos" ColumnName="titu_Titulos" />
+          <ScalarProperty Name="titu_UsuarioCrea" ColumnName="titu_UsuarioCrea" />
+          <ScalarProperty Name="titu_Fechacrea" ColumnName="titu_Fechacrea" />
+          <ScalarProperty Name="titu_Usuariomodifica" ColumnName="titu_Usuariomodifica" />
+          <ScalarProperty Name="titu_FechaModifica" ColumnName="titu_FechaModifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbTitulosRequisicion">
+      <EntityTypeMapping TypeName="PruebaPlanillaModel.tbTitulosRequisicion">
+        <MappingFragment StoreEntitySet="tbTitulosRequisicion">
+          <ScalarProperty Name="treq_Id" ColumnName="treq_Id" />
+          <ScalarProperty Name="req_Id" ColumnName="req_Id" />
+          <ScalarProperty Name="titu_Id" ColumnName="titu_Id" />
+          <ScalarProperty Name="treq_UsuarioCrea" ColumnName="treq_UsuarioCrea" />
+          <ScalarProperty Name="treq_FechaCrea" ColumnName="treq_FechaCrea" />
+          <ScalarProperty Name="treq_UsuarioModifica" ColumnName="treq_UsuarioModifica" />
+          <ScalarProperty Name="treq_FechaModifica" ColumnName="treq_FechaModifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbVacaciones">
+      <EntityTypeMapping TypeName="PruebaPlanillaModel.tbVacaciones">
+        <MappingFragment StoreEntitySet="tbVacaciones">
+          <ScalarProperty Name="vaca_Id" ColumnName="vaca_Id" />
+          <ScalarProperty Name="emp_Id" ColumnName="emp_Id" />
+          <ScalarProperty Name="vaca_dias" ColumnName="vaca_dias" />
+          <ScalarProperty Name="vaca_UsuarioCrea" ColumnName="vaca_UsuarioCrea" />
+          <ScalarProperty Name="vaca_FechaCrea" ColumnName="vaca_FechaCrea" />
+          <ScalarProperty Name="vaca_UsuarioModifica" ColumnName="vaca_UsuarioModifica" />
+          <ScalarProperty Name="vaca_FechaModifica" ColumnName="vaca_FechaModifica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,72 @@
+﻿@model PruebaPlanilla.Models.tbTipoPlanillaDetalleIngreso
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutBase.cshtml";
+}
+
+<div class="col-lg-12">
+<div class="ibox float-e-margins">
+<div class="ibox-title">
+	@Html.ActionLink("Regresar", "Index", null, new {@class="pull-right" })
+	<h2>Details</h2>
+</div>
+
+<div class="ibox-content">
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.tpdi_UsuarioCrea)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tpdi_UsuarioCrea)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tpdi_FechaCrea)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tpdi_FechaCrea)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tpdi_UsuarioModifica)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tpdi_UsuarioModifica)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tpdi_FechaModifica)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tpdi_FechaModifica)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tbCatalogoDeIngresos.cin_DescripcionIngreso)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tbCatalogoDeIngresos.cin_DescripcionIngreso)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tbCatalogoDePlanillas.cpla_DescripcionPlanilla)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tbCatalogoDePlanillas.cpla_DescripcionPlanilla)
+        </dd>
+
+    </dl>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.tpdi_IdDetallePlanillaIngreso }, new {@class="btn btn-primary" }) 
+    @Html.ActionLink("Cancelar", "Index", null, new {@class="btn btn-default" })
+</p>
+</div>
+</div>
+</div>

@@ -1,0 +1,228 @@
+c:\users\lab02\documents\visual studio 2015\Projects\PruebaPlanilla\PruebaPlanilla\bin\ApplicationInsights.config
+c:\users\lab02\documents\visual studio 2015\Projects\PruebaPlanilla\PruebaPlanilla\bin\roslyn\csc.exe
+c:\users\lab02\documents\visual studio 2015\Projects\PruebaPlanilla\PruebaPlanilla\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+c:\users\lab02\documents\visual studio 2015\Projects\PruebaPlanilla\PruebaPlanilla\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+c:\users\lab02\documents\visual studio 2015\Projects\PruebaPlanilla\PruebaPlanilla\bin\roslyn\Microsoft.CodeAnalysis.dll
+c:\users\lab02\documents\visual studio 2015\Projects\PruebaPlanilla\PruebaPlanilla\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+c:\users\lab02\documents\visual studio 2015\Projects\PruebaPlanilla\PruebaPlanilla\bin\roslyn\Microsoft.CSharp.Core.targets
+c:\users\lab02\documents\visual studio 2015\Projects\PruebaPlanilla\PruebaPlanilla\bin\roslyn\Microsoft.VisualBasic.Core.targets
+c:\users\lab02\documents\visual studio 2015\Projects\PruebaPlanilla\PruebaPlanilla\bin\roslyn\System.Collections.Immutable.dll
+c:\users\lab02\documents\visual studio 2015\Projects\PruebaPlanilla\PruebaPlanilla\bin\roslyn\System.Reflection.Metadata.dll
+c:\users\lab02\documents\visual studio 2015\Projects\PruebaPlanilla\PruebaPlanilla\bin\roslyn\vbc.exe
+c:\users\lab02\documents\visual studio 2015\Projects\PruebaPlanilla\PruebaPlanilla\bin\roslyn\VBCSCompiler.exe
+c:\users\lab02\documents\visual studio 2015\Projects\PruebaPlanilla\PruebaPlanilla\bin\roslyn\VBCSCompiler.exe.config
+c:\users\lab02\documents\visual studio 2015\Projects\PruebaPlanilla\PruebaPlanilla\bin\PruebaPlanilla.dll.config
+c:\users\lab02\documents\visual studio 2015\Projects\PruebaPlanilla\PruebaPlanilla\bin\PruebaPlanilla.dll
+c:\users\lab02\documents\visual studio 2015\Projects\PruebaPlanilla\PruebaPlanilla\bin\PruebaPlanilla.pdb
+c:\users\lab02\documents\visual studio 2015\Projects\PruebaPlanilla\PruebaPlanilla\bin\Antlr3.Runtime.dll
+c:\users\lab02\documents\visual studio 2015\Projects\PruebaPlanilla\PruebaPlanilla\bin\Microsoft.AI.Agent.Intercept.dll
+c:\users\lab02\documents\visual studio 2015\Projects\PruebaPlanilla\PruebaPlanilla\bin\Microsoft.AI.DependencyCollector.dll
+c:\users\lab02\documents\visual studio 2015\Projects\PruebaPlanilla\PruebaPlanilla\bin\Microsoft.AI.PerfCounterCollector.dll
+c:\users\lab02\documents\visual studio 2015\Projects\PruebaPlanilla\PruebaPlanilla\bin\Microsoft.AI.ServerTelemetryChannel.dll
+c:\users\lab02\documents\visual studio 2015\Projects\PruebaPlanilla\PruebaPlanilla\bin\Microsoft.AI.Web.dll
+c:\users\lab02\documents\visual studio 2015\Projects\PruebaPlanilla\PruebaPlanilla\bin\Microsoft.AI.WindowsServer.dll
+c:\users\lab02\documents\visual studio 2015\Projects\PruebaPlanilla\PruebaPlanilla\bin\Microsoft.ApplicationInsights.dll
+c:\users\lab02\documents\visual studio 2015\Projects\PruebaPlanilla\PruebaPlanilla\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+c:\users\lab02\documents\visual studio 2015\Projects\PruebaPlanilla\PruebaPlanilla\bin\Microsoft.Web.Infrastructure.dll
+c:\users\lab02\documents\visual studio 2015\Projects\PruebaPlanilla\PruebaPlanilla\bin\Newtonsoft.Json.dll
+c:\users\lab02\documents\visual studio 2015\Projects\PruebaPlanilla\PruebaPlanilla\bin\System.Web.Helpers.dll
+c:\users\lab02\documents\visual studio 2015\Projects\PruebaPlanilla\PruebaPlanilla\bin\System.Web.Mvc.dll
+c:\users\lab02\documents\visual studio 2015\Projects\PruebaPlanilla\PruebaPlanilla\bin\System.Web.Optimization.dll
+c:\users\lab02\documents\visual studio 2015\Projects\PruebaPlanilla\PruebaPlanilla\bin\System.Web.Razor.dll
+c:\users\lab02\documents\visual studio 2015\Projects\PruebaPlanilla\PruebaPlanilla\bin\System.Web.WebPages.Deployment.dll
+c:\users\lab02\documents\visual studio 2015\Projects\PruebaPlanilla\PruebaPlanilla\bin\System.Web.WebPages.dll
+c:\users\lab02\documents\visual studio 2015\Projects\PruebaPlanilla\PruebaPlanilla\bin\System.Web.WebPages.Razor.dll
+c:\users\lab02\documents\visual studio 2015\Projects\PruebaPlanilla\PruebaPlanilla\bin\WebGrease.dll
+c:\users\lab02\documents\visual studio 2015\Projects\PruebaPlanilla\PruebaPlanilla\bin\Microsoft.AI.DependencyCollector.xml
+c:\users\lab02\documents\visual studio 2015\Projects\PruebaPlanilla\PruebaPlanilla\bin\Microsoft.AI.ServerTelemetryChannel.xml
+c:\users\lab02\documents\visual studio 2015\Projects\PruebaPlanilla\PruebaPlanilla\bin\Microsoft.AI.Web.xml
+c:\users\lab02\documents\visual studio 2015\Projects\PruebaPlanilla\PruebaPlanilla\bin\Microsoft.AI.WindowsServer.xml
+c:\users\lab02\documents\visual studio 2015\Projects\PruebaPlanilla\PruebaPlanilla\bin\Microsoft.ApplicationInsights.xml
+c:\users\lab02\documents\visual studio 2015\Projects\PruebaPlanilla\PruebaPlanilla\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+c:\users\lab02\documents\visual studio 2015\Projects\PruebaPlanilla\PruebaPlanilla\bin\System.Web.Helpers.xml
+c:\users\lab02\documents\visual studio 2015\Projects\PruebaPlanilla\PruebaPlanilla\bin\System.Web.Mvc.xml
+c:\users\lab02\documents\visual studio 2015\Projects\PruebaPlanilla\PruebaPlanilla\bin\System.Web.Optimization.xml
+c:\users\lab02\documents\visual studio 2015\Projects\PruebaPlanilla\PruebaPlanilla\bin\System.Web.Razor.xml
+c:\users\lab02\documents\visual studio 2015\Projects\PruebaPlanilla\PruebaPlanilla\bin\System.Web.WebPages.xml
+c:\users\lab02\documents\visual studio 2015\Projects\PruebaPlanilla\PruebaPlanilla\bin\System.Web.WebPages.Deployment.xml
+c:\users\lab02\documents\visual studio 2015\Projects\PruebaPlanilla\PruebaPlanilla\bin\System.Web.WebPages.Razor.xml
+c:\users\lab02\documents\visual studio 2015\Projects\PruebaPlanilla\PruebaPlanilla\bin\Antlr3.Runtime.pdb
+c:\users\lab02\documents\visual studio 2015\Projects\PruebaPlanilla\PruebaPlanilla\bin\Newtonsoft.Json.xml
+c:\users\lab02\documents\visual studio 2015\Projects\PruebaPlanilla\PruebaPlanilla\obj\Debug\PruebaPlanilla.csprojResolveAssemblyReference.cache
+c:\users\lab02\documents\visual studio 2015\Projects\PruebaPlanilla\PruebaPlanilla\obj\Debug\PruebaPlanilla.dll
+c:\users\lab02\documents\visual studio 2015\Projects\PruebaPlanilla\PruebaPlanilla\obj\Debug\PruebaPlanilla.pdb
+C:\Users\LAB02\documents\visual studio 2015\Projects\PruebaPlanilla\PruebaPlanilla\bin\EntityFramework.dll
+C:\Users\LAB02\documents\visual studio 2015\Projects\PruebaPlanilla\PruebaPlanilla\bin\EntityFramework.xml
+C:\Users\DÍAZ\Documents\Visual Studio 2017\Projects\PLANILLAS\PruebaPlanilla\PruebaPlanilla\bin\ApplicationInsights.config
+C:\Users\DÍAZ\Documents\Visual Studio 2017\Projects\PLANILLAS\PruebaPlanilla\PruebaPlanilla\bin\roslyn\csc.exe
+C:\Users\DÍAZ\Documents\Visual Studio 2017\Projects\PLANILLAS\PruebaPlanilla\PruebaPlanilla\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\DÍAZ\Documents\Visual Studio 2017\Projects\PLANILLAS\PruebaPlanilla\PruebaPlanilla\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\DÍAZ\Documents\Visual Studio 2017\Projects\PLANILLAS\PruebaPlanilla\PruebaPlanilla\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\DÍAZ\Documents\Visual Studio 2017\Projects\PLANILLAS\PruebaPlanilla\PruebaPlanilla\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\DÍAZ\Documents\Visual Studio 2017\Projects\PLANILLAS\PruebaPlanilla\PruebaPlanilla\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\DÍAZ\Documents\Visual Studio 2017\Projects\PLANILLAS\PruebaPlanilla\PruebaPlanilla\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\DÍAZ\Documents\Visual Studio 2017\Projects\PLANILLAS\PruebaPlanilla\PruebaPlanilla\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\DÍAZ\Documents\Visual Studio 2017\Projects\PLANILLAS\PruebaPlanilla\PruebaPlanilla\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\DÍAZ\Documents\Visual Studio 2017\Projects\PLANILLAS\PruebaPlanilla\PruebaPlanilla\bin\roslyn\vbc.exe
+C:\Users\DÍAZ\Documents\Visual Studio 2017\Projects\PLANILLAS\PruebaPlanilla\PruebaPlanilla\bin\roslyn\VBCSCompiler.exe
+C:\Users\DÍAZ\Documents\Visual Studio 2017\Projects\PLANILLAS\PruebaPlanilla\PruebaPlanilla\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\DÍAZ\Documents\Visual Studio 2017\Projects\PLANILLAS\PruebaPlanilla\PruebaPlanilla\bin\PruebaPlanilla.dll.config
+C:\Users\DÍAZ\Documents\Visual Studio 2017\Projects\PLANILLAS\PruebaPlanilla\PruebaPlanilla\bin\PruebaPlanilla.dll
+C:\Users\DÍAZ\Documents\Visual Studio 2017\Projects\PLANILLAS\PruebaPlanilla\PruebaPlanilla\bin\PruebaPlanilla.pdb
+C:\Users\DÍAZ\Documents\Visual Studio 2017\Projects\PLANILLAS\PruebaPlanilla\PruebaPlanilla\bin\Antlr3.Runtime.dll
+C:\Users\DÍAZ\Documents\Visual Studio 2017\Projects\PLANILLAS\PruebaPlanilla\PruebaPlanilla\bin\EntityFramework.dll
+C:\Users\DÍAZ\Documents\Visual Studio 2017\Projects\PLANILLAS\PruebaPlanilla\PruebaPlanilla\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\DÍAZ\Documents\Visual Studio 2017\Projects\PLANILLAS\PruebaPlanilla\PruebaPlanilla\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\DÍAZ\Documents\Visual Studio 2017\Projects\PLANILLAS\PruebaPlanilla\PruebaPlanilla\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\DÍAZ\Documents\Visual Studio 2017\Projects\PLANILLAS\PruebaPlanilla\PruebaPlanilla\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\DÍAZ\Documents\Visual Studio 2017\Projects\PLANILLAS\PruebaPlanilla\PruebaPlanilla\bin\Microsoft.AI.Web.dll
+C:\Users\DÍAZ\Documents\Visual Studio 2017\Projects\PLANILLAS\PruebaPlanilla\PruebaPlanilla\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\DÍAZ\Documents\Visual Studio 2017\Projects\PLANILLAS\PruebaPlanilla\PruebaPlanilla\bin\Microsoft.ApplicationInsights.dll
+C:\Users\DÍAZ\Documents\Visual Studio 2017\Projects\PLANILLAS\PruebaPlanilla\PruebaPlanilla\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\DÍAZ\Documents\Visual Studio 2017\Projects\PLANILLAS\PruebaPlanilla\PruebaPlanilla\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\DÍAZ\Documents\Visual Studio 2017\Projects\PLANILLAS\PruebaPlanilla\PruebaPlanilla\bin\Newtonsoft.Json.dll
+C:\Users\DÍAZ\Documents\Visual Studio 2017\Projects\PLANILLAS\PruebaPlanilla\PruebaPlanilla\bin\System.Web.Helpers.dll
+C:\Users\DÍAZ\Documents\Visual Studio 2017\Projects\PLANILLAS\PruebaPlanilla\PruebaPlanilla\bin\System.Web.Mvc.dll
+C:\Users\DÍAZ\Documents\Visual Studio 2017\Projects\PLANILLAS\PruebaPlanilla\PruebaPlanilla\bin\System.Web.Optimization.dll
+C:\Users\DÍAZ\Documents\Visual Studio 2017\Projects\PLANILLAS\PruebaPlanilla\PruebaPlanilla\bin\System.Web.Razor.dll
+C:\Users\DÍAZ\Documents\Visual Studio 2017\Projects\PLANILLAS\PruebaPlanilla\PruebaPlanilla\bin\System.Web.WebPages.Deployment.dll
+C:\Users\DÍAZ\Documents\Visual Studio 2017\Projects\PLANILLAS\PruebaPlanilla\PruebaPlanilla\bin\System.Web.WebPages.dll
+C:\Users\DÍAZ\Documents\Visual Studio 2017\Projects\PLANILLAS\PruebaPlanilla\PruebaPlanilla\bin\System.Web.WebPages.Razor.dll
+C:\Users\DÍAZ\Documents\Visual Studio 2017\Projects\PLANILLAS\PruebaPlanilla\PruebaPlanilla\bin\WebGrease.dll
+C:\Users\DÍAZ\Documents\Visual Studio 2017\Projects\PLANILLAS\PruebaPlanilla\PruebaPlanilla\bin\EntityFramework.xml
+C:\Users\DÍAZ\Documents\Visual Studio 2017\Projects\PLANILLAS\PruebaPlanilla\PruebaPlanilla\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\DÍAZ\Documents\Visual Studio 2017\Projects\PLANILLAS\PruebaPlanilla\PruebaPlanilla\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\DÍAZ\Documents\Visual Studio 2017\Projects\PLANILLAS\PruebaPlanilla\PruebaPlanilla\bin\Microsoft.AI.Web.xml
+C:\Users\DÍAZ\Documents\Visual Studio 2017\Projects\PLANILLAS\PruebaPlanilla\PruebaPlanilla\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\DÍAZ\Documents\Visual Studio 2017\Projects\PLANILLAS\PruebaPlanilla\PruebaPlanilla\bin\Microsoft.ApplicationInsights.xml
+C:\Users\DÍAZ\Documents\Visual Studio 2017\Projects\PLANILLAS\PruebaPlanilla\PruebaPlanilla\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\DÍAZ\Documents\Visual Studio 2017\Projects\PLANILLAS\PruebaPlanilla\PruebaPlanilla\bin\System.Web.Helpers.xml
+C:\Users\DÍAZ\Documents\Visual Studio 2017\Projects\PLANILLAS\PruebaPlanilla\PruebaPlanilla\bin\System.Web.Mvc.xml
+C:\Users\DÍAZ\Documents\Visual Studio 2017\Projects\PLANILLAS\PruebaPlanilla\PruebaPlanilla\bin\System.Web.Optimization.xml
+C:\Users\DÍAZ\Documents\Visual Studio 2017\Projects\PLANILLAS\PruebaPlanilla\PruebaPlanilla\bin\System.Web.Razor.xml
+C:\Users\DÍAZ\Documents\Visual Studio 2017\Projects\PLANILLAS\PruebaPlanilla\PruebaPlanilla\bin\System.Web.WebPages.xml
+C:\Users\DÍAZ\Documents\Visual Studio 2017\Projects\PLANILLAS\PruebaPlanilla\PruebaPlanilla\bin\System.Web.WebPages.Deployment.xml
+C:\Users\DÍAZ\Documents\Visual Studio 2017\Projects\PLANILLAS\PruebaPlanilla\PruebaPlanilla\bin\System.Web.WebPages.Razor.xml
+C:\Users\DÍAZ\Documents\Visual Studio 2017\Projects\PLANILLAS\PruebaPlanilla\PruebaPlanilla\bin\Antlr3.Runtime.pdb
+C:\Users\DÍAZ\Documents\Visual Studio 2017\Projects\PLANILLAS\PruebaPlanilla\PruebaPlanilla\bin\Newtonsoft.Json.xml
+C:\Users\DÍAZ\Documents\Visual Studio 2017\Projects\PLANILLAS\PruebaPlanilla\PruebaPlanilla\obj\Debug\PruebaPlanilla.csproj.CoreCompileInputs.cache
+C:\Users\DÍAZ\Documents\Visual Studio 2017\Projects\PLANILLAS\PruebaPlanilla\PruebaPlanilla\obj\Debug\PruebaPlanilla.csproj.CopyComplete
+C:\Users\DÍAZ\Documents\Visual Studio 2017\Projects\PLANILLAS\PruebaPlanilla\PruebaPlanilla\obj\Debug\PruebaPlanilla.dll
+C:\Users\DÍAZ\Documents\Visual Studio 2017\Projects\PLANILLAS\PruebaPlanilla\PruebaPlanilla\obj\Debug\PruebaPlanilla.pdb
+C:\Users\DÍAZ\Documents\Visual Studio 2017\Projects\PLANILLAS\PruebaPlanilla\PruebaPlanilla\bin\EntityFramework.SqlServer.dll
+C:\Users\DÍAZ\Documents\Visual Studio 2017\Projects\PLANILLAS\PruebaPlanilla\PruebaPlanilla\bin\EntityFramework.SqlServer.xml
+C:\Users\DÍAZ\Documents\Visual Studio 2017\Projects\PLANILLAS\PruebaPlanilla\PruebaPlanilla\obj\Debug\PruebaPlanilla.csprojAssemblyReference.cache
+C:\Users\LAB02\Downloads\PruebaPlanilla\PruebaPlanilla\bin\ApplicationInsights.config
+C:\Users\LAB02\Downloads\PruebaPlanilla\PruebaPlanilla\bin\roslyn\csc.exe
+C:\Users\LAB02\Downloads\PruebaPlanilla\PruebaPlanilla\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\LAB02\Downloads\PruebaPlanilla\PruebaPlanilla\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\LAB02\Downloads\PruebaPlanilla\PruebaPlanilla\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\LAB02\Downloads\PruebaPlanilla\PruebaPlanilla\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\LAB02\Downloads\PruebaPlanilla\PruebaPlanilla\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\LAB02\Downloads\PruebaPlanilla\PruebaPlanilla\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\LAB02\Downloads\PruebaPlanilla\PruebaPlanilla\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\LAB02\Downloads\PruebaPlanilla\PruebaPlanilla\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\LAB02\Downloads\PruebaPlanilla\PruebaPlanilla\bin\roslyn\vbc.exe
+C:\Users\LAB02\Downloads\PruebaPlanilla\PruebaPlanilla\bin\roslyn\VBCSCompiler.exe
+C:\Users\LAB02\Downloads\PruebaPlanilla\PruebaPlanilla\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\LAB02\Downloads\PruebaPlanilla\PruebaPlanilla\bin\PruebaPlanilla.dll.config
+C:\Users\LAB02\Downloads\PruebaPlanilla\PruebaPlanilla\bin\PruebaPlanilla.dll
+C:\Users\LAB02\Downloads\PruebaPlanilla\PruebaPlanilla\bin\PruebaPlanilla.pdb
+C:\Users\LAB02\Downloads\PruebaPlanilla\PruebaPlanilla\bin\Antlr3.Runtime.dll
+C:\Users\LAB02\Downloads\PruebaPlanilla\PruebaPlanilla\bin\EntityFramework.dll
+C:\Users\LAB02\Downloads\PruebaPlanilla\PruebaPlanilla\bin\EntityFramework.SqlServer.dll
+C:\Users\LAB02\Downloads\PruebaPlanilla\PruebaPlanilla\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\LAB02\Downloads\PruebaPlanilla\PruebaPlanilla\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\LAB02\Downloads\PruebaPlanilla\PruebaPlanilla\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\LAB02\Downloads\PruebaPlanilla\PruebaPlanilla\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\LAB02\Downloads\PruebaPlanilla\PruebaPlanilla\bin\Microsoft.AI.Web.dll
+C:\Users\LAB02\Downloads\PruebaPlanilla\PruebaPlanilla\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\LAB02\Downloads\PruebaPlanilla\PruebaPlanilla\bin\Microsoft.ApplicationInsights.dll
+C:\Users\LAB02\Downloads\PruebaPlanilla\PruebaPlanilla\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\LAB02\Downloads\PruebaPlanilla\PruebaPlanilla\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\LAB02\Downloads\PruebaPlanilla\PruebaPlanilla\bin\Newtonsoft.Json.dll
+C:\Users\LAB02\Downloads\PruebaPlanilla\PruebaPlanilla\bin\System.Web.Helpers.dll
+C:\Users\LAB02\Downloads\PruebaPlanilla\PruebaPlanilla\bin\System.Web.Mvc.dll
+C:\Users\LAB02\Downloads\PruebaPlanilla\PruebaPlanilla\bin\System.Web.Optimization.dll
+C:\Users\LAB02\Downloads\PruebaPlanilla\PruebaPlanilla\bin\System.Web.Razor.dll
+C:\Users\LAB02\Downloads\PruebaPlanilla\PruebaPlanilla\bin\System.Web.WebPages.Deployment.dll
+C:\Users\LAB02\Downloads\PruebaPlanilla\PruebaPlanilla\bin\System.Web.WebPages.dll
+C:\Users\LAB02\Downloads\PruebaPlanilla\PruebaPlanilla\bin\System.Web.WebPages.Razor.dll
+C:\Users\LAB02\Downloads\PruebaPlanilla\PruebaPlanilla\bin\WebGrease.dll
+C:\Users\LAB02\Downloads\PruebaPlanilla\PruebaPlanilla\bin\EntityFramework.xml
+C:\Users\LAB02\Downloads\PruebaPlanilla\PruebaPlanilla\bin\EntityFramework.SqlServer.xml
+C:\Users\LAB02\Downloads\PruebaPlanilla\PruebaPlanilla\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\LAB02\Downloads\PruebaPlanilla\PruebaPlanilla\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\LAB02\Downloads\PruebaPlanilla\PruebaPlanilla\bin\Microsoft.AI.Web.xml
+C:\Users\LAB02\Downloads\PruebaPlanilla\PruebaPlanilla\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\LAB02\Downloads\PruebaPlanilla\PruebaPlanilla\bin\Microsoft.ApplicationInsights.xml
+C:\Users\LAB02\Downloads\PruebaPlanilla\PruebaPlanilla\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\LAB02\Downloads\PruebaPlanilla\PruebaPlanilla\bin\System.Web.Helpers.xml
+C:\Users\LAB02\Downloads\PruebaPlanilla\PruebaPlanilla\bin\System.Web.Mvc.xml
+C:\Users\LAB02\Downloads\PruebaPlanilla\PruebaPlanilla\bin\System.Web.Optimization.xml
+C:\Users\LAB02\Downloads\PruebaPlanilla\PruebaPlanilla\bin\System.Web.Razor.xml
+C:\Users\LAB02\Downloads\PruebaPlanilla\PruebaPlanilla\bin\System.Web.WebPages.xml
+C:\Users\LAB02\Downloads\PruebaPlanilla\PruebaPlanilla\bin\System.Web.WebPages.Deployment.xml
+C:\Users\LAB02\Downloads\PruebaPlanilla\PruebaPlanilla\bin\System.Web.WebPages.Razor.xml
+C:\Users\LAB02\Downloads\PruebaPlanilla\PruebaPlanilla\bin\Antlr3.Runtime.pdb
+C:\Users\LAB02\Downloads\PruebaPlanilla\PruebaPlanilla\bin\Newtonsoft.Json.xml
+C:\Users\LAB02\Downloads\PruebaPlanilla\PruebaPlanilla\obj\Debug\PruebaPlanilla.csprojResolveAssemblyReference.cache
+C:\Users\LAB02\Downloads\PruebaPlanilla\PruebaPlanilla\obj\Debug\PruebaPlanilla.dll
+C:\Users\LAB02\Downloads\PruebaPlanilla\PruebaPlanilla\obj\Debug\PruebaPlanilla.pdb
+C:\Users\LAB02\OneDrive - BI-DSS\Documentos\PruebaPlanilla\PruebaPlanilla\PruebaPlanilla\bin\ApplicationInsights.config
+C:\Users\LAB02\OneDrive - BI-DSS\Documentos\PruebaPlanilla\PruebaPlanilla\PruebaPlanilla\bin\roslyn\csc.exe
+C:\Users\LAB02\OneDrive - BI-DSS\Documentos\PruebaPlanilla\PruebaPlanilla\PruebaPlanilla\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\LAB02\OneDrive - BI-DSS\Documentos\PruebaPlanilla\PruebaPlanilla\PruebaPlanilla\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\LAB02\OneDrive - BI-DSS\Documentos\PruebaPlanilla\PruebaPlanilla\PruebaPlanilla\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\LAB02\OneDrive - BI-DSS\Documentos\PruebaPlanilla\PruebaPlanilla\PruebaPlanilla\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\LAB02\OneDrive - BI-DSS\Documentos\PruebaPlanilla\PruebaPlanilla\PruebaPlanilla\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\LAB02\OneDrive - BI-DSS\Documentos\PruebaPlanilla\PruebaPlanilla\PruebaPlanilla\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\LAB02\OneDrive - BI-DSS\Documentos\PruebaPlanilla\PruebaPlanilla\PruebaPlanilla\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\LAB02\OneDrive - BI-DSS\Documentos\PruebaPlanilla\PruebaPlanilla\PruebaPlanilla\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\LAB02\OneDrive - BI-DSS\Documentos\PruebaPlanilla\PruebaPlanilla\PruebaPlanilla\bin\roslyn\vbc.exe
+C:\Users\LAB02\OneDrive - BI-DSS\Documentos\PruebaPlanilla\PruebaPlanilla\PruebaPlanilla\bin\roslyn\VBCSCompiler.exe
+C:\Users\LAB02\OneDrive - BI-DSS\Documentos\PruebaPlanilla\PruebaPlanilla\PruebaPlanilla\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\LAB02\OneDrive - BI-DSS\Documentos\PruebaPlanilla\PruebaPlanilla\PruebaPlanilla\bin\PruebaPlanilla.dll.config
+C:\Users\LAB02\OneDrive - BI-DSS\Documentos\PruebaPlanilla\PruebaPlanilla\PruebaPlanilla\bin\PruebaPlanilla.dll
+C:\Users\LAB02\OneDrive - BI-DSS\Documentos\PruebaPlanilla\PruebaPlanilla\PruebaPlanilla\bin\PruebaPlanilla.pdb
+C:\Users\LAB02\OneDrive - BI-DSS\Documentos\PruebaPlanilla\PruebaPlanilla\PruebaPlanilla\bin\Antlr3.Runtime.dll
+C:\Users\LAB02\OneDrive - BI-DSS\Documentos\PruebaPlanilla\PruebaPlanilla\PruebaPlanilla\bin\EntityFramework.dll
+C:\Users\LAB02\OneDrive - BI-DSS\Documentos\PruebaPlanilla\PruebaPlanilla\PruebaPlanilla\bin\EntityFramework.SqlServer.dll
+C:\Users\LAB02\OneDrive - BI-DSS\Documentos\PruebaPlanilla\PruebaPlanilla\PruebaPlanilla\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\LAB02\OneDrive - BI-DSS\Documentos\PruebaPlanilla\PruebaPlanilla\PruebaPlanilla\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\LAB02\OneDrive - BI-DSS\Documentos\PruebaPlanilla\PruebaPlanilla\PruebaPlanilla\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\LAB02\OneDrive - BI-DSS\Documentos\PruebaPlanilla\PruebaPlanilla\PruebaPlanilla\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\LAB02\OneDrive - BI-DSS\Documentos\PruebaPlanilla\PruebaPlanilla\PruebaPlanilla\bin\Microsoft.AI.Web.dll
+C:\Users\LAB02\OneDrive - BI-DSS\Documentos\PruebaPlanilla\PruebaPlanilla\PruebaPlanilla\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\LAB02\OneDrive - BI-DSS\Documentos\PruebaPlanilla\PruebaPlanilla\PruebaPlanilla\bin\Microsoft.ApplicationInsights.dll
+C:\Users\LAB02\OneDrive - BI-DSS\Documentos\PruebaPlanilla\PruebaPlanilla\PruebaPlanilla\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\LAB02\OneDrive - BI-DSS\Documentos\PruebaPlanilla\PruebaPlanilla\PruebaPlanilla\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\LAB02\OneDrive - BI-DSS\Documentos\PruebaPlanilla\PruebaPlanilla\PruebaPlanilla\bin\Newtonsoft.Json.dll
+C:\Users\LAB02\OneDrive - BI-DSS\Documentos\PruebaPlanilla\PruebaPlanilla\PruebaPlanilla\bin\System.Web.Helpers.dll
+C:\Users\LAB02\OneDrive - BI-DSS\Documentos\PruebaPlanilla\PruebaPlanilla\PruebaPlanilla\bin\System.Web.Mvc.dll
+C:\Users\LAB02\OneDrive - BI-DSS\Documentos\PruebaPlanilla\PruebaPlanilla\PruebaPlanilla\bin\System.Web.Optimization.dll
+C:\Users\LAB02\OneDrive - BI-DSS\Documentos\PruebaPlanilla\PruebaPlanilla\PruebaPlanilla\bin\System.Web.Razor.dll
+C:\Users\LAB02\OneDrive - BI-DSS\Documentos\PruebaPlanilla\PruebaPlanilla\PruebaPlanilla\bin\System.Web.WebPages.Deployment.dll
+C:\Users\LAB02\OneDrive - BI-DSS\Documentos\PruebaPlanilla\PruebaPlanilla\PruebaPlanilla\bin\System.Web.WebPages.dll
+C:\Users\LAB02\OneDrive - BI-DSS\Documentos\PruebaPlanilla\PruebaPlanilla\PruebaPlanilla\bin\System.Web.WebPages.Razor.dll
+C:\Users\LAB02\OneDrive - BI-DSS\Documentos\PruebaPlanilla\PruebaPlanilla\PruebaPlanilla\bin\WebGrease.dll
+C:\Users\LAB02\OneDrive - BI-DSS\Documentos\PruebaPlanilla\PruebaPlanilla\PruebaPlanilla\bin\EntityFramework.xml
+C:\Users\LAB02\OneDrive - BI-DSS\Documentos\PruebaPlanilla\PruebaPlanilla\PruebaPlanilla\bin\EntityFramework.SqlServer.xml
+C:\Users\LAB02\OneDrive - BI-DSS\Documentos\PruebaPlanilla\PruebaPlanilla\PruebaPlanilla\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\LAB02\OneDrive - BI-DSS\Documentos\PruebaPlanilla\PruebaPlanilla\PruebaPlanilla\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\LAB02\OneDrive - BI-DSS\Documentos\PruebaPlanilla\PruebaPlanilla\PruebaPlanilla\bin\Microsoft.AI.Web.xml
+C:\Users\LAB02\OneDrive - BI-DSS\Documentos\PruebaPlanilla\PruebaPlanilla\PruebaPlanilla\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\LAB02\OneDrive - BI-DSS\Documentos\PruebaPlanilla\PruebaPlanilla\PruebaPlanilla\bin\Microsoft.ApplicationInsights.xml
+C:\Users\LAB02\OneDrive - BI-DSS\Documentos\PruebaPlanilla\PruebaPlanilla\PruebaPlanilla\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\LAB02\OneDrive - BI-DSS\Documentos\PruebaPlanilla\PruebaPlanilla\PruebaPlanilla\bin\System.Web.Helpers.xml
+C:\Users\LAB02\OneDrive - BI-DSS\Documentos\PruebaPlanilla\PruebaPlanilla\PruebaPlanilla\bin\System.Web.Mvc.xml
+C:\Users\LAB02\OneDrive - BI-DSS\Documentos\PruebaPlanilla\PruebaPlanilla\PruebaPlanilla\bin\System.Web.Optimization.xml
+C:\Users\LAB02\OneDrive - BI-DSS\Documentos\PruebaPlanilla\PruebaPlanilla\PruebaPlanilla\bin\System.Web.Razor.xml
+C:\Users\LAB02\OneDrive - BI-DSS\Documentos\PruebaPlanilla\PruebaPlanilla\PruebaPlanilla\bin\System.Web.WebPages.xml
+C:\Users\LAB02\OneDrive - BI-DSS\Documentos\PruebaPlanilla\PruebaPlanilla\PruebaPlanilla\bin\System.Web.WebPages.Deployment.xml
+C:\Users\LAB02\OneDrive - BI-DSS\Documentos\PruebaPlanilla\PruebaPlanilla\PruebaPlanilla\bin\System.Web.WebPages.Razor.xml
+C:\Users\LAB02\OneDrive - BI-DSS\Documentos\PruebaPlanilla\PruebaPlanilla\PruebaPlanilla\bin\Antlr3.Runtime.pdb
+C:\Users\LAB02\OneDrive - BI-DSS\Documentos\PruebaPlanilla\PruebaPlanilla\PruebaPlanilla\bin\Newtonsoft.Json.xml
+C:\Users\LAB02\OneDrive - BI-DSS\Documentos\PruebaPlanilla\PruebaPlanilla\PruebaPlanilla\obj\Debug\PruebaPlanilla.csprojResolveAssemblyReference.cache
+C:\Users\LAB02\OneDrive - BI-DSS\Documentos\PruebaPlanilla\PruebaPlanilla\PruebaPlanilla\obj\Debug\PruebaPlanilla.dll
+C:\Users\LAB02\OneDrive - BI-DSS\Documentos\PruebaPlanilla\PruebaPlanilla\PruebaPlanilla\obj\Debug\PruebaPlanilla.pdb

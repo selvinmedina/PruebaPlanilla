@@ -1,0 +1,1746 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PruebaPlanillaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tbAccesoRol">
+    <Key>
+      <PropertyRef Name="acrol_Id" />
+    </Key>
+    <Property Name="acrol_Id" Type="Int32" Nullable="false" />
+    <Property Name="rol_Id" Type="Int32" />
+    <Property Name="obj_Id" Type="Int32" />
+    <Property Name="acrol_UsuarioCrea" Type="Int32" />
+    <Property Name="acrol_FechaCrea" Type="DateTime" Precision="3" />
+    <Property Name="acrol_UsuarioModifica" Type="Int32" />
+    <Property Name="acrol_FechaModifica" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="tbUsuario" Relationship="Self.FK__Acce___tbUsuario__tbAccesoRol__acrol_UsuarioCrea" FromRole="tbAccesoRol" ToRole="tbUsuario" />
+    <NavigationProperty Name="tbObjeto" Relationship="Self.FK__Acce__tbObjeto__tbAccesoRol__obj_Id" FromRole="tbAccesoRol" ToRole="tbObjeto" />
+    <NavigationProperty Name="tbUsuario1" Relationship="Self.FK__Acce__tbUsuario__tbAccesoRol__acrol_UsuarioModifica" FromRole="tbAccesoRol" ToRole="tbUsuario" />
+    <NavigationProperty Name="tbRol" Relationship="Self.FK__Acce_tbRol__tbAccesoRol__rol_Id" FromRole="tbAccesoRol" ToRole="tbRol" />
+  </EntityType>
+  <EntityType Name="tbObjeto">
+    <Key>
+      <PropertyRef Name="obj_Id" />
+    </Key>
+    <Property Name="obj_Id" Type="Int32" Nullable="false" />
+    <Property Name="obj_Pantalla" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="obj_Referencia" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="obj_UsuarioCrea" Type="Int32" />
+    <Property Name="obj_FechaCrea" Type="DateTime" Precision="3" />
+    <Property Name="obj_UsuarioModifica" Type="Int32" />
+    <Property Name="obj_FechaModifica" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="tbAccesoRol" Relationship="Self.FK__Acce__tbObjeto__tbAccesoRol__obj_Id" FromRole="tbObjeto" ToRole="tbAccesoRol" />
+    <NavigationProperty Name="tbUsuario" Relationship="Self.FK__Acce___tbUsuario__tbObjeto__obj_UsuarioCrea" FromRole="tbObjeto" ToRole="tbUsuario" />
+    <NavigationProperty Name="tbUsuario1" Relationship="Self.FK__Acce__tbUsuario__tbObjeto__obj_UsuarioModifica" FromRole="tbObjeto" ToRole="tbUsuario" />
+  </EntityType>
+  <EntityType Name="tbRol">
+    <Key>
+      <PropertyRef Name="rol_Id" />
+    </Key>
+    <Property Name="rol_Id" Type="Int32" Nullable="false" />
+    <Property Name="rol_Descripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="rol_UsuarioCrea" Type="Int32" />
+    <Property Name="rol_FechaCrea" Type="DateTime" Precision="3" />
+    <Property Name="rol_UsuarioModifica" Type="Int32" />
+    <Property Name="rol_FechaModifica" Type="DateTime" Precision="3" />
+    <Property Name="rol_Estado" Type="Boolean" />
+    <NavigationProperty Name="tbAccesoRol" Relationship="Self.FK__Acce_tbRol__tbAccesoRol__rol_Id" FromRole="tbRol" ToRole="tbAccesoRol" />
+    <NavigationProperty Name="tbRolesUsuario" Relationship="Self.FK__Acce__tbRol__tbRolesUsuario_rol_Id" FromRole="tbRol" ToRole="tbRolesUsuario" />
+    <NavigationProperty Name="tbUsuario" Relationship="Self.FK__Acce__tbUsuario__tbRol__rol_UsuarioCrea" FromRole="tbRol" ToRole="tbUsuario" />
+    <NavigationProperty Name="tbUsuario1" Relationship="Self.FK__Acce__tbUsuario__tbRol__rol_UsuarioModifica" FromRole="tbRol" ToRole="tbUsuario" />
+  </EntityType>
+  <EntityType Name="tbRolesUsuario">
+    <Key>
+      <PropertyRef Name="rolu_Id" />
+    </Key>
+    <Property Name="rolu_Id" Type="Int32" Nullable="false" />
+    <Property Name="rol_Id" Type="Int32" />
+    <Property Name="usu_Id" Type="Int32" />
+    <Property Name="rolu_UsuarioCrea" Type="Int32" />
+    <Property Name="rolu_FechaCrea" Type="DateTime" Precision="3" />
+    <Property Name="rolu_UsuarioModifica" Type="Int32" />
+    <Property Name="rolu_FechaModifica" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="tbRol" Relationship="Self.FK__Acce__tbRol__tbRolesUsuario_rol_Id" FromRole="tbRolesUsuario" ToRole="tbRol" />
+    <NavigationProperty Name="tbUsuario" Relationship="Self.FK__Acce__tbUsuario__tbRolesUsuario__rolu_UsuarioCrea" FromRole="tbRolesUsuario" ToRole="tbUsuario" />
+    <NavigationProperty Name="tbUsuario1" Relationship="Self.FK__Acce__tbUsuario__tbRolesUsuario__rolu_UsuarioModifica" FromRole="tbRolesUsuario" ToRole="tbUsuario" />
+    <NavigationProperty Name="tbUsuario2" Relationship="Self.FK__Acce__tbUsuario__tbRolesUsuario__usu_Id" FromRole="tbRolesUsuario" ToRole="tbUsuario" />
+  </EntityType>
+  <EntityType Name="tbUsuario">
+    <Key>
+      <PropertyRef Name="usu_Id" />
+    </Key>
+    <Property Name="usu_Id" Type="Int32" Nullable="false" />
+    <Property Name="usu_NombreUsuario" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="usu_Password" Type="Binary" MaxLength="64" FixedLength="false" />
+    <Property Name="usu_Nombres" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="usu_Apellidos" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="usu_Correos" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="usu_EsActivo" Type="Boolean" />
+    <Property Name="usu_RazonInactivo" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="usu_EsAdministrador" Type="Boolean" />
+    <Property Name="usu_SesionesValidas" Type="Byte" />
+    <Property Name="suc_Id" Type="Int32" />
+    <Property Name="emp_Id" Type="Int16" />
+    <NavigationProperty Name="tbAccesoRol" Relationship="Self.FK__Acce___tbUsuario__tbAccesoRol__acrol_UsuarioCrea" FromRole="tbUsuario" ToRole="tbAccesoRol" />
+    <NavigationProperty Name="tbAccesoRol1" Relationship="Self.FK__Acce__tbUsuario__tbAccesoRol__acrol_UsuarioModifica" FromRole="tbUsuario" ToRole="tbAccesoRol" />
+    <NavigationProperty Name="tbObjeto" Relationship="Self.FK__Acce___tbUsuario__tbObjeto__obj_UsuarioCrea" FromRole="tbUsuario" ToRole="tbObjeto" />
+    <NavigationProperty Name="tbObjeto1" Relationship="Self.FK__Acce__tbUsuario__tbObjeto__obj_UsuarioModifica" FromRole="tbUsuario" ToRole="tbObjeto" />
+    <NavigationProperty Name="tbRol" Relationship="Self.FK__Acce__tbUsuario__tbRol__rol_UsuarioCrea" FromRole="tbUsuario" ToRole="tbRol" />
+    <NavigationProperty Name="tbRol1" Relationship="Self.FK__Acce__tbUsuario__tbRol__rol_UsuarioModifica" FromRole="tbUsuario" ToRole="tbRol" />
+    <NavigationProperty Name="tbRolesUsuario" Relationship="Self.FK__Acce__tbUsuario__tbRolesUsuario__rolu_UsuarioCrea" FromRole="tbUsuario" ToRole="tbRolesUsuario" />
+    <NavigationProperty Name="tbRolesUsuario1" Relationship="Self.FK__Acce__tbUsuario__tbRolesUsuario__rolu_UsuarioModifica" FromRole="tbUsuario" ToRole="tbRolesUsuario" />
+    <NavigationProperty Name="tbRolesUsuario2" Relationship="Self.FK__Acce__tbUsuario__tbRolesUsuario__usu_Id" FromRole="tbUsuario" ToRole="tbRolesUsuario" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tbCatalogoDeDeducciones">
+    <Key>
+      <PropertyRef Name="cde_IdDeducciones" />
+    </Key>
+    <Property Name="cde_IdDeducciones" Type="Int32" Nullable="false" />
+    <Property Name="cde_DescripcionDeduccion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="tde_IdTipoDedu" Type="Int32" />
+    <Property Name="cde_PorcentajeColaborador" Type="Decimal" Precision="16" Scale="2" />
+    <Property Name="cde_PorcentajeEmpresa" Type="Decimal" Precision="16" Scale="2" />
+    <Property Name="cde_UsuarioCrea" Type="Int32" />
+    <Property Name="cde_FechaCrea" Type="DateTime" Precision="3" />
+    <Property Name="cde_UsuarioModifica" Type="Int32" />
+    <Property Name="cde_FechaModifica" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="tbTipoDeduccion" Relationship="Self.FK_Plani_tbCatalogodededucciones_tbTipoDeduccion_tde_IdTipoDedu" FromRole="tbCatalogoDeDeducciones" ToRole="tbTipoDeduccion" />
+    <NavigationProperty Name="tbTipoPlanillaDetalleDeduccion" Relationship="Self.FK_Plani_tbCatálogoDeducciones_tbTipoPlanillaDetalleDeducciones_cde_IdDeducciones" FromRole="tbCatalogoDeDeducciones" ToRole="tbTipoPlanillaDetalleDeduccion" />
+    <NavigationProperty Name="tbDeduccionesExtraordinarias" Relationship="Self.FK_tbDeduccionesExtraordinarias_tbCatalogoDeDeducciones" FromRole="tbCatalogoDeDeducciones" ToRole="tbDeduccionesExtraordinarias" />
+    <NavigationProperty Name="tbDeduccionInstitucionFinanciera" Relationship="Self.FK_tbDeduccionInstitucionFinanciera_tbCatalogoDeDeducciones" FromRole="tbCatalogoDeDeducciones" ToRole="tbDeduccionInstitucionFinanciera" />
+    <NavigationProperty Name="tbTechosDeducciones" Relationship="Self.FK_tbTechosDeducciones_tbCatalogoDeDeducciones" FromRole="tbCatalogoDeDeducciones" ToRole="tbTechosDeducciones" />
+  </EntityType>
+  <EntityType Name="tbCatalogoDeIngresos">
+    <Key>
+      <PropertyRef Name="cin_IdIngreso" />
+    </Key>
+    <Property Name="cin_IdIngreso" Type="Int32" Nullable="false" />
+    <Property Name="cin_DescripcionIngreso" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="cin_UsuarioCrea" Type="Int32" />
+    <Property Name="cin_FechaCrea" Type="DateTime" Precision="3" />
+    <Property Name="cin_UsuarioModifica" Type="Int32" />
+    <Property Name="cin_FechaModifica" Type="Int32" />
+    <NavigationProperty Name="tbTipoPlanillaDetalleIngreso" Relationship="Self.FK_Plani_tbCatalogoIngresos_tbTipoPlanillaDetalleIngreso_cin_IdIngreso" FromRole="tbCatalogoDeIngresos" ToRole="tbTipoPlanillaDetalleIngreso" />
+    <NavigationProperty Name="tbEmpleadoBonos" Relationship="Self.FK_tbEmpleadoBonos_tbCatalogodeIngresos" FromRole="tbCatalogoDeIngresos" ToRole="tbEmpleadoBonos" />
+    <NavigationProperty Name="tbEmpleadoComisiones" Relationship="Self.FK_tbEmpleadoComisiones_tbCatalogoDeIngresos" FromRole="tbCatalogoDeIngresos" ToRole="tbEmpleadoComisiones" />
+  </EntityType>
+  <EntityType Name="tbCatalogoDePlanillas">
+    <Key>
+      <PropertyRef Name="cpla_IdPlanilla" />
+    </Key>
+    <Property Name="cpla_IdPlanilla" Type="Int32" Nullable="false" />
+    <Property Name="cpla_DescripcionPlanilla" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="cpla_FrecuenciaEnDias" Type="Int32" />
+    <Property Name="cpla_UsuarioCrea" Type="Int32" />
+    <Property Name="cpla_FechaCrea" Type="DateTime" Precision="3" />
+    <Property Name="cpla_UsuarioModifica" Type="Int32" />
+    <Property Name="cpla_FechaModifica" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="tbTipoPlanillaDetalleDeduccion" Relationship="Self.FK_Plani_tbCatálogoPlanillas_tbTipoPlanillaDetalleDeducciones_cpla_IdPlanilla" FromRole="tbCatalogoDePlanillas" ToRole="tbTipoPlanillaDetalleDeduccion" />
+    <NavigationProperty Name="tbTipoPlanillaDetalleIngreso" Relationship="Self.FK_Plani_tbCatalogoPlanillas_tbTipoPlanillaDetalleIngreso_cpla_IdPlanilla" FromRole="tbCatalogoDePlanillas" ToRole="tbTipoPlanillaDetalleIngreso" />
+    <NavigationProperty Name="tbEmpleados" Relationship="Self.FK_tbEmpleados_tbCatalogodeplanillas" FromRole="tbCatalogoDePlanillas" ToRole="tbEmpleados" />
+  </EntityType>
+  <EntityType Name="tbDeduccionesExtraordinarias">
+    <Key>
+      <PropertyRef Name="dex_IdDeduccionesExtra" />
+    </Key>
+    <Property Name="dex_IdDeduccionesExtra" Type="Int32" Nullable="false" />
+    <Property Name="eqco_Id" Type="Int32" />
+    <Property Name="dex_MontoInicial" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="dex_MontoRestante" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="dex_ObservacionesComentarios" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="cde_IdDeducciones" Type="Int32" />
+    <Property Name="dex_Cuota" Type="Decimal" Precision="16" Scale="2" />
+    <Property Name="dex_UsuarioCrea" Type="Int32" />
+    <Property Name="dex_FechaCrea" Type="DateTime" Precision="3" />
+    <Property Name="dex_UsuarioModifica" Type="Int32" />
+    <Property Name="dex_FechaModifica" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="tbCatalogoDeDeducciones" Relationship="Self.FK_tbDeduccionesExtraordinarias_tbCatalogoDeDeducciones" FromRole="tbDeduccionesExtraordinarias" ToRole="tbCatalogoDeDeducciones" />
+    <NavigationProperty Name="tbEquipoEmpleados" Relationship="Self.FK_tbDeduccionesExtraordinarias_tbEquipoPorColaborador" FromRole="tbDeduccionesExtraordinarias" ToRole="tbEquipoEmpleados" />
+  </EntityType>
+  <EntityType Name="tbDeduccionInstitucionFinanciera">
+    <Key>
+      <PropertyRef Name="deif_IdDeduccionInstFinanciera" />
+    </Key>
+    <Property Name="deif_IdDeduccionInstFinanciera" Type="Int32" Nullable="false" />
+    <Property Name="emp_Id" Type="Int32" />
+    <Property Name="insf_IdInstitucionFinanciera" Type="Int32" />
+    <Property Name="deif_Monto" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="deif_Comentarios" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="cde_IdDeducciones" Type="Int32" />
+    <Property Name="deif_UsuarioCrea" Type="Int32" />
+    <Property Name="deif_FechaCrea" Type="DateTime" Precision="3" />
+    <Property Name="deif_UsuarioModifica" Type="Int32" />
+    <Property Name="deif_FechaModifica" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="tbCatalogoDeDeducciones" Relationship="Self.FK_tbDeduccionInstitucionFinanciera_tbCatalogoDeDeducciones" FromRole="tbDeduccionInstitucionFinanciera" ToRole="tbCatalogoDeDeducciones" />
+    <NavigationProperty Name="tbInstitucionesFinancieras" Relationship="Self.FK_Plani_tbInstitucionesFinancieras_tbDeduInstiFinan_insf_IdInstituFinan" FromRole="tbDeduccionInstitucionFinanciera" ToRole="tbInstitucionesFinancieras" />
+    <NavigationProperty Name="tbEmpleados" Relationship="Self.FK_tbDeduccionInstitucionfinanciera_tbEmpleados" FromRole="tbDeduccionInstitucionFinanciera" ToRole="tbEmpleados" />
+  </EntityType>
+  <EntityType Name="tbEmpleadoBonos">
+    <Key>
+      <PropertyRef Name="cb_Id" />
+    </Key>
+    <Property Name="cb_Id" Type="Int32" Nullable="false" />
+    <Property Name="emp_Id" Type="Int32" Nullable="false" />
+    <Property Name="cin_IdIngreso" Type="Int32" Nullable="false" />
+    <Property Name="cb_Monto" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="cb_FechaRegistro" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="cb_Pagado" Type="Boolean" Nullable="false" />
+    <Property Name="cb_UsuarioCrea" Type="Int32" />
+    <Property Name="cb_FechaCrea" Type="DateTime" Precision="3" />
+    <Property Name="cb_UsuarioModifica" Type="Int32" />
+    <Property Name="cb_FechaModifica" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="tbCatalogoDeIngresos" Relationship="Self.FK_tbEmpleadoBonos_tbCatalogodeIngresos" FromRole="tbEmpleadoBonos" ToRole="tbCatalogoDeIngresos" />
+    <NavigationProperty Name="tbEmpleados" Relationship="Self.FK_tbEmpleadoBonos_tbEmpleados" FromRole="tbEmpleadoBonos" ToRole="tbEmpleados" />
+  </EntityType>
+  <EntityType Name="tbEmpleadoComisiones">
+    <Key>
+      <PropertyRef Name="cc_Id" />
+    </Key>
+    <Property Name="cc_Id" Type="Int32" Nullable="false" />
+    <Property Name="emp_Id" Type="Int32" Nullable="false" />
+    <Property Name="cin_IdIngreso" Type="Int32" Nullable="false" />
+    <Property Name="cc_Monto" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="cc_FechaRegistro" Type="DateTime" Precision="3" />
+    <Property Name="cc_Pagado" Type="Boolean" />
+    <Property Name="cc_UsuarioCrea" Type="Int32" />
+    <Property Name="cc_FechaCrea" Type="DateTime" Precision="3" />
+    <Property Name="cc_UsuarioModifica" Type="Int32" />
+    <Property Name="cc_FechaModifica" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="tbCatalogoDeIngresos" Relationship="Self.FK_tbEmpleadoComisiones_tbCatalogoDeIngresos" FromRole="tbEmpleadoComisiones" ToRole="tbCatalogoDeIngresos" />
+    <NavigationProperty Name="tbEmpleados" Relationship="Self.FK_tbEmpleadoComisiones_tbEmpleados" FromRole="tbEmpleadoComisiones" ToRole="tbEmpleados" />
+  </EntityType>
+  <EntityType Name="tbHistorialDeduccionPago">
+    <Key>
+      <PropertyRef Name="hidp_IdHistorialdeDeduPago" />
+    </Key>
+    <Property Name="hidp_IdHistorialdeDeduPago" Type="Int32" Nullable="false" />
+    <Property Name="tpdd_IdPlanillaDetDeduccion" Type="Int32" Nullable="false" />
+    <Property Name="hipa_IdHistorialDePago" Type="Int32" Nullable="false" />
+    <Property Name="hidp_Total" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="hidp_UsuarioCrea" Type="Int32" />
+    <Property Name="hidp_FechaCrea" Type="DateTime" Precision="3" />
+    <Property Name="hidp_UsuarioModifica" Type="Int32" />
+    <Property Name="hidp_FechaModifica" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="tbHistorialDePago" Relationship="Self.FK_Plani_tbHistorialDePago_tbHistorialDeDeduccionPago_hipa_IdHistorialdePago" FromRole="tbHistorialDeduccionPago" ToRole="tbHistorialDePago" />
+    <NavigationProperty Name="tbTipoPlanillaDetalleDeduccion" Relationship="Self.FK_tbHistorialdeduccionpago_tbTipoPlanilladetallededuccion" FromRole="tbHistorialDeduccionPago" ToRole="tbTipoPlanillaDetalleDeduccion" />
+  </EntityType>
+  <EntityType Name="tbHistorialDeIngresosPago">
+    <Key>
+      <PropertyRef Name="hip_IdHistorialDeIngresosPago" />
+    </Key>
+    <Property Name="hip_IdHistorialDeIngresosPago" Type="Int32" Nullable="false" />
+    <Property Name="hipa_IdHistorialDePago" Type="Int32" />
+    <Property Name="hip_FechaInicio" Type="DateTime" Precision="3" />
+    <Property Name="hip_FechaFinal" Type="DateTime" Precision="3" />
+    <Property Name="hip_UnidadesPagar" Type="Int32" />
+    <Property Name="hip_MedidaUnitaria" Type="Int32" />
+    <Property Name="hip_TotalPagar" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="tpdi_IdDetallePlanillaIngreso" Type="Int32" />
+    <Property Name="hip_UsuarioCrea" Type="Int32" />
+    <Property Name="hip_FechaCrea" Type="DateTime" Precision="3" />
+    <Property Name="hip_UsuarioModifica" Type="Int32" />
+    <Property Name="hip_FechaModifica" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="tbHistorialDePago" Relationship="Self.FK_tbHistorialDeIngresosPago_tbHistorialdePago" FromRole="tbHistorialDeIngresosPago" ToRole="tbHistorialDePago" />
+    <NavigationProperty Name="tbTipoPlanillaDetalleIngreso" Relationship="Self.FK_tbHistorialDeIngresosPago_tbTipoplanilladetalleingreso" FromRole="tbHistorialDeIngresosPago" ToRole="tbTipoPlanillaDetalleIngreso" />
+  </EntityType>
+  <EntityType Name="tbHistorialDePago">
+    <Key>
+      <PropertyRef Name="hipa_IdHistorialDePago" />
+    </Key>
+    <Property Name="hipa_IdHistorialDePago" Type="Int32" Nullable="false" />
+    <Property Name="emp_Id" Type="Int32" Nullable="false" />
+    <Property Name="hipa_SueldoNeto" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="hipa_FechaInicio" Type="DateTime" Precision="3" />
+    <Property Name="hipa_FechaFin" Type="DateTime" Precision="3" />
+    <Property Name="hipa_FechaPago" Type="DateTime" Precision="3" />
+    <Property Name="hipa_Año" Type="Int32" />
+    <Property Name="hipa_Mes" Type="Int32" />
+    <Property Name="peri_IdPeriodo" Type="Int32" />
+    <Property Name="hipa_UsuarioCrea" Type="Int32" />
+    <Property Name="hipa_FechaCrea" Type="DateTime" Precision="3" />
+    <Property Name="hipa_UsuarioModifica" Type="Int32" />
+    <Property Name="hipa_FechaModifica" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="tbHistorialDeduccionPago" Relationship="Self.FK_Plani_tbHistorialDePago_tbHistorialDeDeduccionPago_hipa_IdHistorialdePago" FromRole="tbHistorialDePago" ToRole="tbHistorialDeduccionPago" />
+    <NavigationProperty Name="tbHistorialDeIngresosPago" Relationship="Self.FK_tbHistorialDeIngresosPago_tbHistorialdePago" FromRole="tbHistorialDePago" ToRole="tbHistorialDeIngresosPago" />
+    <NavigationProperty Name="tbEmpleados" Relationship="Self.FK_Plani_tbHistorialdePago_tbEmpleados_emp_Id" FromRole="tbHistorialDePago" ToRole="tbEmpleados" />
+    <NavigationProperty Name="tbPeriodos" Relationship="Self.FK_tbHistorialDePago_tbPeriodos" FromRole="tbHistorialDePago" ToRole="tbPeriodos" />
+  </EntityType>
+  <EntityType Name="tbInstitucionesFinancieras">
+    <Key>
+      <PropertyRef Name="insf_IdInstitucionFinanciera" />
+    </Key>
+    <Property Name="insf_IdInstitucionFinanciera" Type="Int32" Nullable="false" />
+    <Property Name="insf_DescInstitucionFinanc" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="insf_Contacto" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="insf_Telefono" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="insf_Correo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="insf_UsuarioCrea" Type="Int32" />
+    <Property Name="insf_FechaCrea" Type="DateTime" Precision="3" />
+    <Property Name="insf_UsuarioModifica" Type="Int32" />
+    <Property Name="insf_FechaModifica" Type="DateTime" Precision="3" />
+    <Property Name="emp_Id" Type="Int32" />
+    <NavigationProperty Name="tbDeduccionInstitucionFinanciera" Relationship="Self.FK_Plani_tbInstitucionesFinancieras_tbDeduInstiFinan_insf_IdInstituFinan" FromRole="tbInstitucionesFinancieras" ToRole="tbDeduccionInstitucionFinanciera" />
+  </EntityType>
+  <EntityType Name="tbPeriodos">
+    <Key>
+      <PropertyRef Name="peri_IdPeriodo" />
+    </Key>
+    <Property Name="peri_IdPeriodo" Type="Int32" Nullable="false" />
+    <Property Name="peri_DescripPeriodo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="peri_UsuarioCrea" Type="Int32" />
+    <Property Name="peri_FechaCrea" Type="DateTime" Precision="3" />
+    <Property Name="peri_UsuarioModifica" Type="Int32" />
+    <Property Name="peri_FechaModifica" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="tbHistorialDePago" Relationship="Self.FK_tbHistorialDePago_tbPeriodos" FromRole="tbPeriodos" ToRole="tbHistorialDePago" />
+  </EntityType>
+  <EntityType Name="tbRamaActividad">
+    <Key>
+      <PropertyRef Name="rama_Id" />
+    </Key>
+    <Property Name="rama_Id" Type="Int32" Nullable="false" />
+    <Property Name="rama_Descripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="rama_UsuarioCrea" Type="Int32" />
+    <Property Name="rama_FechaCrea" Type="DateTime" Precision="3" />
+    <Property Name="rama_UsuarioModifica" Type="Int32" />
+    <Property Name="rama_FechaModifica" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="tbSalarioPorHora" Relationship="Self.FK_tbSalarioPorHora_tbRamaActividad" FromRole="tbRamaActividad" ToRole="tbSalarioPorHora" />
+  </EntityType>
+  <EntityType Name="tbSalarioPorHora">
+    <Key>
+      <PropertyRef Name="saph_Idsaph" />
+    </Key>
+    <Property Name="saph_Idsaph" Type="Int32" Nullable="false" />
+    <Property Name="rama_Id" Type="Int32" />
+    <Property Name="saph_SalarioMinimo" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="jor_Id" Type="Int32" />
+    <Property Name="saph_Monto" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="saph_TamanoEmpresaInicial" Type="Int32" />
+    <Property Name="saph_TamanoEmpresaFinal" Type="Int32" />
+    <Property Name="saph_UsuarioCrea" Type="Int32" />
+    <Property Name="saph_FechaCrea" Type="DateTime" Precision="3" />
+    <Property Name="saph_UsuarioModifica" Type="Int32" />
+    <Property Name="saph_FechaModifica" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="tbRamaActividad" Relationship="Self.FK_tbSalarioPorHora_tbRamaActividad" FromRole="tbSalarioPorHora" ToRole="tbRamaActividad" />
+    <NavigationProperty Name="tbJornadas" Relationship="Self.FK_tbSalarioPorHora_tbJornadas" FromRole="tbSalarioPorHora" ToRole="tbJornadas" />
+  </EntityType>
+  <EntityType Name="tbTechosDeducciones">
+    <Key>
+      <PropertyRef Name="tede_Id" />
+    </Key>
+    <Property Name="tede_Id" Type="Int32" Nullable="false" />
+    <Property Name="tede_RangoInicial" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="tede_RangoFinal" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="tede_Porcentaje" Type="Int32" />
+    <Property Name="cde_IdDeducciones" Type="Int32" />
+    <Property Name="tede_UsuarioCrea" Type="Int32" />
+    <Property Name="tede_FechaCrea" Type="DateTime" Precision="3" />
+    <Property Name="tede_UsuarioModifica" Type="Int32" />
+    <Property Name="tede_FechaModifica" Type="Int32" />
+    <NavigationProperty Name="tbCatalogoDeDeducciones" Relationship="Self.FK_tbTechosDeducciones_tbCatalogoDeDeducciones" FromRole="tbTechosDeducciones" ToRole="tbCatalogoDeDeducciones" />
+  </EntityType>
+  <EntityType Name="tbTipoDeduccion">
+    <Key>
+      <PropertyRef Name="tde_IdTipoDedu" />
+    </Key>
+    <Property Name="tde_IdTipoDedu" Type="Int32" Nullable="false" />
+    <Property Name="tde_Descripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="tde_UsuarioCrea" Type="Int32" />
+    <Property Name="tde_FechaCrea" Type="DateTime" Precision="3" />
+    <Property Name="tde_UsuarioModifica" Type="Int32" />
+    <Property Name="tde_FechaModifica" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="tbCatalogoDeDeducciones" Relationship="Self.FK_Plani_tbCatalogodededucciones_tbTipoDeduccion_tde_IdTipoDedu" FromRole="tbTipoDeduccion" ToRole="tbCatalogoDeDeducciones" />
+  </EntityType>
+  <EntityType Name="tbTipoPlanillaDetalleDeduccion">
+    <Key>
+      <PropertyRef Name="tpdd_IdPlanillaDetDeduccion" />
+    </Key>
+    <Property Name="tpdd_IdPlanillaDetDeduccion" Type="Int32" Nullable="false" />
+    <Property Name="cpla_IdPlanilla" Type="Int32" />
+    <Property Name="cde_IdDeducciones" Type="Int32" />
+    <Property Name="tpdd_UsuarioCrea" Type="Int32" />
+    <Property Name="tpdd_FechaCrea" Type="DateTime" Precision="3" />
+    <Property Name="tpdd_UsuarioModifica" Type="Int32" />
+    <Property Name="tpdd_FechaModifica" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="tbCatalogoDeDeducciones" Relationship="Self.FK_Plani_tbCatálogoDeducciones_tbTipoPlanillaDetalleDeducciones_cde_IdDeducciones" FromRole="tbTipoPlanillaDetalleDeduccion" ToRole="tbCatalogoDeDeducciones" />
+    <NavigationProperty Name="tbCatalogoDePlanillas" Relationship="Self.FK_Plani_tbCatálogoPlanillas_tbTipoPlanillaDetalleDeducciones_cpla_IdPlanilla" FromRole="tbTipoPlanillaDetalleDeduccion" ToRole="tbCatalogoDePlanillas" />
+    <NavigationProperty Name="tbHistorialDeduccionPago" Relationship="Self.FK_tbHistorialdeduccionpago_tbTipoPlanilladetallededuccion" FromRole="tbTipoPlanillaDetalleDeduccion" ToRole="tbHistorialDeduccionPago" />
+  </EntityType>
+  <EntityType Name="tbTipoPlanillaDetalleIngreso">
+    <Key>
+      <PropertyRef Name="tpdi_IdDetallePlanillaIngreso" />
+    </Key>
+    <Property Name="tpdi_IdDetallePlanillaIngreso" Type="Int32" Nullable="false" />
+    <Property Name="cin_IdIngreso" Type="Int32" />
+    <Property Name="cpla_IdPlanilla" Type="Int32" />
+    <Property Name="tpdi_UsuarioCrea" Type="Int32" />
+    <Property Name="tpdi_FechaCrea" Type="DateTime" Precision="3" />
+    <Property Name="tpdi_UsuarioModifica" Type="Int32" />
+    <Property Name="tpdi_FechaModifica" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="tbCatalogoDeIngresos" Relationship="Self.FK_Plani_tbCatalogoIngresos_tbTipoPlanillaDetalleIngreso_cin_IdIngreso" FromRole="tbTipoPlanillaDetalleIngreso" ToRole="tbCatalogoDeIngresos" />
+    <NavigationProperty Name="tbCatalogoDePlanillas" Relationship="Self.FK_Plani_tbCatalogoPlanillas_tbTipoPlanillaDetalleIngreso_cpla_IdPlanilla" FromRole="tbTipoPlanillaDetalleIngreso" ToRole="tbCatalogoDePlanillas" />
+    <NavigationProperty Name="tbHistorialDeIngresosPago" Relationship="Self.FK_tbHistorialDeIngresosPago_tbTipoplanilladetalleingreso" FromRole="tbTipoPlanillaDetalleIngreso" ToRole="tbHistorialDeIngresosPago" />
+  </EntityType>
+  <EntityType Name="tbAreas">
+    <Key>
+      <PropertyRef Name="area_Id" />
+    </Key>
+    <Property Name="area_Id" Type="Int32" Nullable="false" />
+    <Property Name="car_id" Type="Int32" Nullable="false" />
+    <Property Name="depto_Id" Type="Int32" Nullable="false" />
+    <Property Name="area_Descripcion" Type="Int32" Nullable="false" />
+    <Property Name="area_Estado" Type="Boolean" />
+    <Property Name="area_Razoninactiva" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="area_Usuariocrea" Type="Int32" Nullable="false" />
+    <Property Name="area_Fechacrea" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="area_Usuariomodifica" Type="Int32" />
+    <Property Name="area_Fechamodifica" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbCargos">
+    <Key>
+      <PropertyRef Name="car_Id" />
+    </Key>
+    <Property Name="car_Id" Type="Int32" Nullable="false" />
+    <Property Name="car_Descripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="car_Estado" Type="Boolean" />
+    <Property Name="car_Usuariocrea" Type="Int32" Nullable="false" />
+    <Property Name="car_Fechacrea" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="car_Usuariomodifica" Type="Int32" />
+    <Property Name="car_Fechamodifica" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbCompetencias">
+    <Key>
+      <PropertyRef Name="comp_Id" />
+    </Key>
+    <Property Name="comp_Id" Type="Int32" Nullable="false" />
+    <Property Name="comp_Descripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="comp_UsuarioCrea" Type="Int32" Nullable="false" />
+    <Property Name="comp_FechaCrea" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="comp_UsuarioModifica" Type="Int32" />
+    <Property Name="comp_FechaModifica" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbCompetenciasPersona">
+    <Key>
+      <PropertyRef Name="cope_Id" />
+    </Key>
+    <Property Name="cope_Id" Type="Int32" Nullable="false" />
+    <Property Name="per_Id" Type="Int32" Nullable="false" />
+    <Property Name="comp_Id" Type="Int32" Nullable="false" />
+    <Property Name="cope_UsuarioCrea" Type="Int32" Nullable="false" />
+    <Property Name="cope_FechaCrea" Type="DateTime" Precision="3" />
+    <Property Name="cope_UsuarioModifica" Type="Int32" />
+    <Property Name="cope_FechaModifica" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbCompetenciasRequisicion">
+    <Key>
+      <PropertyRef Name="creq_Id" />
+    </Key>
+    <Property Name="creq_Id" Type="Int32" Nullable="false" />
+    <Property Name="req_Id" Type="Int32" Nullable="false" />
+    <Property Name="comp_Id" Type="Int32" Nullable="false" />
+    <Property Name="creq_UsuarioCrea" Type="Int32" Nullable="false" />
+    <Property Name="creq_FechaCrea" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="creq_UsuarioModifica" Type="Int32" />
+    <Property Name="req_FechaModifica" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbDepartamentos">
+    <Key>
+      <PropertyRef Name="depto_Id" />
+    </Key>
+    <Property Name="depto_Id" Type="Int32" Nullable="false" />
+    <Property Name="suc_Id" Type="Int32" Nullable="false" />
+    <Property Name="car_Id" Type="Int32" Nullable="false" />
+    <Property Name="depto_Descripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="depto_UsuarioCrea" Type="Int32" Nullable="false" />
+    <Property Name="depto_Fechacrea" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="depto_Usuariomodifica" Type="Int32" />
+    <Property Name="depto_Fechamodifica" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbEmpleados">
+    <Key>
+      <PropertyRef Name="emp_Id" />
+    </Key>
+    <Property Name="emp_Id" Type="Int32" Nullable="false" />
+    <Property Name="per_Id" Type="Int32" Nullable="false" />
+    <Property Name="car_Id" Type="Int32" Nullable="false" />
+    <Property Name="area_Id" Type="Int32" Nullable="false" />
+    <Property Name="jor_id" Type="Int32" Nullable="false" />
+    <Property Name="emp_Reingreso" Type="Boolean" />
+    <Property Name="emp_Fechaingreso" Type="DateTime" Precision="3" />
+    <Property Name="emp_Estado" Type="Boolean" />
+    <Property Name="emp_Razoninactivacion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="emp_Razonsalida" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="emp_CargoAnterior" Type="Int32" />
+    <Property Name="emp_Fechadesalida" Type="DateTime" Precision="3" />
+    <Property Name="emp_Usuariocrea" Type="Int32" Nullable="false" />
+    <Property Name="emp_Fechacrea" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="emp_Usuariomodifica" Type="Int32" />
+    <Property Name="emp_Fechamodifica" Type="DateTime" Precision="3" />
+    <Property Name="cpla_IdPlanilla" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tbCatalogoDePlanillas" Relationship="Self.FK_tbEmpleados_tbCatalogodeplanillas" FromRole="tbEmpleados" ToRole="tbCatalogoDePlanillas" />
+    <NavigationProperty Name="tbDeduccionInstitucionFinanciera" Relationship="Self.FK_tbDeduccionInstitucionfinanciera_tbEmpleados" FromRole="tbEmpleados" ToRole="tbDeduccionInstitucionFinanciera" />
+    <NavigationProperty Name="tbEmpleadoBonos" Relationship="Self.FK_tbEmpleadoBonos_tbEmpleados" FromRole="tbEmpleados" ToRole="tbEmpleadoBonos" />
+    <NavigationProperty Name="tbEmpleadoComisiones" Relationship="Self.FK_tbEmpleadoComisiones_tbEmpleados" FromRole="tbEmpleados" ToRole="tbEmpleadoComisiones" />
+    <NavigationProperty Name="tbHistorialDePago" Relationship="Self.FK_Plani_tbHistorialdePago_tbEmpleados_emp_Id" FromRole="tbEmpleados" ToRole="tbHistorialDePago" />
+    <NavigationProperty Name="tbSueldos" Relationship="PruebaPlanillaModel.FK_emp_Id_rrhh_tbEmpleados_emp_Id" FromRole="tbEmpleados" ToRole="tbSueldos" />
+  </EntityType>
+  <EntityType Name="tbEmpleadosAreas">
+    <Key>
+      <PropertyRef Name="coar_Id" />
+    </Key>
+    <Property Name="coar_Id" Type="Int32" Nullable="false" />
+    <Property Name="emp_Id" Type="Int32" Nullable="false" />
+    <Property Name="are_Id" Type="Int32" Nullable="false" />
+    <Property Name="coar_UsuarioCrea" Type="Int32" Nullable="false" />
+    <Property Name="coar_FechaCrea" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="coar_UsuarioModifica" Type="Int32" />
+    <Property Name="coar_FechaModifica" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbEmpresas">
+    <Key>
+      <PropertyRef Name="empr_Id" />
+    </Key>
+    <Property Name="empr_Id" Type="Int32" Nullable="false" />
+    <Property Name="empr_Nombre" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="empr_UsuarioCrea" Type="Int32" Nullable="false" />
+    <Property Name="empr_FechaCrea" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="empr_UsuarioModifica" Type="Int32" />
+    <Property Name="empr_FechaModifica" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbEquipoEmpleados">
+    <Key>
+      <PropertyRef Name="eqco_Id" />
+    </Key>
+    <Property Name="eqco_Id" Type="Int32" Nullable="false" />
+    <Property Name="emp_Id" Type="Int32" />
+    <Property Name="eqtra_Id" Type="Int32" />
+    <Property Name="eqco_Fecha" Type="DateTime" Precision="3" />
+    <Property Name="eqco_UsuarioCrea" Type="Int32" Nullable="false" />
+    <Property Name="eqco_FechaCrea" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="eqco_UsuarioModifica" Type="Int32" />
+    <Property Name="eqco_FechaModifica" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="tbDeduccionesExtraordinarias" Relationship="Self.FK_tbDeduccionesExtraordinarias_tbEquipoPorColaborador" FromRole="tbEquipoEmpleados" ToRole="tbDeduccionesExtraordinarias" />
+  </EntityType>
+  <EntityType Name="tbEquipoTrabajo">
+    <Key>
+      <PropertyRef Name="eqtra_Id" />
+    </Key>
+    <Property Name="eqtra_Id" Type="Int32" Nullable="false" />
+    <Property Name="eqtra_codigo" Type="Int32" />
+    <Property Name="eqtra_Descripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="eqtra_observacion" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="eqtra_util" Type="Boolean" />
+    <Property Name="eqtra_UsuarioCrea" Type="Int32" Nullable="false" />
+    <Property Name="eqtra_FechaCrea" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="eqtra_UsuarioModifica" Type="Int32" />
+    <Property Name="eqtra_FechaModifica" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbFaseSeleccion">
+    <Key>
+      <PropertyRef Name="fsel_Id" />
+    </Key>
+    <Property Name="fsel_Id" Type="Int32" Nullable="false" />
+    <Property Name="fare_Id" Type="Int32" Nullable="false" />
+    <Property Name="fare_fecha" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="fsel_UsuarioCrea" Type="Int32" Nullable="false" />
+    <Property Name="fsel_FechaCrea" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="fsel_UsuarioModifica" Type="Int32" />
+    <Property Name="fsel_FechaModifica" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbFasesReclutamiento">
+    <Key>
+      <PropertyRef Name="fare_Id" />
+    </Key>
+    <Property Name="fare_Id" Type="Int32" Nullable="false" />
+    <Property Name="fare_Descripcion" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="fare_Estado" Type="Boolean" />
+    <Property Name="fare_UsuarioCrea" Type="Int32" Nullable="false" />
+    <Property Name="fare_FechaCrea" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="fare_UsuarioModifica" Type="Int32" />
+    <Property Name="fare_FechaModifica" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbHabilidades">
+    <Key>
+      <PropertyRef Name="habi_Id" />
+    </Key>
+    <Property Name="habi_Id" Type="Int32" Nullable="false" />
+    <Property Name="habi_Descripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="habi_UsuarioCrea" Type="Int32" Nullable="false" />
+    <Property Name="habi_FechaCrea" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="habi_UsuarioModifica" Type="Int32" />
+    <Property Name="habi_FechaModifica" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbHabilidadesPersona">
+    <Key>
+      <PropertyRef Name="hape_Id" />
+    </Key>
+    <Property Name="hape_Id" Type="Int32" Nullable="false" />
+    <Property Name="per_Id" Type="Int32" />
+    <Property Name="habi_Id" Type="Int32" />
+    <Property Name="hape_UsuarioCrea" Type="Int32" Nullable="false" />
+    <Property Name="hape_FechaCrea" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="hape_UsuarioModifica" Type="Int32" />
+    <Property Name="hape_FechaModifica" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbHabilidadesRequisicion">
+    <Key>
+      <PropertyRef Name="hreq_Id" />
+    </Key>
+    <Property Name="hreq_Id" Type="Int32" Nullable="false" />
+    <Property Name="req_Id" Type="Int32" Nullable="false" />
+    <Property Name="habi_Id" Type="Int32" Nullable="false" />
+    <Property Name="hreq_UsuarioCrea" Type="Int32" Nullable="false" />
+    <Property Name="hreq_FechaCrea" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="hreq_UsuarioModifica" Type="Int32" />
+    <Property Name="hreq_FechaModifica" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbHistorialAmonestaciones">
+    <Key>
+      <PropertyRef Name="hamo_Id" />
+    </Key>
+    <Property Name="hamo_Id" Type="Int32" Nullable="false" />
+    <Property Name="emp_Id" Type="Int32" />
+    <Property Name="tamo_Id" Type="Int32" />
+    <Property Name="hamo_Anterior" Type="Int32" Nullable="false" />
+    <Property Name="hamo_Observacion" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="hamo_UsuarioCrea" Type="Int32" Nullable="false" />
+    <Property Name="hamo_FechaCrea" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="hamo_UsuarioModifica" Type="Int32" />
+    <Property Name="hamo_FechaModifica" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbHistorialAudienciaDescargo">
+    <Key>
+      <PropertyRef Name="aude_Id" />
+    </Key>
+    <Property Name="aude_Id" Type="Int32" Nullable="false" />
+    <Property Name="emp_Id" Type="Int32" Nullable="false" />
+    <Property Name="aude_Descripcion" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="aude_Fechaaudiencia" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="aude_Testigo" Type="Boolean" />
+    <Property Name="aude_Direccionarchivo" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="aude_UsuarioCrea" Type="Int32" Nullable="false" />
+    <Property Name="aude_Fechacrea" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="aude_UsuarioModifica" Type="Int32" />
+    <Property Name="aude_Fechamodifica" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbHistorialCargos">
+    <Key>
+      <PropertyRef Name="hcar_Id" />
+    </Key>
+    <Property Name="hcar_Id" Type="Int32" Nullable="false" />
+    <Property Name="emp_Id" Type="Int32" />
+    <Property Name="car_Id" Type="Int32" />
+    <Property Name="hcar_Fecha" Type="DateTime" Precision="3" />
+    <Property Name="hcar_Usuariocrea" Type="Int32" />
+    <Property Name="hcar_Fechacrea" Type="DateTime" Precision="3" />
+    <Property Name="hcar_Usuariomodifica" Type="Int32" />
+    <Property Name="hcar_Fechamodifica" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbHistorialContrataciones">
+    <Key>
+      <PropertyRef Name="hcon_Id" />
+    </Key>
+    <Property Name="hcon_Id" Type="Int32" Nullable="false" />
+    <Property Name="per_Id" Type="Int32" Nullable="false" />
+    <Property Name="area_Id" Type="Int32" Nullable="false" />
+    <Property Name="hcon_FechaContratado" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="hcon_UsuarioCrea" Type="Int32" Nullable="false" />
+    <Property Name="hcon_FechaCrea" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="hcon_UsuarioModifica" Type="Int32" />
+    <Property Name="hcon_FechaModifica" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbHistorialHorasTrabajadas">
+    <Key>
+      <PropertyRef Name="htra_Id" />
+    </Key>
+    <Property Name="htra_Id" Type="Int32" Nullable="false" />
+    <Property Name="emp_Id" Type="Int32" Nullable="false" />
+    <Property Name="tiho_id" Type="Int32" Nullable="false" />
+    <Property Name="jor_id" Type="Int32" Nullable="false" />
+    <Property Name="htra_Cantidadhoras" Type="Int32" Nullable="false" />
+    <Property Name="htra_Fecha" Type="DateTime" Precision="0" />
+    <Property Name="htra_UsuarioCrea" Type="Int32" Nullable="false" />
+    <Property Name="htra_FechaCrea" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="htra_UsuarioModifica" Type="Int32" />
+    <Property Name="htra_FechaModifica" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbHistorialincapacidades">
+    <Key>
+      <PropertyRef Name="hinc_Id" />
+    </Key>
+    <Property Name="hinc_Id" Type="Int32" Nullable="false" />
+    <Property Name="Emp_Id" Type="Int32" Nullable="false" />
+    <Property Name="ticn_Id" Type="Int32" Nullable="false" />
+    <Property Name="hinc_PorcentajeIndemnizado" Type="Int32" Nullable="false" />
+    <Property Name="hinc_Observacion" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="hinc_Fechainicio" Type="DateTime" Precision="3" />
+    <Property Name="hinc_Fechafin" Type="DateTime" Precision="3" />
+    <Property Name="hinc_Usuariocrea" Type="Int32" Nullable="false" />
+    <Property Name="hinc_Fechacrea" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="hinc_Usuariomodifica" Type="Int32" />
+    <Property Name="hinc_Fechamodifica" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbHistorialLiquidaciones">
+    <Key>
+      <PropertyRef Name="hliq_Id" />
+    </Key>
+    <Property Name="hliq_Id" Type="Int32" Nullable="false" />
+    <Property Name="emp_Id" Type="Int32" Nullable="false" />
+    <Property Name="hliq_Observaciones" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="hliq_UsuarioCrea" Type="Int32" Nullable="false" />
+    <Property Name="hliq_FechaCrea" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="hliq_UsuarioModifica" Type="Int32" />
+    <Property Name="hliq_FechaModifica" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbHistorialPermisos">
+    <Key>
+      <PropertyRef Name="hper_Id" />
+    </Key>
+    <Property Name="hper_Id" Type="Int32" Nullable="false" />
+    <Property Name="emp_Id" Type="Int32" Nullable="false" />
+    <Property Name="tper_Id" Type="Int32" Nullable="false" />
+    <Property Name="hper_fecha" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="hper_duracion" Type="Int32" Nullable="false" />
+    <Property Name="hper_Observacion" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="hper_UsuarioCrea" Type="Int32" Nullable="false" />
+    <Property Name="hper_FechaCrea" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="hper_UsuarioModifica" Type="Int32" />
+    <Property Name="hper_FechaModifica" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbHistorialRefrendamientos">
+    <Key>
+      <PropertyRef Name="href_Id" />
+    </Key>
+    <Property Name="href_Id" Type="Int32" Nullable="false" />
+    <Property Name="emp_Id" Type="Int32" Nullable="false" />
+    <Property Name="href_Archivo" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="href_FechaRefrendado" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="href_UsuarioCrea" Type="Int32" Nullable="false" />
+    <Property Name="href_FechaCrea" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="href_UsuarioModifica" Type="Int32" />
+    <Property Name="href_FechaModifica" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbHistorialSalidas">
+    <Key>
+      <PropertyRef Name="hsal_Id" />
+    </Key>
+    <Property Name="hsal_Id" Type="Int32" Nullable="false" />
+    <Property Name="emp_Id" Type="Int32" Nullable="false" />
+    <Property Name="tsal_Id" Type="Int32" Nullable="false" />
+    <Property Name="pres_Id" Type="Int32" Nullable="false" />
+    <Property Name="hsal_FechaAmonestacion" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="hsal_Observacion" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="hsal_UsuarioCrea" Type="Int32" Nullable="false" />
+    <Property Name="hsal_FechaCrea" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="hsal_UsuarioModifica" Type="Int32" />
+    <Property Name="hsal_FechaModifica" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbHistorialVacaciones">
+    <Key>
+      <PropertyRef Name="hvac_Id" />
+    </Key>
+    <Property Name="hvac_Id" Type="Int32" Nullable="false" />
+    <Property Name="emp_Id" Type="Int32" Nullable="false" />
+    <Property Name="hvac_Fechanainicio" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="hvac_Fechafin" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="hvac_DiasTomados" Type="Boolean" Nullable="false" />
+    <Property Name="hvac_MesVacaciones" Type="Int32" Nullable="false" />
+    <Property Name="hvac_AnioVacaciones" Type="Int32" Nullable="false" />
+    <Property Name="hvac_UsuarioCrea" Type="Int32" Nullable="false" />
+    <Property Name="hvac_FechaCrea" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="hvac_UsuarioModifica" Type="Int32" />
+    <Property Name="hvac_FechaModifica" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbHorarios">
+    <Key>
+      <PropertyRef Name="hor_Id" />
+    </Key>
+    <Property Name="hor_Id" Type="Int32" Nullable="false" />
+    <Property Name="hor_Descripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="hor_HoraInicio" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="hor_HoraFin" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="hor_DuracionHoras" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="hor_UsuarioCrea" Type="Int32" Nullable="false" />
+    <Property Name="hor_FechaCrea" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="hor_UsuarioModifica" Type="Int32" />
+    <Property Name="hor_FechaModifica" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbIdiomaPersona">
+    <Key>
+      <PropertyRef Name="idpe_Id" />
+    </Key>
+    <Property Name="idpe_Id" Type="Int32" Nullable="false" />
+    <Property Name="per_Id" Type="Int32" />
+    <Property Name="idi_Id" Type="Int32" />
+    <Property Name="idpe_UsuarioCrea" Type="Int32" Nullable="false" />
+    <Property Name="idpe_FechaCrea" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="idpe_UsuarioModifica" Type="Int32" />
+    <Property Name="idpe_FechaModifica" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbidiomas">
+    <Key>
+      <PropertyRef Name="idi_Id" />
+    </Key>
+    <Property Name="idi_Id" Type="Int32" Nullable="false" />
+    <Property Name="idi_Descripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="idi_UsuarioCrea" Type="Int32" Nullable="false" />
+    <Property Name="idi_FechaCrea" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="idi_UsuarioModifica" Type="Int32" />
+    <Property Name="idi_FechaModifica" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbIdiomasRequisicion">
+    <Key>
+      <PropertyRef Name="ireq_Id" />
+    </Key>
+    <Property Name="ireq_Id" Type="Int32" Nullable="false" />
+    <Property Name="req_Id" Type="Int32" Nullable="false" />
+    <Property Name="idi_Id" Type="Int32" Nullable="false" />
+    <Property Name="ireq_UsuarioCrea" Type="Int32" Nullable="false" />
+    <Property Name="ireq_FechaCrea" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ireq_UsuarioModifica" Type="Int32" />
+    <Property Name="ireq_FechaModifica" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbJornadas">
+    <Key>
+      <PropertyRef Name="jor_Id" />
+    </Key>
+    <Property Name="jor_Id" Type="Int32" Nullable="false" />
+    <Property Name="hor_Id" Type="Int32" Nullable="false" />
+    <Property Name="jor_Descripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="jor_UsuarioCrea" Type="Int32" Nullable="false" />
+    <Property Name="jor_FechaCrea" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="jor_UsuarioModifica" Type="Int32" />
+    <Property Name="jor_FechaModifica" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="tbSalarioPorHora" Relationship="Self.FK_tbSalarioPorHora_tbJornadas" FromRole="tbJornadas" ToRole="tbSalarioPorHora" />
+  </EntityType>
+  <EntityType Name="tbPersonas">
+    <Key>
+      <PropertyRef Name="per_Id" />
+    </Key>
+    <Property Name="per_Id" Type="Int32" Nullable="false" />
+    <Property Name="per_Identidad" Type="String" MaxLength="16" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="per_Nombres" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="per_Apellidos" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="per_FechaNacimiento" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="per_Sexo" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="per_Edad" Type="Int32" />
+    <Property Name="per_Direccion" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="per_Telefono" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="per_CorreoElectronico" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="per_EstadoCivil" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="per_Nacionalidad" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="per_TipoSangre" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="per_UsuarioCrea" Type="Int32" Nullable="false" />
+    <Property Name="per_FechaCrea" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="per_UsuarioModifica" Type="Int32" />
+    <Property Name="per_FechaModifica" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbPrestaciones">
+    <Key>
+      <PropertyRef Name="pres_Id" />
+    </Key>
+    <Property Name="pres_Id" Type="Int32" Nullable="false" />
+    <Property Name="pres_DerechoPreaviso" Type="Boolean" Nullable="false" />
+    <Property Name="pres_Preaviso" Type="Decimal" Precision="8" Scale="2" Nullable="false" />
+    <Property Name="pres_DecimoTercer" Type="Decimal" Precision="8" Scale="2" Nullable="false" />
+    <Property Name="pres_Catorceabo" Type="Decimal" Precision="8" Scale="2" Nullable="false" />
+    <Property Name="pres_UsuarioCrea" Type="Int32" Nullable="false" />
+    <Property Name="pres_FechaCrea" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="pres_UsuarioModifica" Type="Int32" />
+    <Property Name="pres_FechaModifica" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbRazonDespidos">
+    <Key>
+      <PropertyRef Name="rdes_id" />
+    </Key>
+    <Property Name="rdes_id" Type="Int32" Nullable="false" />
+    <Property Name="rdes_descripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="rdes_usuariocrea" Type="Int32" Nullable="false" />
+    <Property Name="rdes_fechacrea" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="rdes_usuariomodifica" Type="Int32" />
+    <Property Name="rdes_fechamodifica" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbRazonRenuncias">
+    <Key>
+      <PropertyRef Name="rren_id" />
+    </Key>
+    <Property Name="rren_id" Type="Int32" Nullable="false" />
+    <Property Name="rren_descripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="rren_usuariocrea" Type="Int32" Nullable="false" />
+    <Property Name="rren_fechacrea" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="rren_usuariomodifica" Type="Int32" />
+    <Property Name="rren_fechamodifica" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbRequisiciones">
+    <Key>
+      <PropertyRef Name="req_Id" />
+    </Key>
+    <Property Name="req_Id" Type="Int32" Nullable="false" />
+    <Property Name="req_Edad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="req_Experiencia" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="req_Genero" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="req_Descripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="req_Vacantes" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="req_FechaRequisicion" Type="DateTime" Precision="3" />
+    <Property Name="req_FechaContratacion" Type="DateTime" Precision="3" />
+    <Property Name="req_UsuarioCrea" Type="Int32" Nullable="false" />
+    <Property Name="req_FechaCrea" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="req_UsuarioModifica" Type="Int32" />
+    <Property Name="req_FechaModifica" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbRequisicionPersonal">
+    <Key>
+      <PropertyRef Name="rper_Id" />
+    </Key>
+    <Property Name="rper_Id" Type="Int32" Nullable="false" />
+    <Property Name="emp_Id" Type="Int32" Nullable="false" />
+    <Property Name="area_Id" Type="Int32" Nullable="false" />
+    <Property Name="rper_plaza" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="rper_Descripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="rper_Usuariocrea" Type="Int32" Nullable="false" />
+    <Property Name="rper_Fechacrea" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="rper_Usuariomodifica" Type="Int32" />
+    <Property Name="rper_Fechamodifica" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbSeleccionCandidatos">
+    <Key>
+      <PropertyRef Name="scan_Id" />
+    </Key>
+    <Property Name="scan_Id" Type="Int32" Nullable="false" />
+    <Property Name="per_Id" Type="Int32" Nullable="false" />
+    <Property Name="fare_Id" Type="Int32" Nullable="false" />
+    <Property Name="scan_fecha" Type="DateTime" Precision="3" />
+    <Property Name="rper_Id" Type="Int32" Nullable="false" />
+    <Property Name="scan_Usuariocrea" Type="Int32" Nullable="false" />
+    <Property Name="scan_Fechacrea" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="scan_Usuariomodifica" Type="Int32" />
+    <Property Name="scan_Fechamodifica" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbSucursales">
+    <Key>
+      <PropertyRef Name="suc_Id" />
+    </Key>
+    <Property Name="suc_Id" Type="Int32" Nullable="false" />
+    <Property Name="emp_Id" Type="Int32" Nullable="false" />
+    <Property Name="empr_Id" Type="Int32" Nullable="false" />
+    <Property Name="mun_Codigo" Type="String" MaxLength="4" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="bod_Id" Type="Int32" Nullable="false" />
+    <Property Name="pemi_Id" Type="Int32" Nullable="false" />
+    <Property Name="suc_Descripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="suc_Correo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="suc_Direccion" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="suc_Telefono" Type="String" MaxLength="9" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="suc_UsuarioCrea" Type="Int32" Nullable="false" />
+    <Property Name="suc_FechaCrea" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="suc_UsuarioModifica" Type="Int32" />
+    <Property Name="suc_FechaModifica" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbSueldos">
+    <Key>
+      <PropertyRef Name="hsue_Id" />
+    </Key>
+    <Property Name="hsue_Id" Type="Int32" Nullable="false" />
+    <Property Name="emp_Id" Type="Int32" Nullable="false" />
+    <Property Name="tmon_Id" Type="Int32" Nullable="false" />
+    <Property Name="hsue_Cantidad" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="hsue_SueldoAnterior" Type="Int32" />
+    <Property Name="hsue_UsuarioCrea" Type="Int32" Nullable="false" />
+    <Property Name="hsue_FechaCrea" Type="DateTime" Precision="3" />
+    <Property Name="hsue_UsuarioModifica" Type="Int32" />
+    <Property Name="hsue_FechaModifica" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="tbEmpleados" Relationship="PruebaPlanillaModel.FK_emp_Id_rrhh_tbEmpleados_emp_Id" FromRole="tbSueldos" ToRole="tbEmpleados" />
+  </EntityType>
+  <EntityType Name="tbTipoAmonestaciones">
+    <Key>
+      <PropertyRef Name="tamo_Id" />
+    </Key>
+    <Property Name="tamo_Id" Type="Int32" Nullable="false" />
+    <Property Name="tamo_Descripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="tamo_UsuarioCrea" Type="Int32" Nullable="false" />
+    <Property Name="tamo_FechaCrea" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="tamo_UsuarioModifica" Type="Int32" />
+    <Property Name="tamo_FechaModifica" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbTipoHoras">
+    <Key>
+      <PropertyRef Name="tiho_Id" />
+    </Key>
+    <Property Name="tiho_Id" Type="Int32" Nullable="false" />
+    <Property Name="tiho_Descripcion" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="tiho_recargo" Type="Int32" Nullable="false" />
+    <Property Name="tiho_Estado" Type="Boolean" />
+    <Property Name="tiho_UsuarioCrea" Type="Int32" Nullable="false" />
+    <Property Name="tiho_FechaCrea" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="tiho_UsuarioModifica" Type="Int32" />
+    <Property Name="tiho_FechaModifica" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbTipoIncapacidades">
+    <Key>
+      <PropertyRef Name="ticn_Id" />
+    </Key>
+    <Property Name="ticn_Id" Type="Int32" Nullable="false" />
+    <Property Name="ticn_Descripcion" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ticn_Usuariocrea" Type="Int32" Nullable="false" />
+    <Property Name="ticn_Fechacrea" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ticn_Usuariomodifica" Type="Int32" />
+    <Property Name="ticn_Fechamodifica" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbTipoMonedas">
+    <Key>
+      <PropertyRef Name="tmon_Id" />
+    </Key>
+    <Property Name="tmon_Id" Type="Int32" Nullable="false" />
+    <Property Name="tmon_Descripcion" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="tmon_UsuarioCrea" Type="Int32" Nullable="false" />
+    <Property Name="tmon_FechaCrea" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="tmon_UsuarioModifica" Type="Int32" />
+    <Property Name="tmon_FechaModifica" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbTipoPermisos">
+    <Key>
+      <PropertyRef Name="tper_Id" />
+    </Key>
+    <Property Name="tper_Id" Type="Int32" Nullable="false" />
+    <Property Name="tper_Descripcion" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="tper_UsuarioCrea" Type="Int32" Nullable="false" />
+    <Property Name="tper_FechaCrea" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="tper_UsuarioModifica" Type="Int32" />
+    <Property Name="tper_FechaModifica" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbTipoSalidas">
+    <Key>
+      <PropertyRef Name="tsal_id" />
+    </Key>
+    <Property Name="tsal_id" Type="Int32" Nullable="false" />
+    <Property Name="rdes_id" Type="Int32" />
+    <Property Name="rren_id" Type="Int32" />
+    <Property Name="tsal_descripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="tsal_usuariocrea" Type="Int32" Nullable="false" />
+    <Property Name="tsal_fechacrea" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="tsal_usuariomodifica" Type="Int32" />
+    <Property Name="tsal_fechamodifica" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbTitulos">
+    <Key>
+      <PropertyRef Name="titu_Id" />
+    </Key>
+    <Property Name="titu_Id" Type="Int32" Nullable="false" />
+    <Property Name="titu_Titulos" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="titu_UsuarioCrea" Type="Int32" Nullable="false" />
+    <Property Name="titu_Fechacrea" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="titu_Usuariomodifica" Type="Int32" />
+    <Property Name="titu_FechaModifica" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbTitulosPersona">
+    <Key>
+      <PropertyRef Name="tipe_Id" />
+    </Key>
+    <Property Name="tipe_Id" Type="Int32" Nullable="false" />
+    <Property Name="per_Id" Type="Int32" Nullable="false" />
+    <Property Name="titu_Id" Type="Int32" Nullable="false" />
+    <Property Name="tipe_UsuarioCrea" Type="Int32" Nullable="false" />
+    <Property Name="tipe_FechaCrea" Type="DateTime" Precision="3" />
+    <Property Name="tipe_UsuarioModifica" Type="Int32" />
+    <Property Name="tipe_FechaModifica" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbTitulosRequisicion">
+    <Key>
+      <PropertyRef Name="treq_Id" />
+    </Key>
+    <Property Name="treq_Id" Type="Int32" Nullable="false" />
+    <Property Name="req_Id" Type="Int32" Nullable="false" />
+    <Property Name="titu_Id" Type="Int32" Nullable="false" />
+    <Property Name="treq_UsuarioCrea" Type="Int32" Nullable="false" />
+    <Property Name="treq_FechaCrea" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="treq_UsuarioModifica" Type="Int32" />
+    <Property Name="treq_FechaModifica" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbVacaciones">
+    <Key>
+      <PropertyRef Name="vaca_Id" />
+    </Key>
+    <Property Name="vaca_Id" Type="Int32" Nullable="false" />
+    <Property Name="emp_Id" Type="Int32" Nullable="false" />
+    <Property Name="vaca_dias" Type="Int32" />
+    <Property Name="vaca_UsuarioCrea" Type="Int32" Nullable="false" />
+    <Property Name="vaca_FechaCrea" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="vaca_UsuarioModifica" Type="Int32" />
+    <Property Name="vaca_FechaModifica" Type="DateTime" Precision="3" />
+  </EntityType>
+  <Association Name="FK__Acce___tbUsuario__tbAccesoRol__acrol_UsuarioCrea">
+    <End Role="tbUsuario" Type="Self.tbUsuario" Multiplicity="0..1" />
+    <End Role="tbAccesoRol" Type="Self.tbAccesoRol" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbUsuario">
+        <PropertyRef Name="usu_Id" />
+      </Principal>
+      <Dependent Role="tbAccesoRol">
+        <PropertyRef Name="acrol_UsuarioCrea" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Acce__tbObjeto__tbAccesoRol__obj_Id">
+    <End Role="tbObjeto" Type="Self.tbObjeto" Multiplicity="0..1" />
+    <End Role="tbAccesoRol" Type="Self.tbAccesoRol" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbObjeto">
+        <PropertyRef Name="obj_Id" />
+      </Principal>
+      <Dependent Role="tbAccesoRol">
+        <PropertyRef Name="obj_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Acce__tbUsuario__tbAccesoRol__acrol_UsuarioModifica">
+    <End Role="tbUsuario" Type="Self.tbUsuario" Multiplicity="0..1" />
+    <End Role="tbAccesoRol" Type="Self.tbAccesoRol" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbUsuario">
+        <PropertyRef Name="usu_Id" />
+      </Principal>
+      <Dependent Role="tbAccesoRol">
+        <PropertyRef Name="acrol_UsuarioModifica" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Acce_tbRol__tbAccesoRol__rol_Id">
+    <End Role="tbRol" Type="Self.tbRol" Multiplicity="0..1" />
+    <End Role="tbAccesoRol" Type="Self.tbAccesoRol" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbRol">
+        <PropertyRef Name="rol_Id" />
+      </Principal>
+      <Dependent Role="tbAccesoRol">
+        <PropertyRef Name="rol_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Acce___tbUsuario__tbObjeto__obj_UsuarioCrea">
+    <End Role="tbUsuario" Type="Self.tbUsuario" Multiplicity="0..1" />
+    <End Role="tbObjeto" Type="Self.tbObjeto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbUsuario">
+        <PropertyRef Name="usu_Id" />
+      </Principal>
+      <Dependent Role="tbObjeto">
+        <PropertyRef Name="obj_UsuarioCrea" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Acce__tbUsuario__tbObjeto__obj_UsuarioModifica">
+    <End Role="tbUsuario" Type="Self.tbUsuario" Multiplicity="0..1" />
+    <End Role="tbObjeto" Type="Self.tbObjeto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbUsuario">
+        <PropertyRef Name="usu_Id" />
+      </Principal>
+      <Dependent Role="tbObjeto">
+        <PropertyRef Name="obj_UsuarioModifica" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Acce__tbRol__tbRolesUsuario_rol_Id">
+    <End Role="tbRol" Type="Self.tbRol" Multiplicity="0..1" />
+    <End Role="tbRolesUsuario" Type="Self.tbRolesUsuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbRol">
+        <PropertyRef Name="rol_Id" />
+      </Principal>
+      <Dependent Role="tbRolesUsuario">
+        <PropertyRef Name="rol_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Acce__tbUsuario__tbRol__rol_UsuarioCrea">
+    <End Role="tbUsuario" Type="Self.tbUsuario" Multiplicity="0..1" />
+    <End Role="tbRol" Type="Self.tbRol" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbUsuario">
+        <PropertyRef Name="usu_Id" />
+      </Principal>
+      <Dependent Role="tbRol">
+        <PropertyRef Name="rol_UsuarioCrea" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Acce__tbUsuario__tbRol__rol_UsuarioModifica">
+    <End Role="tbUsuario" Type="Self.tbUsuario" Multiplicity="0..1" />
+    <End Role="tbRol" Type="Self.tbRol" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbUsuario">
+        <PropertyRef Name="usu_Id" />
+      </Principal>
+      <Dependent Role="tbRol">
+        <PropertyRef Name="rol_UsuarioModifica" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Acce__tbUsuario__tbRolesUsuario__rolu_UsuarioCrea">
+    <End Role="tbUsuario" Type="Self.tbUsuario" Multiplicity="0..1" />
+    <End Role="tbRolesUsuario" Type="Self.tbRolesUsuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbUsuario">
+        <PropertyRef Name="usu_Id" />
+      </Principal>
+      <Dependent Role="tbRolesUsuario">
+        <PropertyRef Name="rolu_UsuarioCrea" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Acce__tbUsuario__tbRolesUsuario__rolu_UsuarioModifica">
+    <End Role="tbUsuario" Type="Self.tbUsuario" Multiplicity="0..1" />
+    <End Role="tbRolesUsuario" Type="Self.tbRolesUsuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbUsuario">
+        <PropertyRef Name="usu_Id" />
+      </Principal>
+      <Dependent Role="tbRolesUsuario">
+        <PropertyRef Name="rolu_UsuarioModifica" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Acce__tbUsuario__tbRolesUsuario__usu_Id">
+    <End Role="tbUsuario" Type="Self.tbUsuario" Multiplicity="0..1" />
+    <End Role="tbRolesUsuario" Type="Self.tbRolesUsuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbUsuario">
+        <PropertyRef Name="usu_Id" />
+      </Principal>
+      <Dependent Role="tbRolesUsuario">
+        <PropertyRef Name="usu_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Plani_tbCatalogodededucciones_tbTipoDeduccion_tde_IdTipoDedu">
+    <End Role="tbTipoDeduccion" Type="Self.tbTipoDeduccion" Multiplicity="0..1" />
+    <End Role="tbCatalogoDeDeducciones" Type="Self.tbCatalogoDeDeducciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbTipoDeduccion">
+        <PropertyRef Name="tde_IdTipoDedu" />
+      </Principal>
+      <Dependent Role="tbCatalogoDeDeducciones">
+        <PropertyRef Name="tde_IdTipoDedu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Plani_tbCatálogoDeducciones_tbTipoPlanillaDetalleDeducciones_cde_IdDeducciones">
+    <End Role="tbCatalogoDeDeducciones" Type="Self.tbCatalogoDeDeducciones" Multiplicity="0..1" />
+    <End Role="tbTipoPlanillaDetalleDeduccion" Type="Self.tbTipoPlanillaDetalleDeduccion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbCatalogoDeDeducciones">
+        <PropertyRef Name="cde_IdDeducciones" />
+      </Principal>
+      <Dependent Role="tbTipoPlanillaDetalleDeduccion">
+        <PropertyRef Name="cde_IdDeducciones" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbDeduccionesExtraordinarias_tbCatalogoDeDeducciones">
+    <End Role="tbCatalogoDeDeducciones" Type="Self.tbCatalogoDeDeducciones" Multiplicity="0..1" />
+    <End Role="tbDeduccionesExtraordinarias" Type="Self.tbDeduccionesExtraordinarias" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbCatalogoDeDeducciones">
+        <PropertyRef Name="cde_IdDeducciones" />
+      </Principal>
+      <Dependent Role="tbDeduccionesExtraordinarias">
+        <PropertyRef Name="cde_IdDeducciones" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbDeduccionInstitucionFinanciera_tbCatalogoDeDeducciones">
+    <End Role="tbCatalogoDeDeducciones" Type="Self.tbCatalogoDeDeducciones" Multiplicity="0..1" />
+    <End Role="tbDeduccionInstitucionFinanciera" Type="Self.tbDeduccionInstitucionFinanciera" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbCatalogoDeDeducciones">
+        <PropertyRef Name="cde_IdDeducciones" />
+      </Principal>
+      <Dependent Role="tbDeduccionInstitucionFinanciera">
+        <PropertyRef Name="cde_IdDeducciones" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbTechosDeducciones_tbCatalogoDeDeducciones">
+    <End Role="tbCatalogoDeDeducciones" Type="Self.tbCatalogoDeDeducciones" Multiplicity="0..1" />
+    <End Role="tbTechosDeducciones" Type="Self.tbTechosDeducciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbCatalogoDeDeducciones">
+        <PropertyRef Name="cde_IdDeducciones" />
+      </Principal>
+      <Dependent Role="tbTechosDeducciones">
+        <PropertyRef Name="cde_IdDeducciones" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Plani_tbCatalogoIngresos_tbTipoPlanillaDetalleIngreso_cin_IdIngreso">
+    <End Role="tbCatalogoDeIngresos" Type="Self.tbCatalogoDeIngresos" Multiplicity="0..1" />
+    <End Role="tbTipoPlanillaDetalleIngreso" Type="Self.tbTipoPlanillaDetalleIngreso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbCatalogoDeIngresos">
+        <PropertyRef Name="cin_IdIngreso" />
+      </Principal>
+      <Dependent Role="tbTipoPlanillaDetalleIngreso">
+        <PropertyRef Name="cin_IdIngreso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbEmpleadoBonos_tbCatalogodeIngresos">
+    <End Role="tbCatalogoDeIngresos" Type="Self.tbCatalogoDeIngresos" Multiplicity="1" />
+    <End Role="tbEmpleadoBonos" Type="Self.tbEmpleadoBonos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbCatalogoDeIngresos">
+        <PropertyRef Name="cin_IdIngreso" />
+      </Principal>
+      <Dependent Role="tbEmpleadoBonos">
+        <PropertyRef Name="cin_IdIngreso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbEmpleadoComisiones_tbCatalogoDeIngresos">
+    <End Role="tbCatalogoDeIngresos" Type="Self.tbCatalogoDeIngresos" Multiplicity="1" />
+    <End Role="tbEmpleadoComisiones" Type="Self.tbEmpleadoComisiones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbCatalogoDeIngresos">
+        <PropertyRef Name="cin_IdIngreso" />
+      </Principal>
+      <Dependent Role="tbEmpleadoComisiones">
+        <PropertyRef Name="cin_IdIngreso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Plani_tbCatálogoPlanillas_tbTipoPlanillaDetalleDeducciones_cpla_IdPlanilla">
+    <End Role="tbCatalogoDePlanillas" Type="Self.tbCatalogoDePlanillas" Multiplicity="0..1" />
+    <End Role="tbTipoPlanillaDetalleDeduccion" Type="Self.tbTipoPlanillaDetalleDeduccion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbCatalogoDePlanillas">
+        <PropertyRef Name="cpla_IdPlanilla" />
+      </Principal>
+      <Dependent Role="tbTipoPlanillaDetalleDeduccion">
+        <PropertyRef Name="cpla_IdPlanilla" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Plani_tbCatalogoPlanillas_tbTipoPlanillaDetalleIngreso_cpla_IdPlanilla">
+    <End Role="tbCatalogoDePlanillas" Type="Self.tbCatalogoDePlanillas" Multiplicity="0..1" />
+    <End Role="tbTipoPlanillaDetalleIngreso" Type="Self.tbTipoPlanillaDetalleIngreso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbCatalogoDePlanillas">
+        <PropertyRef Name="cpla_IdPlanilla" />
+      </Principal>
+      <Dependent Role="tbTipoPlanillaDetalleIngreso">
+        <PropertyRef Name="cpla_IdPlanilla" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbEmpleados_tbCatalogodeplanillas">
+    <End Role="tbCatalogoDePlanillas" Type="Self.tbCatalogoDePlanillas" Multiplicity="1" />
+    <End Role="tbEmpleados" Type="Self.tbEmpleados" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbCatalogoDePlanillas">
+        <PropertyRef Name="cpla_IdPlanilla" />
+      </Principal>
+      <Dependent Role="tbEmpleados">
+        <PropertyRef Name="cpla_IdPlanilla" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbDeduccionesExtraordinarias_tbEquipoPorColaborador">
+    <End Role="tbEquipoEmpleados" Type="Self.tbEquipoEmpleados" Multiplicity="0..1" />
+    <End Role="tbDeduccionesExtraordinarias" Type="Self.tbDeduccionesExtraordinarias" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbEquipoEmpleados">
+        <PropertyRef Name="eqco_Id" />
+      </Principal>
+      <Dependent Role="tbDeduccionesExtraordinarias">
+        <PropertyRef Name="eqco_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Plani_tbInstitucionesFinancieras_tbDeduInstiFinan_insf_IdInstituFinan">
+    <End Role="tbInstitucionesFinancieras" Type="Self.tbInstitucionesFinancieras" Multiplicity="0..1" />
+    <End Role="tbDeduccionInstitucionFinanciera" Type="Self.tbDeduccionInstitucionFinanciera" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbInstitucionesFinancieras">
+        <PropertyRef Name="insf_IdInstitucionFinanciera" />
+      </Principal>
+      <Dependent Role="tbDeduccionInstitucionFinanciera">
+        <PropertyRef Name="insf_IdInstitucionFinanciera" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbDeduccionInstitucionfinanciera_tbEmpleados">
+    <End Role="tbEmpleados" Type="Self.tbEmpleados" Multiplicity="0..1" />
+    <End Role="tbDeduccionInstitucionFinanciera" Type="Self.tbDeduccionInstitucionFinanciera" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbEmpleados">
+        <PropertyRef Name="emp_Id" />
+      </Principal>
+      <Dependent Role="tbDeduccionInstitucionFinanciera">
+        <PropertyRef Name="emp_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbEmpleadoBonos_tbEmpleados">
+    <End Role="tbEmpleados" Type="Self.tbEmpleados" Multiplicity="1" />
+    <End Role="tbEmpleadoBonos" Type="Self.tbEmpleadoBonos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbEmpleados">
+        <PropertyRef Name="emp_Id" />
+      </Principal>
+      <Dependent Role="tbEmpleadoBonos">
+        <PropertyRef Name="emp_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbEmpleadoComisiones_tbEmpleados">
+    <End Role="tbEmpleados" Type="Self.tbEmpleados" Multiplicity="1" />
+    <End Role="tbEmpleadoComisiones" Type="Self.tbEmpleadoComisiones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbEmpleados">
+        <PropertyRef Name="emp_Id" />
+      </Principal>
+      <Dependent Role="tbEmpleadoComisiones">
+        <PropertyRef Name="emp_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Plani_tbHistorialDePago_tbHistorialDeDeduccionPago_hipa_IdHistorialdePago">
+    <End Role="tbHistorialDePago" Type="Self.tbHistorialDePago" Multiplicity="1" />
+    <End Role="tbHistorialDeduccionPago" Type="Self.tbHistorialDeduccionPago" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbHistorialDePago">
+        <PropertyRef Name="hipa_IdHistorialDePago" />
+      </Principal>
+      <Dependent Role="tbHistorialDeduccionPago">
+        <PropertyRef Name="hipa_IdHistorialDePago" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbHistorialdeduccionpago_tbTipoPlanilladetallededuccion">
+    <End Role="tbTipoPlanillaDetalleDeduccion" Type="Self.tbTipoPlanillaDetalleDeduccion" Multiplicity="1" />
+    <End Role="tbHistorialDeduccionPago" Type="Self.tbHistorialDeduccionPago" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbTipoPlanillaDetalleDeduccion">
+        <PropertyRef Name="tpdd_IdPlanillaDetDeduccion" />
+      </Principal>
+      <Dependent Role="tbHistorialDeduccionPago">
+        <PropertyRef Name="tpdd_IdPlanillaDetDeduccion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbHistorialDeIngresosPago_tbHistorialdePago">
+    <End Role="tbHistorialDePago" Type="Self.tbHistorialDePago" Multiplicity="0..1" />
+    <End Role="tbHistorialDeIngresosPago" Type="Self.tbHistorialDeIngresosPago" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbHistorialDePago">
+        <PropertyRef Name="hipa_IdHistorialDePago" />
+      </Principal>
+      <Dependent Role="tbHistorialDeIngresosPago">
+        <PropertyRef Name="hipa_IdHistorialDePago" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbHistorialDeIngresosPago_tbTipoplanilladetalleingreso">
+    <End Role="tbTipoPlanillaDetalleIngreso" Type="Self.tbTipoPlanillaDetalleIngreso" Multiplicity="0..1" />
+    <End Role="tbHistorialDeIngresosPago" Type="Self.tbHistorialDeIngresosPago" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbTipoPlanillaDetalleIngreso">
+        <PropertyRef Name="tpdi_IdDetallePlanillaIngreso" />
+      </Principal>
+      <Dependent Role="tbHistorialDeIngresosPago">
+        <PropertyRef Name="tpdi_IdDetallePlanillaIngreso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Plani_tbHistorialdePago_tbEmpleados_emp_Id">
+    <End Role="tbEmpleados" Type="Self.tbEmpleados" Multiplicity="1" />
+    <End Role="tbHistorialDePago" Type="Self.tbHistorialDePago" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbEmpleados">
+        <PropertyRef Name="emp_Id" />
+      </Principal>
+      <Dependent Role="tbHistorialDePago">
+        <PropertyRef Name="emp_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbHistorialDePago_tbPeriodos">
+    <End Role="tbPeriodos" Type="Self.tbPeriodos" Multiplicity="0..1" />
+    <End Role="tbHistorialDePago" Type="Self.tbHistorialDePago" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbPeriodos">
+        <PropertyRef Name="peri_IdPeriodo" />
+      </Principal>
+      <Dependent Role="tbHistorialDePago">
+        <PropertyRef Name="peri_IdPeriodo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbSalarioPorHora_tbRamaActividad">
+    <End Role="tbRamaActividad" Type="Self.tbRamaActividad" Multiplicity="0..1" />
+    <End Role="tbSalarioPorHora" Type="Self.tbSalarioPorHora" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbRamaActividad">
+        <PropertyRef Name="rama_Id" />
+      </Principal>
+      <Dependent Role="tbSalarioPorHora">
+        <PropertyRef Name="rama_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbSalarioPorHora_tbJornadas">
+    <End Role="tbJornadas" Type="Self.tbJornadas" Multiplicity="0..1" />
+    <End Role="tbSalarioPorHora" Type="Self.tbSalarioPorHora" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbJornadas">
+        <PropertyRef Name="jor_Id" />
+      </Principal>
+      <Dependent Role="tbSalarioPorHora">
+        <PropertyRef Name="jor_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="PlanillaEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tbAccesoRol" EntityType="Self.tbAccesoRol" />
+    <EntitySet Name="tbObjeto" EntityType="Self.tbObjeto" />
+    <EntitySet Name="tbRol" EntityType="Self.tbRol" />
+    <EntitySet Name="tbRolesUsuario" EntityType="Self.tbRolesUsuario" />
+    <EntitySet Name="tbUsuario" EntityType="Self.tbUsuario" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="tbCatalogoDeDeducciones" EntityType="Self.tbCatalogoDeDeducciones" />
+    <EntitySet Name="tbCatalogoDeIngresos" EntityType="Self.tbCatalogoDeIngresos" />
+    <EntitySet Name="tbCatalogoDePlanillas" EntityType="Self.tbCatalogoDePlanillas" />
+    <EntitySet Name="tbDeduccionesExtraordinarias" EntityType="Self.tbDeduccionesExtraordinarias" />
+    <EntitySet Name="tbDeduccionInstitucionFinanciera" EntityType="Self.tbDeduccionInstitucionFinanciera" />
+    <EntitySet Name="tbEmpleadoBonos" EntityType="Self.tbEmpleadoBonos" />
+    <EntitySet Name="tbEmpleadoComisiones" EntityType="Self.tbEmpleadoComisiones" />
+    <EntitySet Name="tbHistorialDeduccionPago" EntityType="Self.tbHistorialDeduccionPago" />
+    <EntitySet Name="tbHistorialDeIngresosPago" EntityType="Self.tbHistorialDeIngresosPago" />
+    <EntitySet Name="tbHistorialDePago" EntityType="Self.tbHistorialDePago" />
+    <EntitySet Name="tbInstitucionesFinancieras" EntityType="Self.tbInstitucionesFinancieras" />
+    <EntitySet Name="tbPeriodos" EntityType="Self.tbPeriodos" />
+    <EntitySet Name="tbRamaActividad" EntityType="Self.tbRamaActividad" />
+    <EntitySet Name="tbSalarioPorHora" EntityType="Self.tbSalarioPorHora" />
+    <EntitySet Name="tbTechosDeducciones" EntityType="Self.tbTechosDeducciones" />
+    <EntitySet Name="tbTipoDeduccion" EntityType="Self.tbTipoDeduccion" />
+    <EntitySet Name="tbTipoPlanillaDetalleDeduccion" EntityType="Self.tbTipoPlanillaDetalleDeduccion" />
+    <EntitySet Name="tbTipoPlanillaDetalleIngreso" EntityType="Self.tbTipoPlanillaDetalleIngreso" />
+    <EntitySet Name="tbAreas" EntityType="Self.tbAreas" />
+    <EntitySet Name="tbCargos" EntityType="Self.tbCargos" />
+    <EntitySet Name="tbCompetencias" EntityType="Self.tbCompetencias" />
+    <EntitySet Name="tbCompetenciasPersona" EntityType="Self.tbCompetenciasPersona" />
+    <EntitySet Name="tbCompetenciasRequisicion" EntityType="Self.tbCompetenciasRequisicion" />
+    <EntitySet Name="tbDepartamentos" EntityType="Self.tbDepartamentos" />
+    <EntitySet Name="tbEmpleados" EntityType="Self.tbEmpleados" />
+    <EntitySet Name="tbEmpleadosAreas" EntityType="Self.tbEmpleadosAreas" />
+    <EntitySet Name="tbEmpresas" EntityType="Self.tbEmpresas" />
+    <EntitySet Name="tbEquipoEmpleados" EntityType="Self.tbEquipoEmpleados" />
+    <EntitySet Name="tbEquipoTrabajo" EntityType="Self.tbEquipoTrabajo" />
+    <EntitySet Name="tbFaseSeleccion" EntityType="Self.tbFaseSeleccion" />
+    <EntitySet Name="tbFasesReclutamiento" EntityType="Self.tbFasesReclutamiento" />
+    <EntitySet Name="tbHabilidades" EntityType="Self.tbHabilidades" />
+    <EntitySet Name="tbHabilidadesPersona" EntityType="Self.tbHabilidadesPersona" />
+    <EntitySet Name="tbHabilidadesRequisicion" EntityType="Self.tbHabilidadesRequisicion" />
+    <EntitySet Name="tbHistorialAmonestaciones" EntityType="Self.tbHistorialAmonestaciones" />
+    <EntitySet Name="tbHistorialAudienciaDescargo" EntityType="Self.tbHistorialAudienciaDescargo" />
+    <EntitySet Name="tbHistorialCargos" EntityType="Self.tbHistorialCargos" />
+    <EntitySet Name="tbHistorialContrataciones" EntityType="Self.tbHistorialContrataciones" />
+    <EntitySet Name="tbHistorialHorasTrabajadas" EntityType="Self.tbHistorialHorasTrabajadas" />
+    <EntitySet Name="tbHistorialincapacidades" EntityType="Self.tbHistorialincapacidades" />
+    <EntitySet Name="tbHistorialLiquidaciones" EntityType="Self.tbHistorialLiquidaciones" />
+    <EntitySet Name="tbHistorialPermisos" EntityType="Self.tbHistorialPermisos" />
+    <EntitySet Name="tbHistorialRefrendamientos" EntityType="Self.tbHistorialRefrendamientos" />
+    <EntitySet Name="tbHistorialSalidas" EntityType="Self.tbHistorialSalidas" />
+    <EntitySet Name="tbHistorialVacaciones" EntityType="Self.tbHistorialVacaciones" />
+    <EntitySet Name="tbHorarios" EntityType="Self.tbHorarios" />
+    <EntitySet Name="tbIdiomaPersona" EntityType="Self.tbIdiomaPersona" />
+    <EntitySet Name="tbidiomas" EntityType="Self.tbidiomas" />
+    <EntitySet Name="tbIdiomasRequisicion" EntityType="Self.tbIdiomasRequisicion" />
+    <EntitySet Name="tbJornadas" EntityType="Self.tbJornadas" />
+    <EntitySet Name="tbPersonas" EntityType="Self.tbPersonas" />
+    <EntitySet Name="tbPrestaciones" EntityType="Self.tbPrestaciones" />
+    <EntitySet Name="tbRazonDespidos" EntityType="Self.tbRazonDespidos" />
+    <EntitySet Name="tbRazonRenuncias" EntityType="Self.tbRazonRenuncias" />
+    <EntitySet Name="tbRequisiciones" EntityType="Self.tbRequisiciones" />
+    <EntitySet Name="tbRequisicionPersonal" EntityType="Self.tbRequisicionPersonal" />
+    <EntitySet Name="tbSeleccionCandidatos" EntityType="Self.tbSeleccionCandidatos" />
+    <EntitySet Name="tbSucursales" EntityType="Self.tbSucursales" />
+    <EntitySet Name="tbSueldos" EntityType="Self.tbSueldos" />
+    <EntitySet Name="tbTipoAmonestaciones" EntityType="Self.tbTipoAmonestaciones" />
+    <EntitySet Name="tbTipoHoras" EntityType="Self.tbTipoHoras" />
+    <EntitySet Name="tbTipoIncapacidades" EntityType="Self.tbTipoIncapacidades" />
+    <EntitySet Name="tbTipoMonedas" EntityType="Self.tbTipoMonedas" />
+    <EntitySet Name="tbTipoPermisos" EntityType="Self.tbTipoPermisos" />
+    <EntitySet Name="tbTipoSalidas" EntityType="Self.tbTipoSalidas" />
+    <EntitySet Name="tbTitulos" EntityType="Self.tbTitulos" />
+    <EntitySet Name="tbTitulosPersona" EntityType="Self.tbTitulosPersona" />
+    <EntitySet Name="tbTitulosRequisicion" EntityType="Self.tbTitulosRequisicion" />
+    <EntitySet Name="tbVacaciones" EntityType="Self.tbVacaciones" />
+    <AssociationSet Name="FK__Acce___tbUsuario__tbAccesoRol__acrol_UsuarioCrea" Association="Self.FK__Acce___tbUsuario__tbAccesoRol__acrol_UsuarioCrea">
+      <End Role="tbUsuario" EntitySet="tbUsuario" />
+      <End Role="tbAccesoRol" EntitySet="tbAccesoRol" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Acce__tbObjeto__tbAccesoRol__obj_Id" Association="Self.FK__Acce__tbObjeto__tbAccesoRol__obj_Id">
+      <End Role="tbObjeto" EntitySet="tbObjeto" />
+      <End Role="tbAccesoRol" EntitySet="tbAccesoRol" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Acce__tbUsuario__tbAccesoRol__acrol_UsuarioModifica" Association="Self.FK__Acce__tbUsuario__tbAccesoRol__acrol_UsuarioModifica">
+      <End Role="tbUsuario" EntitySet="tbUsuario" />
+      <End Role="tbAccesoRol" EntitySet="tbAccesoRol" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Acce_tbRol__tbAccesoRol__rol_Id" Association="Self.FK__Acce_tbRol__tbAccesoRol__rol_Id">
+      <End Role="tbRol" EntitySet="tbRol" />
+      <End Role="tbAccesoRol" EntitySet="tbAccesoRol" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Acce___tbUsuario__tbObjeto__obj_UsuarioCrea" Association="Self.FK__Acce___tbUsuario__tbObjeto__obj_UsuarioCrea">
+      <End Role="tbUsuario" EntitySet="tbUsuario" />
+      <End Role="tbObjeto" EntitySet="tbObjeto" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Acce__tbUsuario__tbObjeto__obj_UsuarioModifica" Association="Self.FK__Acce__tbUsuario__tbObjeto__obj_UsuarioModifica">
+      <End Role="tbUsuario" EntitySet="tbUsuario" />
+      <End Role="tbObjeto" EntitySet="tbObjeto" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Acce__tbRol__tbRolesUsuario_rol_Id" Association="Self.FK__Acce__tbRol__tbRolesUsuario_rol_Id">
+      <End Role="tbRol" EntitySet="tbRol" />
+      <End Role="tbRolesUsuario" EntitySet="tbRolesUsuario" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Acce__tbUsuario__tbRol__rol_UsuarioCrea" Association="Self.FK__Acce__tbUsuario__tbRol__rol_UsuarioCrea">
+      <End Role="tbUsuario" EntitySet="tbUsuario" />
+      <End Role="tbRol" EntitySet="tbRol" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Acce__tbUsuario__tbRol__rol_UsuarioModifica" Association="Self.FK__Acce__tbUsuario__tbRol__rol_UsuarioModifica">
+      <End Role="tbUsuario" EntitySet="tbUsuario" />
+      <End Role="tbRol" EntitySet="tbRol" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Acce__tbUsuario__tbRolesUsuario__rolu_UsuarioCrea" Association="Self.FK__Acce__tbUsuario__tbRolesUsuario__rolu_UsuarioCrea">
+      <End Role="tbUsuario" EntitySet="tbUsuario" />
+      <End Role="tbRolesUsuario" EntitySet="tbRolesUsuario" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Acce__tbUsuario__tbRolesUsuario__rolu_UsuarioModifica" Association="Self.FK__Acce__tbUsuario__tbRolesUsuario__rolu_UsuarioModifica">
+      <End Role="tbUsuario" EntitySet="tbUsuario" />
+      <End Role="tbRolesUsuario" EntitySet="tbRolesUsuario" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Acce__tbUsuario__tbRolesUsuario__usu_Id" Association="Self.FK__Acce__tbUsuario__tbRolesUsuario__usu_Id">
+      <End Role="tbUsuario" EntitySet="tbUsuario" />
+      <End Role="tbRolesUsuario" EntitySet="tbRolesUsuario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Plani_tbCatalogodededucciones_tbTipoDeduccion_tde_IdTipoDedu" Association="Self.FK_Plani_tbCatalogodededucciones_tbTipoDeduccion_tde_IdTipoDedu">
+      <End Role="tbTipoDeduccion" EntitySet="tbTipoDeduccion" />
+      <End Role="tbCatalogoDeDeducciones" EntitySet="tbCatalogoDeDeducciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Plani_tbCatálogoDeducciones_tbTipoPlanillaDetalleDeducciones_cde_IdDeducciones" Association="Self.FK_Plani_tbCatálogoDeducciones_tbTipoPlanillaDetalleDeducciones_cde_IdDeducciones">
+      <End Role="tbCatalogoDeDeducciones" EntitySet="tbCatalogoDeDeducciones" />
+      <End Role="tbTipoPlanillaDetalleDeduccion" EntitySet="tbTipoPlanillaDetalleDeduccion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbDeduccionesExtraordinarias_tbCatalogoDeDeducciones" Association="Self.FK_tbDeduccionesExtraordinarias_tbCatalogoDeDeducciones">
+      <End Role="tbCatalogoDeDeducciones" EntitySet="tbCatalogoDeDeducciones" />
+      <End Role="tbDeduccionesExtraordinarias" EntitySet="tbDeduccionesExtraordinarias" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbDeduccionInstitucionFinanciera_tbCatalogoDeDeducciones" Association="Self.FK_tbDeduccionInstitucionFinanciera_tbCatalogoDeDeducciones">
+      <End Role="tbCatalogoDeDeducciones" EntitySet="tbCatalogoDeDeducciones" />
+      <End Role="tbDeduccionInstitucionFinanciera" EntitySet="tbDeduccionInstitucionFinanciera" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbTechosDeducciones_tbCatalogoDeDeducciones" Association="Self.FK_tbTechosDeducciones_tbCatalogoDeDeducciones">
+      <End Role="tbCatalogoDeDeducciones" EntitySet="tbCatalogoDeDeducciones" />
+      <End Role="tbTechosDeducciones" EntitySet="tbTechosDeducciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Plani_tbCatalogoIngresos_tbTipoPlanillaDetalleIngreso_cin_IdIngreso" Association="Self.FK_Plani_tbCatalogoIngresos_tbTipoPlanillaDetalleIngreso_cin_IdIngreso">
+      <End Role="tbCatalogoDeIngresos" EntitySet="tbCatalogoDeIngresos" />
+      <End Role="tbTipoPlanillaDetalleIngreso" EntitySet="tbTipoPlanillaDetalleIngreso" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbEmpleadoBonos_tbCatalogodeIngresos" Association="Self.FK_tbEmpleadoBonos_tbCatalogodeIngresos">
+      <End Role="tbCatalogoDeIngresos" EntitySet="tbCatalogoDeIngresos" />
+      <End Role="tbEmpleadoBonos" EntitySet="tbEmpleadoBonos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbEmpleadoComisiones_tbCatalogoDeIngresos" Association="Self.FK_tbEmpleadoComisiones_tbCatalogoDeIngresos">
+      <End Role="tbCatalogoDeIngresos" EntitySet="tbCatalogoDeIngresos" />
+      <End Role="tbEmpleadoComisiones" EntitySet="tbEmpleadoComisiones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Plani_tbCatálogoPlanillas_tbTipoPlanillaDetalleDeducciones_cpla_IdPlanilla" Association="Self.FK_Plani_tbCatálogoPlanillas_tbTipoPlanillaDetalleDeducciones_cpla_IdPlanilla">
+      <End Role="tbCatalogoDePlanillas" EntitySet="tbCatalogoDePlanillas" />
+      <End Role="tbTipoPlanillaDetalleDeduccion" EntitySet="tbTipoPlanillaDetalleDeduccion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Plani_tbCatalogoPlanillas_tbTipoPlanillaDetalleIngreso_cpla_IdPlanilla" Association="Self.FK_Plani_tbCatalogoPlanillas_tbTipoPlanillaDetalleIngreso_cpla_IdPlanilla">
+      <End Role="tbCatalogoDePlanillas" EntitySet="tbCatalogoDePlanillas" />
+      <End Role="tbTipoPlanillaDetalleIngreso" EntitySet="tbTipoPlanillaDetalleIngreso" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbEmpleados_tbCatalogodeplanillas" Association="Self.FK_tbEmpleados_tbCatalogodeplanillas">
+      <End Role="tbCatalogoDePlanillas" EntitySet="tbCatalogoDePlanillas" />
+      <End Role="tbEmpleados" EntitySet="tbEmpleados" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbDeduccionesExtraordinarias_tbEquipoPorColaborador" Association="Self.FK_tbDeduccionesExtraordinarias_tbEquipoPorColaborador">
+      <End Role="tbEquipoEmpleados" EntitySet="tbEquipoEmpleados" />
+      <End Role="tbDeduccionesExtraordinarias" EntitySet="tbDeduccionesExtraordinarias" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Plani_tbInstitucionesFinancieras_tbDeduInstiFinan_insf_IdInstituFinan" Association="Self.FK_Plani_tbInstitucionesFinancieras_tbDeduInstiFinan_insf_IdInstituFinan">
+      <End Role="tbInstitucionesFinancieras" EntitySet="tbInstitucionesFinancieras" />
+      <End Role="tbDeduccionInstitucionFinanciera" EntitySet="tbDeduccionInstitucionFinanciera" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbDeduccionInstitucionfinanciera_tbEmpleados" Association="Self.FK_tbDeduccionInstitucionfinanciera_tbEmpleados">
+      <End Role="tbEmpleados" EntitySet="tbEmpleados" />
+      <End Role="tbDeduccionInstitucionFinanciera" EntitySet="tbDeduccionInstitucionFinanciera" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbEmpleadoBonos_tbEmpleados" Association="Self.FK_tbEmpleadoBonos_tbEmpleados">
+      <End Role="tbEmpleados" EntitySet="tbEmpleados" />
+      <End Role="tbEmpleadoBonos" EntitySet="tbEmpleadoBonos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbEmpleadoComisiones_tbEmpleados" Association="Self.FK_tbEmpleadoComisiones_tbEmpleados">
+      <End Role="tbEmpleados" EntitySet="tbEmpleados" />
+      <End Role="tbEmpleadoComisiones" EntitySet="tbEmpleadoComisiones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Plani_tbHistorialDePago_tbHistorialDeDeduccionPago_hipa_IdHistorialdePago" Association="Self.FK_Plani_tbHistorialDePago_tbHistorialDeDeduccionPago_hipa_IdHistorialdePago">
+      <End Role="tbHistorialDePago" EntitySet="tbHistorialDePago" />
+      <End Role="tbHistorialDeduccionPago" EntitySet="tbHistorialDeduccionPago" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbHistorialdeduccionpago_tbTipoPlanilladetallededuccion" Association="Self.FK_tbHistorialdeduccionpago_tbTipoPlanilladetallededuccion">
+      <End Role="tbTipoPlanillaDetalleDeduccion" EntitySet="tbTipoPlanillaDetalleDeduccion" />
+      <End Role="tbHistorialDeduccionPago" EntitySet="tbHistorialDeduccionPago" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbHistorialDeIngresosPago_tbHistorialdePago" Association="Self.FK_tbHistorialDeIngresosPago_tbHistorialdePago">
+      <End Role="tbHistorialDePago" EntitySet="tbHistorialDePago" />
+      <End Role="tbHistorialDeIngresosPago" EntitySet="tbHistorialDeIngresosPago" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbHistorialDeIngresosPago_tbTipoplanilladetalleingreso" Association="Self.FK_tbHistorialDeIngresosPago_tbTipoplanilladetalleingreso">
+      <End Role="tbTipoPlanillaDetalleIngreso" EntitySet="tbTipoPlanillaDetalleIngreso" />
+      <End Role="tbHistorialDeIngresosPago" EntitySet="tbHistorialDeIngresosPago" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Plani_tbHistorialdePago_tbEmpleados_emp_Id" Association="Self.FK_Plani_tbHistorialdePago_tbEmpleados_emp_Id">
+      <End Role="tbEmpleados" EntitySet="tbEmpleados" />
+      <End Role="tbHistorialDePago" EntitySet="tbHistorialDePago" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbHistorialDePago_tbPeriodos" Association="Self.FK_tbHistorialDePago_tbPeriodos">
+      <End Role="tbPeriodos" EntitySet="tbPeriodos" />
+      <End Role="tbHistorialDePago" EntitySet="tbHistorialDePago" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbSalarioPorHora_tbRamaActividad" Association="Self.FK_tbSalarioPorHora_tbRamaActividad">
+      <End Role="tbRamaActividad" EntitySet="tbRamaActividad" />
+      <End Role="tbSalarioPorHora" EntitySet="tbSalarioPorHora" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbSalarioPorHora_tbJornadas" Association="Self.FK_tbSalarioPorHora_tbJornadas">
+      <End Role="tbJornadas" EntitySet="tbJornadas" />
+      <End Role="tbSalarioPorHora" EntitySet="tbSalarioPorHora" />
+    </AssociationSet>
+    <AssociationSet Name="FK_emp_Id_rrhh_tbEmpleados_emp_Id" Association="PruebaPlanillaModel.FK_emp_Id_rrhh_tbEmpleados_emp_Id">
+      <End Role="tbEmpleados" EntitySet="tbEmpleados" />
+      <End Role="tbSueldos" EntitySet="tbSueldos" />
+    </AssociationSet>
+  </EntityContainer>
+  <Association Name="FK_emp_Id_rrhh_tbEmpleados_emp_Id">
+    <End Type="PruebaPlanillaModel.tbEmpleados" Role="tbEmpleados" Multiplicity="1" />
+    <End Type="PruebaPlanillaModel.tbSueldos" Role="tbSueldos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbEmpleados">
+        <PropertyRef Name="emp_Id" />
+      </Principal>
+      <Dependent Role="tbSueldos">
+        <PropertyRef Name="emp_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

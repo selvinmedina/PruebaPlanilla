@@ -1,0 +1,58 @@
+﻿@model IEnumerable<PruebaPlanilla.Models.tbCatalogoDeIngresos>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutBase.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.cin_DescripcionIngreso)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cin_UsuarioCrea)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cin_FechaCrea)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cin_UsuarioModifica)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cin_FechaModifica)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.cin_DescripcionIngreso)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cin_UsuarioCrea)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cin_FechaCrea)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cin_UsuarioModifica)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cin_FechaModifica)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.cin_IdIngreso }) |
+            @Html.ActionLink("Details", "Details", new { id=item.cin_IdIngreso }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.cin_IdIngreso })
+        </td>
+    </tr>
+}
+
+</table>
